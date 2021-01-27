@@ -5,6 +5,23 @@
   transform: translate(-50%, -50%);
 }
 
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexColumnCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+@mixin shadow {
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.7);
+}
+
 //MEDIA QUERY MANAGER
 /*
 0-600px:        phone
