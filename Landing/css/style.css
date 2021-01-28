@@ -9,6 +9,7 @@ $breakpoint argument choices:
 - phone
 - tabl-port
 - tab-land
+- laptop
 - big-desktop
 
 ORDER: Base + typography > general layout + grid > page layout > components
@@ -25,7 +26,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 html {
   font-size: 62.5%;
   scroll-behavior: smooth; }
-  @media only screen and (max-width: 75em) {
+  @media only screen and (max-width: 68.75em) {
     html {
       font-size: 56.25%; } }
   @media only screen and (max-width: 56.25em) {
@@ -59,10 +60,16 @@ body {
     align-items: center;
     text-align: center;
     font-size: 1.6rem; }
+    @media only screen and (max-width: 93.75em) {
+      #quienes-somos .about {
+        width: 90%; } }
     #quienes-somos .about .title {
       font-size: 2rem;
       position: relative;
       margin-bottom: 10rem; }
+      @media only screen and (max-width: 37.5em) {
+        #quienes-somos .about .title {
+          margin-bottom: 5rem; } }
       #quienes-somos .about .title::after {
         position: absolute;
         content: '';
@@ -78,6 +85,14 @@ body {
       align-items: center;
       justify-content: space-between;
       width: 100%; }
+      @media only screen and (max-width: 56.25em) {
+        #quienes-somos .about .cards {
+          flex-direction: column; }
+          #quienes-somos .about .cards--left {
+            margin-bottom: 10rem; } }
+    @media only screen and (max-width: 56.25em) and (max-width: 37.5em) {
+      #quienes-somos .about .cards--left {
+        margin-bottom: 5rem; } }
       #quienes-somos .about .cards > div {
         display: flex;
         flex-direction: column;

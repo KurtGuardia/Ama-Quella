@@ -11,10 +11,18 @@
     text-align: center;
     font-size: $default-font-size;
 
+    @include respond(laptop) {
+      width: 90%;
+    }
+
     & .title {
       font-size: $large-font-size;
       position: relative;
       margin-bottom: 10rem;
+
+      @include respond(phone) {
+        margin-bottom: 5rem;
+      }
 
       &::after {
         position: absolute;
@@ -32,6 +40,17 @@
       @include flexCenter();
       justify-content: space-between;
       width: 100%;
+
+      @include respond(tab-port) {
+        flex-direction: column;
+
+        &--left {
+          margin-bottom: 10rem;
+          @include respond(phone) {
+            margin-bottom: 5rem;
+          }
+        }
+      }
 
       // for both cards left and right
       & > div {
