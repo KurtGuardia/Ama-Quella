@@ -1,4 +1,5 @@
 .navigation {
+  z-index: 10;
   position: fixed;
   top: 0;
   left: 0;
@@ -44,25 +45,6 @@
     }
   }
 
-  .ingresar {
-    letter-spacing: 1px;
-    text-decoration: none;
-    cursor: pointer;
-    font-size: 1.7rem;
-    margin-left: 0.5rem;
-    padding: 0.5rem 2rem;
-    background-color: transparent;
-    border: 1px solid #fff;
-    color: #fff;
-    border-radius: 7px;
-    transition: all 0.3s;
-
-    &:hover {
-      background-color: #fff;
-      color: $color-primary;
-    }
-  }
-
   &__hamburger {
     z-index: 100;
     display: none;
@@ -103,6 +85,7 @@
     top: 0;
     right: 0;
     height: 100vh;
+    min-width: 35rem;
     background-color: $color-primary;
     list-style: none;
     padding: 2rem;

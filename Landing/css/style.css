@@ -17,6 +17,26 @@ ORDER: Base + typography > general layout + grid > page layout > components
 1em = 16px
 */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
 *,
 *::after,
 *::before {
@@ -43,10 +63,160 @@ body {
   @media only screen and (max-width: 56.25em) {
     body {
       padding: 0; } }
+  body::-webkit-scrollbar {
+    width: 1rem; }
+  body::-webkit-scrollbar-track {
+    background-color: #222127;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3); }
+  body::-webkit-scrollbar-thumb {
+    background-color: rgba(136, 136, 136, 0.5);
+    border-radius: 4px; }
 
 ::selection {
   background-color: #222127;
   color: #fff; }
+
+.heading-primary {
+  color: #f9f9f9;
+  backface-visibility: hidden;
+  margin: 5rem 0; }
+  .heading-primary--main {
+    display: block;
+    font-size: 3.5rem;
+    font-weight: 400;
+    letter-spacing: 1rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; }
+    @media only screen and (max-width: 37.5em) {
+      .heading-primary--main {
+        font-size: 5rem;
+        letter-spacing: 1rem; } }
+  .heading-primary--sub {
+    display: block;
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 0.5rem;
+    animation: moveInRight 1s ease-out; }
+    @media only screen and (max-width: 37.5em) {
+      .heading-primary--sub {
+        font-weight: 400;
+        letter-spacing: 0.5rem; } }
+
+.ingresar {
+  outline: none;
+  letter-spacing: 1px;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.7rem;
+  margin-left: 0.5rem;
+  padding: 0.5rem 3rem;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 7px;
+  opacity: 0.5;
+  transition: all 0.3s; }
+  .ingresar:hover {
+    opacity: 1;
+    background-color: #fff;
+    color: #222127; }
+  .ingresar:active {
+    transform: scale(0.95); }
+  .ingresar.cta {
+    opacity: 1;
+    font-size: 1.8rem;
+    background-color: #d8890b;
+    border: 1px solid #d8890b;
+    color: inherit; }
+    .ingresar.cta:hover {
+      background-color: #e69d28;
+      color: inherit; }
+    .ingresar.cta:active {
+      transform: scale(0.95); }
+
+.selector {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: inline-flex;
+  align-items: center; }
+  .selector .square {
+    cursor: pointer;
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 1px;
+    background-color: #cacaca;
+    margin-right: 1rem; }
+    .selector .square.selected {
+      background-color: #d8890b;
+      width: 1rem;
+      height: 1rem; }
+
+.carousel {
+  display: flex;
+  width: 100%;
+  height: 52rem;
+  overflow: hidden; }
+  .carousel__card {
+    position: relative;
+    display: inline-block;
+    min-width: 29.2rem;
+    min-height: 52rem;
+    opacity: 0.9;
+    border-radius: 7px;
+    margin-right: 3rem;
+    overflow: hidden; }
+    .carousel__card img {
+      width: 29.2rem;
+      height: 52rem; }
+    .carousel__card:hover .carousel__card--glass {
+      opacity: 1; }
+    .carousel__card--glass {
+      position: absolute;
+      opacity: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 1.5rem;
+      border-radius: 7px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 52rem;
+      background: linear-gradient(to right bottom, rgba(111, 111, 111, 0.7), rgba(111, 111, 111, 0.3));
+      backdrop-filter: blur(1.5rem);
+      transition: opacity 0.4s; }
+      .carousel__card--glass h3 {
+        font-size: 2rem;
+        margin-bottom: 1rem; }
+
+.pagination {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  right: 5rem; }
+  .pagination span {
+    font-size: 2rem;
+    opacity: 0.5;
+    margin-right: 2rem; }
+  .pagination__btns {
+    display: flex;
+    align-items: center; }
+    .pagination__btns .line {
+      width: 5rem;
+      height: 1px;
+      background-color: #cacaca;
+      opacity: 0.7;
+      margin: 0 0.5rem; }
+    .pagination__btns button {
+      cursor: pointer;
+      background: transparent;
+      border: none;
+      color: #cacaca;
+      font-size: 1.6rem; }
 
 #quienes-somos {
   display: flex;
@@ -98,7 +268,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-content: center;
+        align-items: center;
         width: 40rem;
         height: 45rem;
         perspective: 150rem;
@@ -114,7 +284,7 @@ body {
           display: flex;
           flex-direction: column;
           justify-content: center;
-          align-content: center;
+          align-items: center;
           height: 100%;
           width: 100%;
           border: 1px solid #222127;
@@ -128,7 +298,7 @@ body {
           display: flex;
           flex-direction: column;
           justify-content: center;
-          align-content: center;
+          align-items: center;
           line-height: 2.5rem;
           background-color: #222127;
           height: 100%;
@@ -147,7 +317,30 @@ body {
         #quienes-somos .about .cards > div:hover .cards--right__back {
           transform: rotateY(0deg); }
 
+.header {
+  width: 100%;
+  padding: 5rem;
+  padding-right: 0;
+  margin-top: 6rem;
+  background: radial-gradient(74.41% 147.15% at 74.41% 60.94%, #222127f2 0%, #222127 100%);
+  color: #f9f9f9;
+  display: flex; }
+  .header__left {
+    width: 35%;
+    padding: 2rem;
+    padding-bottom: 7rem;
+    position: relative; }
+    .header__left img {
+      max-width: 12.5rem; }
+    .header__left a {
+      display: inline-block; }
+  .header__right {
+    width: 65%;
+    position: relative;
+    padding-bottom: 5rem; }
+
 .navigation {
+  z-index: 10;
   position: fixed;
   top: 0;
   left: 0;
@@ -184,21 +377,6 @@ body {
       text-decoration: none;
       color: #f9f9f9;
       font-size: 1.7rem; }
-  .navigation .ingresar {
-    letter-spacing: 1px;
-    text-decoration: none;
-    cursor: pointer;
-    font-size: 1.7rem;
-    margin-left: 0.5rem;
-    padding: 0.5rem 2rem;
-    background-color: transparent;
-    border: 1px solid #fff;
-    color: #fff;
-    border-radius: 7px;
-    transition: all 0.3s; }
-    .navigation .ingresar:hover {
-      background-color: #fff;
-      color: #222127; }
   .navigation__hamburger {
     z-index: 100;
     display: none;
@@ -228,6 +406,7 @@ body {
     top: 0;
     right: 0;
     height: 100vh;
+    min-width: 35rem;
     background-color: #222127;
     list-style: none;
     padding: 2rem;
