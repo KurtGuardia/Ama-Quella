@@ -1,0 +1,56 @@
+.pasos {
+  @include flexColumnCenter();
+  justify-content: flex-start;
+  background-color: $color-primary;
+  width: 100%;
+  height: 60rem;
+  padding: 5rem 0;
+  font-size: $default-font-size;
+  text-align: center;
+  color: $color-white;
+
+  & .title {
+    color: $color-white;
+    font-size: $large-font-size;
+    position: relative;
+    margin-bottom: 10rem;
+
+    @include respond(phone) {
+      margin-bottom: 5rem;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      bottom: -1rem;
+      left: 50%;
+      width: 32rem;
+      height: 0.35rem;
+      background-color: $color-white;
+      transform: translateX(-50%);
+    }
+  }
+
+  .steps {
+    @include flexCenter();
+    justify-content: space-between;
+    width: 100%;
+
+    &--icon {
+      @include flexColumnCenter();
+      width: 20rem;
+
+      & > svg {
+        width: 15rem;
+      }
+
+      &__down {
+        transform: translateY(12rem);
+      }
+
+      & p {
+        margin-top: 2rem;
+      }
+    }
+  }
+}
