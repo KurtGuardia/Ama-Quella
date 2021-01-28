@@ -9,6 +9,10 @@
   text-align: center;
   color: $color-white;
 
+  @include respond(tab-port) {
+    height: auto;
+  }
+
   & .title {
     color: $color-white;
     font-size: $large-font-size;
@@ -36,20 +40,44 @@
     justify-content: space-between;
     width: 100%;
 
+    @include respond(tab-port) {
+      flex-wrap: wrap;
+      width: 70%;
+    }
+
     &--icon {
       @include flexColumnCenter();
       width: 20rem;
 
+      @include respond(tab-port) {
+        flex: 50%;
+      }
+
       & > svg {
         width: 15rem;
+
+        @include respond(tab-port) {
+          width: 10rem;
+        }
       }
 
       &__down {
         transform: translateY(12rem);
+
+        @include respond(tab-port) {
+          transform: translateY(0);
+        }
       }
 
       & p {
         margin-top: 2rem;
+
+        @include respond(tab-port) {
+          margin-top: 0;
+          margin-bottom: 2rem;
+          font-size: 15px;
+          letter-spacing: 0.5px;
+        }
       }
     }
   }

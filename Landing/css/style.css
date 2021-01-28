@@ -159,6 +159,9 @@ body {
   font-size: 1.6rem;
   text-align: center;
   color: #fff; }
+  @media only screen and (max-width: 56.25em) {
+    .pasos {
+      height: auto; } }
   .pasos .title {
     color: #fff;
     font-size: 2rem;
@@ -182,15 +185,34 @@ body {
     align-items: center;
     justify-content: space-between;
     width: 100%; }
+    @media only screen and (max-width: 56.25em) {
+      .pasos .steps {
+        flex-wrap: wrap;
+        width: 70%; } }
     .pasos .steps--icon {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       width: 20rem; }
+      @media only screen and (max-width: 56.25em) {
+        .pasos .steps--icon {
+          flex: 50%; } }
       .pasos .steps--icon > svg {
         width: 15rem; }
+        @media only screen and (max-width: 56.25em) {
+          .pasos .steps--icon > svg {
+            width: 10rem; } }
       .pasos .steps--icon__down {
         transform: translateY(12rem); }
+        @media only screen and (max-width: 56.25em) {
+          .pasos .steps--icon__down {
+            transform: translateY(0); } }
       .pasos .steps--icon p {
         margin-top: 2rem; }
+        @media only screen and (max-width: 56.25em) {
+          .pasos .steps--icon p {
+            margin-top: 0;
+            margin-bottom: 2rem;
+            font-size: 15px;
+            letter-spacing: 0.5px; } }
