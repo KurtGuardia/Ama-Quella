@@ -52,13 +52,13 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding-top: 5rem; }
+  padding: 5rem 0; }
   #quienes-somos .about {
     width: 70%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    text-align: center;
     font-size: 1.6rem; }
     @media only screen and (max-width: 93.75em) {
       #quienes-somos .about {
@@ -97,7 +97,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-content: center;
+        align-items: center;
         width: 40rem;
         height: 45rem;
         perspective: 150rem;
@@ -113,7 +113,7 @@ body {
           display: flex;
           flex-direction: column;
           justify-content: center;
-          align-content: center;
+          align-items: center;
           height: 100%;
           width: 100%;
           border: 1px solid #222127;
@@ -127,7 +127,7 @@ body {
           display: flex;
           flex-direction: column;
           justify-content: center;
-          align-content: center;
+          align-items: center;
           line-height: 2.5rem;
           background-color: #222127;
           height: 100%;
@@ -145,3 +145,74 @@ body {
           transform: rotateY(-180deg); }
         #quienes-somos .about .cards > div:hover .cards--right__back {
           transform: rotateY(0deg); }
+
+.pasos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #222127;
+  width: 100%;
+  height: 60rem;
+  padding: 5rem 0;
+  font-size: 1.6rem;
+  text-align: center;
+  color: #fff; }
+  @media only screen and (max-width: 56.25em) {
+    .pasos {
+      height: auto; } }
+  .pasos .title {
+    color: #fff;
+    font-size: 2rem;
+    position: relative;
+    margin-bottom: 10rem; }
+    @media only screen and (max-width: 37.5em) {
+      .pasos .title {
+        margin-bottom: 5rem; } }
+    .pasos .title::after {
+      position: absolute;
+      content: '';
+      bottom: -1rem;
+      left: 50%;
+      width: 32rem;
+      height: 0.35rem;
+      background-color: #fff;
+      transform: translateX(-50%); }
+  .pasos .steps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; }
+    @media only screen and (max-width: 56.25em) {
+      .pasos .steps {
+        flex-wrap: wrap;
+        width: 70%; } }
+    .pasos .steps--icon {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 20rem; }
+      @media only screen and (max-width: 56.25em) {
+        .pasos .steps--icon {
+          flex: 50%; } }
+      .pasos .steps--icon > svg {
+        width: 15rem; }
+        @media only screen and (max-width: 56.25em) {
+          .pasos .steps--icon > svg {
+            width: 10rem; } }
+      .pasos .steps--icon__down {
+        transform: translateY(12rem); }
+        @media only screen and (max-width: 56.25em) {
+          .pasos .steps--icon__down {
+            transform: translateY(0); } }
+      .pasos .steps--icon p {
+        margin-top: 2rem; }
+        @media only screen and (max-width: 56.25em) {
+          .pasos .steps--icon p {
+            margin-top: 0;
+            margin-bottom: 2rem;
+            font-size: 15px;
+            letter-spacing: 0.5px; } }
