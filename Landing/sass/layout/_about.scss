@@ -99,19 +99,19 @@
           }
         }
 
-        &:hover .cards--left__front {
+        &:hover .cards__left--front {
           transform: rotateY(-180deg);
         }
 
-        &:hover .cards--left__back {
+        &:hover .cards__left--back {
           transform: rotateY(0deg);
         }
 
-        &:hover .cards--right__front {
+        &:hover .cards__right--front {
           transform: rotateY(-180deg);
         }
 
-        &:hover .cards--right__back {
+        &:hover .cards__right--back {
           transform: rotateY(0deg);
         }
       }

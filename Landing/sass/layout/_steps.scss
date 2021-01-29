@@ -45,7 +45,7 @@
       width: 70%;
     }
 
-    &--icon {
+    &__icon {
       @include flexColumnCenter();
       width: 20rem;
 
@@ -61,7 +61,7 @@
         }
       }
 
-      &__down {
+      &--down {
         transform: translateY(12rem);
 
         @include respond(tab-port) {
