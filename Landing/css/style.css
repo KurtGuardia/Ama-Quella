@@ -319,13 +319,13 @@ body {
             color: #fff;
             letter-spacing: 0.5px;
             font-size: 15px; }
-        #quienes-somos .about .cards > div:hover .cards--left__front {
+        #quienes-somos .about .cards > div:hover .cards__left--front {
           transform: rotateY(-180deg); }
-        #quienes-somos .about .cards > div:hover .cards--left__back {
+        #quienes-somos .about .cards > div:hover .cards__left--back {
           transform: rotateY(0deg); }
-        #quienes-somos .about .cards > div:hover .cards--right__front {
+        #quienes-somos .about .cards > div:hover .cards__right--front {
           transform: rotateY(-180deg); }
-        #quienes-somos .about .cards > div:hover .cards--right__back {
+        #quienes-somos .about .cards > div:hover .cards__right--back {
           transform: rotateY(0deg); }
 
 .header {
@@ -475,29 +475,29 @@ body {
       .pasos .steps {
         flex-wrap: wrap;
         width: 70%; } }
-    .pasos .steps--icon {
+    .pasos .steps__icon {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       width: 20rem; }
       @media only screen and (max-width: 56.25em) {
-        .pasos .steps--icon {
+        .pasos .steps__icon {
           flex: 50%; } }
-      .pasos .steps--icon > svg {
+      .pasos .steps__icon > svg {
         width: 15rem; }
         @media only screen and (max-width: 56.25em) {
-          .pasos .steps--icon > svg {
+          .pasos .steps__icon > svg {
             width: 10rem; } }
-      .pasos .steps--icon__down {
+      .pasos .steps__icon--down {
         transform: translateY(12rem); }
         @media only screen and (max-width: 56.25em) {
-          .pasos .steps--icon__down {
+          .pasos .steps__icon--down {
             transform: translateY(0); } }
-      .pasos .steps--icon p {
+      .pasos .steps__icon p {
         margin-top: 2rem; }
         @media only screen and (max-width: 56.25em) {
-          .pasos .steps--icon p {
+          .pasos .steps__icon p {
             margin-top: 0;
             margin-bottom: 2rem;
             font-size: 15px;
