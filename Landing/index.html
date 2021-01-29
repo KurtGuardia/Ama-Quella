@@ -345,14 +345,41 @@
     </section>
 
     <section class="contact">
-      <form class="form">
-        <div class="form--group">
-
+      <div class="contact-form">
+        <div class="contact-form__title">
+          <h2>Contáctanos</h2>
         </div>
-      </form>
-      <div class="contact--img">
-        <img src="./assets/images/contact-form.png" alt="logo" />
+        <form class="form">
+        <div class="form__group">
+          <input type="text" id="name" name="nombre" class="form__group--input" placeholder="*Nombre" required />
+          <label for="name" class="form__group--label">Nombre</label>
+        </div>
+        
+        <div class="form__group">
+          <input type="email" id="email" name="email" class="form__group--input" placeholder="*Email" required />
+          <label for="email" class="form__group--label">Email</label>
+        </div>
+
+        <div class="form__group">
+          <input type="number" id="phone" name="numero" class="form__group--input" placeholder="Teléfono" />
+          <label for="phone" class="form__group--label">Teléfono</label>
+        </div>
+
+        <div class="form__group">
+          <textarea rows="4" id="message" name="message" class="form__group--input"
+            placeholder="Tu mensaje."
+            required></textarea>
+        </div>
+
+        <div class="form__group--btn">
+          <button class="ingresar cta">Enviar</button>
+        </div>
+        </form>
+
       </div>
+        <div class="contact__img">
+          <img src="./assets/images/contact-form.png" alt="logo" />
+        </div>
     </section>
 
     <script defer src="./js/script.js"></script>
