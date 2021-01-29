@@ -79,11 +79,12 @@
         <a href="https://oliverct.com" class="ingresar cta">Ingresar</a>
 
         <div class="selector">
-          <div class="square selected" data-slected="1"></div>
-          <div class="square" data-slected="2"></div>
-          <div class="square" data-slected="3"></div>
-          <div class="square" data-slected="4"></div>
-          <div class="square" data-slected="5"></div>
+          <div class="square selected" data-selected="1"></div>
+          <div class="square" data-selected="2"></div>
+          <div class="square" data-selected="3"></div>
+          <div class="square" data-selected="4"></div>
+          <div class="square" data-selected="5"></div>
+          <div class="square" data-selected="6"></div>
         </div>
       </div>
       <div class="header__right">
@@ -159,14 +160,72 @@
               </p>
             </div>
           </div>
+
+          <div class="carousel__card">
+            <img src="./assets/images/family.png" alt="servicios" />
+            <div class="carousel__card--glass">
+              <h3>Inmobiliaria</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut,
+                corporis. Magnam illum blanditiis omnis aperiam facere vel iste
+                dolore sapiente officia delectus adipisci, enim obcaecati sequi
+                atque vitae aliquid soluta dolorem inventore numquam ratione
+                eligendi nostrum amet molestias impedit. Optio doloribus ad
+                repellendus recusandae sint cupiditate et nobis, vel doloremque
+                facilis delectus, possimus iste deserunt temporibus quia sed
+                veniam esse? Magnam nemo dolorum excepturi commodi deleniti
+                officiis quod iste ratione.
+              </p>
+            </div>
+          </div>
+
+          <div class="carousel__card">
+            <img src="./assets/images/globe.png" alt="servicios" />
+            <div class="carousel__card--glass">
+              <h3>Inmobiliaria</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut,
+                corporis. Magnam illum blanditiis omnis aperiam facere vel iste
+                dolore sapiente officia delectus adipisci, enim obcaecati sequi
+                atque vitae aliquid soluta dolorem inventore numquam ratione
+                eligendi nostrum amet molestias impedit. Optio doloribus ad
+                repellendus recusandae sint cupiditate et nobis, vel doloremque
+                facilis delectus, possimus iste deserunt temporibus quia sed
+                veniam esse? Magnam nemo dolorum excepturi commodi deleniti
+                officiis quod iste ratione.
+              </p>
+            </div>
+          </div>
+
+          <div class="carousel__card">
+            <img src="./assets/images/taxes.png" alt="servicios" />
+            <div class="carousel__card--glass">
+              <h3>Inmobiliaria</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut,
+                corporis. Magnam illum blanditiis omnis aperiam facere vel iste
+                dolore sapiente officia delectus adipisci, enim obcaecati sequi
+                atque vitae aliquid soluta dolorem inventore numquam ratione
+                eligendi nostrum amet molestias impedit. Optio doloribus ad
+                repellendus recusandae sint cupiditate et nobis, vel doloremque
+                facilis delectus, possimus iste deserunt temporibus quia sed
+                veniam esse? Magnam nemo dolorum excepturi commodi deleniti
+                officiis quod iste ratione.
+              </p>
+            </div>
+          </div>
+
+          <div class="carousel__card dots">
+            <p>...</p>
+          </div>
         </div>
 
         <div class="pagination">
           <span>03 / 07</span>
           <div class="pagination__btns">
-            <button>Prev</button>
+            <button id="prevBtn">Prev</button>
             <div class="line"></div>
-            <button>Next</button>
+            <button id="nextBtn">Next</button>
           </div>
         </div>
       </div>
@@ -182,7 +241,7 @@
           <div class="cards--left">
             <div class="cards--left__front">
               <div class="icon">
-                <img src="./assets/icons/woman-icon.png" />
+                <img src="./assets/icons/woman-icon.svg" />
               </div>
               <div class="name"><h4>DIMELZA ESCOBAR ABREGO</h4></div>
             </div>
@@ -205,7 +264,7 @@
           </div>
           <div class="cards--right">
             <div class="cards--right__front">
-              <div class="icon"><img src="./assets/icons/man-icon.png" /></div>
+              <div class="icon"><img src="./assets/icons/man-icon.svg" /></div>
               <div class="name"><h4>GABRIEL DE LA MORA GONZALEZ</h4></div>
             </div>
             <div class="cards--right__back">
@@ -225,8 +284,7 @@
       </div>
     </section>
 
-    <script defer src="./js/script.js"></script>
-      <div class="cards--right">
+    <!-- <div class="cards--right">
         <div class="cards--right__front"><div class="icon"><svg>
           <use xlink:href="assets/icons/sprite.svg#man-icon"></use>
         </svg></div>
@@ -240,34 +298,52 @@
       </div>      
     </div>
   </div>
-</section>
+</section> -->
 
-<section class="pasos">
-  <div class="title">
-   <h2> Pasos para una declaración trimestral</h2>
-  </div>
-  <div class="steps">
-    <div class="steps--icon"><svg class="steps--icon__up">
-          <use xlink:href="assets/icons/sprite.svg#contact"></use>
-        </svg><p>Contacta y te daremos una cuenta</p></div>
-    <div class="steps--icon steps--icon__down"><svg>
-          <use xlink:href="assets/icons/sprite.svg#user-icon"></use>
-        </svg><p>Inicia sesión</p></div>
-    <div class="steps--icon"><svg class="steps--icon__up">
-          <use xlink:href="assets/icons/sprite.svg#declare"></use>
-        </svg><p>Ingresa a Declarar</p></div>
-    <div class="steps--icon steps--icon__down"><svg>
-          <use xlink:href="assets/icons/sprite.svg#coins"></use>
-        </svg><p>Selecciona Ingreso o Gasto</p></div>
-    <div class="steps--icon"><svg class="steps--icon__up">
-          <use xlink:href="assets/icons/sprite.svg#fill"></use>
-        </svg><p>Rellena el formulario</p></div>
-    <div class="steps--icon steps--icon__down"><svg>
-          <use xlink:href="assets/icons/sprite.svg#done"></use>
-        </svg><p>Pulsa Guardar y continuar</p></div>
+    <section class="pasos">
+      <div class="title">
+        <h2>Pasos para una declaración trimestral</h2>
+      </div>
+      <div class="steps">
+        <div class="steps--icon">
+          <svg class="steps--icon__up">
+            <use xlink:href="assets/icons/sprite.svg#contact"></use>
+          </svg>
+          <p>Contacta y te daremos una cuenta</p>
+        </div>
+        <div class="steps--icon steps--icon__down">
+          <svg>
+            <use xlink:href="assets/icons/sprite.svg#user-icon"></use>
+          </svg>
+          <p>Inicia sesión</p>
+        </div>
+        <div class="steps--icon">
+          <svg class="steps--icon__up">
+            <use xlink:href="assets/icons/sprite.svg#declare"></use>
+          </svg>
+          <p>Ingresa a Declarar</p>
+        </div>
+        <div class="steps--icon steps--icon__down">
+          <svg>
+            <use xlink:href="assets/icons/sprite.svg#coins"></use>
+          </svg>
+          <p>Selecciona Ingreso o Gasto</p>
+        </div>
+        <div class="steps--icon">
+          <svg class="steps--icon__up">
+            <use xlink:href="assets/icons/sprite.svg#fill"></use>
+          </svg>
+          <p>Rellena el formulario</p>
+        </div>
+        <div class="steps--icon steps--icon__down">
+          <svg>
+            <use xlink:href="assets/icons/sprite.svg#done"></use>
+          </svg>
+          <p>Pulsa Guardar y continuar</p>
+        </div>
+      </div>
+    </section>
 
-  </div>
-</section>
-
+    <script defer src="./js/script.js"></script>
   </body>
 </html>
