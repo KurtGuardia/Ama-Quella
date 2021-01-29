@@ -1,36 +1,290 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="stylesheet" href="css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Ama Quella asesoría jurídica y fiscal en Salamanca, te ayuda con asuntos laborales, familiares, declaración de ascienda, alta en la seguridad social y mas ..."
+    />
+    <link
+      rel="shortcut icon"
+      type="image/svg"
+      href="./assets/icons/ama-quella-logo.svg"
+    />
+    <link rel="stylesheet" href="css/style.css" />
 
     <title>Ama Quella | Asesoria</title>
   </head>
   <body>
+    <!-- _______________________________ Navigation _______________________________ -->
+    <nav class="navigation">
+      <h1>Ama Quella</h1>
 
-<section id="quienes-somos">
-  <div class="about">
-    <div class="title">
-      <h2>Quienes Somos</h2>
-    </div>
-    <div class="cards">
-      <div class="cards--left">
-        <div class="cards--left__front">
-          <div class="icon"><svg><use xlink:href="assets/icons/sprite.svg#woman-icon"></use></svg></div>
-          <div class="name"><h4>DIMELZA ESCOBAR ABREGO</h4></div>
-        </div>
-        <div class="cards--left__back">
-          <p>De nacionalidad boliviana, residente en España desde 2007.
-          Abogada de profesión, Licenciada en Ciencias Jurídicas y Políticas por la UMSS (Bolivia) en el año 2004.
-          Obtuvo el Diploma de Estudios Avanzados en la Universidad de Salamanca en el año 2009, logrando el título de Doctora en
-          Derecho con la calificación de Sobresaliente “Cum Laude” en 2015.
-          Su trayectoria profesional abarca, desde el ejercicio de la profesión independiente de Abogada, el asesoramiento a
-          empresas privadas de telecomunicaciones, hasta el desarrollo de tareas para la Administración Pública Boliviana como
-          Consultora Externa.
-          Actualmente, arraigada en la ciudad de Salamanca, ejerce como Asesora Jurídica y Fiscal.</p>
+      <ul class="navigation__list">
+        <li class="navigation__item active">
+          <a href="#nosotros">Nosotros</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#pasos">Pasos</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#info">Información</a>
+        </li>
+        <a
+          href="https://oliverct.com"
+          target="_blank"
+          rel="noreferrer"
+          class="ingresar"
+          >Ingresar</a
+        >
+      </ul>
+
+      <div class="navigation__hamburger" id="menu">
+        <div class="line one"></div>
+        <div class="line two"></div>
+        <div class="line three"></div>
+      </div>
+
+      <ul class="navigation__phone" id="phone-nav">
+        <li class="navigation__item active">
+          <a href="#nosotros">Nosotros</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#pasos">Pasos</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#info">Información</a>
+        </li>
+        <a
+          href="https://oliverct.com"
+          target="_blank"
+          rel="noreferrer"
+          class="ingresar"
+          >Ingresar</a
+        >
+      </ul>
+    </nav>
+
+    <!-- ________________________________ Header ________________________________ -->
+    <header class="header">
+      <div class="header__left">
+        <img src="./assets/images/ama-quella-logo.svg" alt="logo" />
+
+        <h2 class="heading-primary">
+          <span class="heading-primary--main">Asesoria</span>
+          <span class="heading-primary--sub">Jurídica y Fiscal</span>
+        </h2>
+
+        <a href="https://oliverct.com" class="ingresar cta">Ingresar</a>
+
+        <div class="selector">
+          <div class="square selected" data-selected="1"></div>
+          <div class="square" data-selected="2"></div>
+          <div class="square" data-selected="3"></div>
+          <div class="square" data-selected="4"></div>
+          <div class="square" data-selected="5"></div>
+          <div class="square" data-selected="6"></div>
         </div>
       </div>
-      <div class="cards--right">
+      <div class="header__right">
+        <div class="carousel">
+          <div class="carousel__card">
+            <img src="./assets/images/house.png" alt="servicios" />
+            <div class="carousel__card--glass">
+              <h3>Inmobiliaria</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut,
+                corporis. Magnam illum blanditiis omnis aperiam facere vel iste
+                dolore sapiente officia delectus adipisci, enim obcaecati sequi
+                atque vitae aliquid soluta dolorem inventore numquam ratione
+                eligendi nostrum amet molestias impedit. Optio doloribus ad
+                repellendus recusandae sint cupiditate et nobis, vel doloremque
+                facilis delectus, possimus iste deserunt temporibus quia sed
+                veniam esse? Magnam nemo dolorum excepturi commodi deleniti
+                officiis quod iste ratione.
+              </p>
+            </div>
+          </div>
+
+          <div class="carousel__card">
+            <img src="./assets/images/library.png" alt="servicios" />
+            <div class="carousel__card--glass">
+              <h3>Inmobiliaria</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut,
+                corporis. Magnam illum blanditiis omnis aperiam facere vel iste
+                dolore sapiente officia delectus adipisci, enim obcaecati sequi
+                atque vitae aliquid soluta dolorem inventore numquam ratione
+                eligendi nostrum amet molestias impedit. Optio doloribus ad
+                repellendus recusandae sint cupiditate et nobis, vel doloremque
+                facilis delectus, possimus iste deserunt temporibus quia sed
+                veniam esse? Magnam nemo dolorum excepturi commodi deleniti
+                officiis quod iste ratione.
+              </p>
+            </div>
+          </div>
+
+          <div class="carousel__card">
+            <img src="./assets/images/justice.png" alt="servicios" />
+            <div class="carousel__card--glass">
+              <h3>Inmobiliaria</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut,
+                corporis. Magnam illum blanditiis omnis aperiam facere vel iste
+                dolore sapiente officia delectus adipisci, enim obcaecati sequi
+                atque vitae aliquid soluta dolorem inventore numquam ratione
+                eligendi nostrum amet molestias impedit. Optio doloribus ad
+                repellendus recusandae sint cupiditate et nobis, vel doloremque
+                facilis delectus, possimus iste deserunt temporibus quia sed
+                veniam esse? Magnam nemo dolorum excepturi commodi deleniti
+                officiis quod iste ratione.
+              </p>
+            </div>
+          </div>
+
+          <div class="carousel__card">
+            <img src="./assets/images/security.png" alt="servicios" />
+            <div class="carousel__card--glass">
+              <h3>Inmobiliaria</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut,
+                corporis. Magnam illum blanditiis omnis aperiam facere vel iste
+                dolore sapiente officia delectus adipisci, enim obcaecati sequi
+                atque vitae aliquid soluta dolorem inventore numquam ratione
+                eligendi nostrum amet molestias impedit. Optio doloribus ad
+                repellendus recusandae sint cupiditate et nobis, vel doloremque
+                facilis delectus, possimus iste deserunt temporibus quia sed
+                veniam esse? Magnam nemo dolorum excepturi commodi deleniti
+                officiis quod iste ratione.
+              </p>
+            </div>
+          </div>
+
+          <div class="carousel__card">
+            <img src="./assets/images/family.png" alt="servicios" />
+            <div class="carousel__card--glass">
+              <h3>Inmobiliaria</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut,
+                corporis. Magnam illum blanditiis omnis aperiam facere vel iste
+                dolore sapiente officia delectus adipisci, enim obcaecati sequi
+                atque vitae aliquid soluta dolorem inventore numquam ratione
+                eligendi nostrum amet molestias impedit. Optio doloribus ad
+                repellendus recusandae sint cupiditate et nobis, vel doloremque
+                facilis delectus, possimus iste deserunt temporibus quia sed
+                veniam esse? Magnam nemo dolorum excepturi commodi deleniti
+                officiis quod iste ratione.
+              </p>
+            </div>
+          </div>
+
+          <div class="carousel__card">
+            <img src="./assets/images/globe.png" alt="servicios" />
+            <div class="carousel__card--glass">
+              <h3>Inmobiliaria</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut,
+                corporis. Magnam illum blanditiis omnis aperiam facere vel iste
+                dolore sapiente officia delectus adipisci, enim obcaecati sequi
+                atque vitae aliquid soluta dolorem inventore numquam ratione
+                eligendi nostrum amet molestias impedit. Optio doloribus ad
+                repellendus recusandae sint cupiditate et nobis, vel doloremque
+                facilis delectus, possimus iste deserunt temporibus quia sed
+                veniam esse? Magnam nemo dolorum excepturi commodi deleniti
+                officiis quod iste ratione.
+              </p>
+            </div>
+          </div>
+
+          <div class="carousel__card">
+            <img src="./assets/images/taxes.png" alt="servicios" />
+            <div class="carousel__card--glass">
+              <h3>Inmobiliaria</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut,
+                corporis. Magnam illum blanditiis omnis aperiam facere vel iste
+                dolore sapiente officia delectus adipisci, enim obcaecati sequi
+                atque vitae aliquid soluta dolorem inventore numquam ratione
+                eligendi nostrum amet molestias impedit. Optio doloribus ad
+                repellendus recusandae sint cupiditate et nobis, vel doloremque
+                facilis delectus, possimus iste deserunt temporibus quia sed
+                veniam esse? Magnam nemo dolorum excepturi commodi deleniti
+                officiis quod iste ratione.
+              </p>
+            </div>
+          </div>
+
+          <div class="carousel__card dots">
+            <p>...</p>
+          </div>
+        </div>
+
+        <div class="pagination">
+          <span>03 / 07</span>
+          <div class="pagination__btns">
+            <button id="prevBtn">Prev</button>
+            <div class="line"></div>
+            <button id="nextBtn">Next</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- _______________________________ Quienes Somos _______________________________ -->
+    <section id="quienes-somos">
+      <div class="about">
+        <div class="title">
+          <h2>Quienes Somos</h2>
+        </div>
+        <div class="cards">
+          <div class="cards--left">
+            <div class="cards--left__front">
+              <div class="icon">
+                <img src="./assets/icons/woman-icon.svg" />
+              </div>
+              <div class="name"><h4>DIMELZA ESCOBAR ABREGO</h4></div>
+            </div>
+            <div class="cards--left__back">
+              <p>
+                De nacionalidad boliviana, residente en España desde 2007.
+                Abogada de profesión, Licenciada en Ciencias Jurídicas y
+                Políticas por la UMSS (Bolivia) en el año 2004. Obtuvo el
+                Diploma de Estudios Avanzados en la Universidad de Salamanca en
+                el año 2009, logrando el título de Doctora en Derecho con la
+                calificación de Sobresaliente “Cum Laude” en 2015. Su
+                trayectoria profesional abarca, desde el ejercicio de la
+                profesión independiente de Abogada, el asesoramiento a empresas
+                privadas de telecomunicaciones, hasta el desarrollo de tareas
+                para la Administración Pública Boliviana como Consultora
+                Externa. Actualmente, arraigada en la ciudad de Salamanca,
+                ejerce como Asesora Jurídica y Fiscal.
+              </p>
+            </div>
+          </div>
+          <div class="cards--right">
+            <div class="cards--right__front">
+              <div class="icon"><img src="./assets/icons/man-icon.svg" /></div>
+              <div class="name"><h4>GABRIEL DE LA MORA GONZALEZ</h4></div>
+            </div>
+            <div class="cards--right__back">
+              <p>
+                Ingeniero Técnico agrícola por la Universidad de Salamanca en el
+                año 2004. Licenciado en Ciencias Ambientales por la Universidad
+                de Salamanca en el año 2006. Licenciado en Derecho por la
+                Universidad de Salamanca en 2011. Máster en Abogacía
+                Internacional Práctica por la Universidad de Murcia en 2012.
+                Ejerce activamente la profesión de abogado desde su colegiatura
+                en el Ilustre Colegio de Abogados de Salamanca desde 2012,
+                prestando atención jurídica como Abogado de Extranjería y Asilo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <div class="cards--right">
         <div class="cards--right__front"><div class="icon"><svg>
           <use xlink:href="assets/icons/sprite.svg#man-icon"></use>
         </svg></div>
@@ -44,34 +298,52 @@
       </div>      
     </div>
   </div>
-</section>
+</section> -->
 
-<section class="pasos">
-  <div class="title">
-   <h2> Pasos para una declaración trimestral</h2>
-  </div>
-  <div class="steps">
-    <div class="steps--icon"><svg class="steps--icon__up">
-          <use xlink:href="assets/icons/sprite.svg#contact"></use>
-        </svg><p>Contacta y te daremos una cuenta</p></div>
-    <div class="steps--icon steps--icon__down"><svg>
-          <use xlink:href="assets/icons/sprite.svg#user-icon"></use>
-        </svg><p>Inicia sesión</p></div>
-    <div class="steps--icon"><svg class="steps--icon__up">
-          <use xlink:href="assets/icons/sprite.svg#declare"></use>
-        </svg><p>Ingresa a Declarar</p></div>
-    <div class="steps--icon steps--icon__down"><svg>
-          <use xlink:href="assets/icons/sprite.svg#coins"></use>
-        </svg><p>Selecciona Ingreso o Gasto</p></div>
-    <div class="steps--icon"><svg class="steps--icon__up">
-          <use xlink:href="assets/icons/sprite.svg#fill"></use>
-        </svg><p>Rellena el formulario</p></div>
-    <div class="steps--icon steps--icon__down"><svg>
-          <use xlink:href="assets/icons/sprite.svg#done"></use>
-        </svg><p>Pulsa Guardar y continuar</p></div>
+    <section class="pasos">
+      <div class="title">
+        <h2>Pasos para una declaración trimestral</h2>
+      </div>
+      <div class="steps">
+        <div class="steps--icon">
+          <svg class="steps--icon__up">
+            <use xlink:href="assets/icons/sprite.svg#contact"></use>
+          </svg>
+          <p>Contacta y te daremos una cuenta</p>
+        </div>
+        <div class="steps--icon steps--icon__down">
+          <svg>
+            <use xlink:href="assets/icons/sprite.svg#user-icon"></use>
+          </svg>
+          <p>Inicia sesión</p>
+        </div>
+        <div class="steps--icon">
+          <svg class="steps--icon__up">
+            <use xlink:href="assets/icons/sprite.svg#declare"></use>
+          </svg>
+          <p>Ingresa a Declarar</p>
+        </div>
+        <div class="steps--icon steps--icon__down">
+          <svg>
+            <use xlink:href="assets/icons/sprite.svg#coins"></use>
+          </svg>
+          <p>Selecciona Ingreso o Gasto</p>
+        </div>
+        <div class="steps--icon">
+          <svg class="steps--icon__up">
+            <use xlink:href="assets/icons/sprite.svg#fill"></use>
+          </svg>
+          <p>Rellena el formulario</p>
+        </div>
+        <div class="steps--icon steps--icon__down">
+          <svg>
+            <use xlink:href="assets/icons/sprite.svg#done"></use>
+          </svg>
+          <p>Pulsa Guardar y continuar</p>
+        </div>
+      </div>
+    </section>
 
-  </div>
-</section>
-
+    <script defer src="./js/script.js"></script>
   </body>
 </html>

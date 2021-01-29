@@ -1,0 +1,34 @@
+.header {
+  width: 100%;
+  padding: 5rem;
+  padding-right: 0;
+  margin-top: 6rem;
+  background: radial-gradient(
+    74.41% 147.15% at 74.41% 60.94%,
+    #222127f2 0%,
+    #222127 100%
+  );
+  color: $text-light;
+  display: flex;
+
+  &__left {
+    width: 35%;
+    padding: 2rem;
+    padding-bottom: 7rem;
+    position: relative;
+
+    img {
+      max-width: 12.5rem;
+    }
+
+    a {
+      display: inline-block;
+    }
+  }
+
+  &__right {
+    width: 65%;
+    position: relative;
+    padding-bottom: 7rem;
+  }
+}
