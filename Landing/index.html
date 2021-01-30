@@ -350,37 +350,113 @@
           <h2>Contáctanos</h2>
         </div>
         <form class="form">
-        <div class="form__group">
-          <input type="text" id="name" name="nombre" class="form__group--input" placeholder="*Nombre" required />
-          <label for="name" class="form__group--label">Nombre</label>
-        </div>
-        
-        <div class="form__group">
-          <input type="email" id="email" name="email" class="form__group--input" placeholder="*Email" required />
-          <label for="email" class="form__group--label">Email</label>
-        </div>
+          <div class="form__group">
+            <input
+              type="text"
+              id="name"
+              name="nombre"
+              class="form__group--input"
+              placeholder="*Nombre"
+              required
+            />
+            <label for="name" class="form__group--label">Nombre</label>
+          </div>
 
-        <div class="form__group">
-          <input type="number" id="phone" name="numero" class="form__group--input" placeholder="Teléfono" />
-          <label for="phone" class="form__group--label">Teléfono</label>
-        </div>
+          <div class="form__group">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form__group--input"
+              placeholder="*Email"
+              required
+            />
+            <label for="email" class="form__group--label">Email</label>
+          </div>
 
-        <div class="form__group">
-          <textarea rows="4" id="message" name="message" class="form__group--input"
-            placeholder="Tu mensaje."
-            required></textarea>
-        </div>
+          <div class="form__group">
+            <input
+              type="number"
+              id="phone"
+              name="numero"
+              class="form__group--input"
+              placeholder="Teléfono"
+            />
+            <label for="phone" class="form__group--label">Teléfono</label>
+          </div>
 
-        <div class="form__group--btn">
-          <button class="ingresar cta">Enviar</button>
-        </div>
+          <div class="form__group">
+            <textarea
+              rows="4"
+              id="message"
+              name="message"
+              class="form__group--input"
+              placeholder="Tu mensaje."
+              required
+            ></textarea>
+          </div>
+
+          <div class="form__group--btn">
+            <button class="ingresar cta">Enviar</button>
+          </div>
         </form>
-
       </div>
-        <div class="contact__img">
-          <img src="./assets/images/contact-form.png" alt="logo" />
-        </div>
+      <div class="contact__img">
+        <img src="./assets/images/contact-form.png" alt="logo" />
+      </div>
     </section>
+
+    <!-- ________________________________ Footer ________________________________ -->
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="footer__nav">
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item"><a href="#">Home</a></li>
+            <li class="footer__nav-item"><a href="#us">Nosotros</a></li>
+            <li class="footer__nav-item"><a href="#steps">Pasos</a></li>
+            <li class="footer__nav-item"><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__logo">
+          <a href="#">
+            <img src="./assets/icons/ama-quella-logo.svg" alt="logo footer" />
+          </a>
+        </div>
+        <div class="footer__link">
+          <a href="#" class="footer__link-item">
+            <svg class="footer__link-icon">
+              <use xlink:href="assets/icons/sprite.svg#phone"></use>
+            </svg>
+            <p>+34 617 729 711</p>
+          </a>
+          <a href="#" class="footer__link-item">
+            <svg class="footer__link-icon">
+              <use xlink:href="assets/icons/sprite.svg#phone-old"></use>
+            </svg>
+            <p>923 995 136</p>
+          </a>
+          <a href="#" class="footer__link-item">
+            <svg class="footer__link-icon">
+              <use xlink:href="assets/icons/sprite.svg#mail"></use>
+            </svg>
+            <p>amaquellaabogados@gmail.com</p>
+          </a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>Copyright &copy; 2020</p>
+        <a
+          href="https://www.phi-desarrollo.com/"
+          rel="noreferrer"
+          target="_blank"
+          >Phi - Desarrollo Web &nbsp;</a
+        >
+        <span> & &nbsp;</span>
+        <a href="https://oliverct.com/" rel="noreferrer" target="_blank"
+          >Oliver Castro Teran</a
+        >
+      </div>
+    </footer>
 
     <script defer src="./js/script.js"></script>
   </body>
