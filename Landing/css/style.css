@@ -203,7 +203,7 @@ body {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 0 1.5rem;
+      padding: 0 2rem;
       border-radius: 7px;
       top: 0;
       left: 0;
@@ -218,6 +218,11 @@ body {
       .carousel__card--glass h3 {
         font-size: 2rem;
         margin-bottom: 1rem; }
+      .carousel__card--glass ul {
+        margin-right: 1rem; }
+        .carousel__card--glass ul li {
+          margin: 1rem;
+          font-size: 16px; }
     .carousel__card.dots {
       font-size: 5rem;
       width: 100%;
@@ -533,7 +538,14 @@ body {
     justify-content: center;
     align-items: center;
     justify-content: space-between;
-    width: 100%; }
+    width: 100%;
+    max-width: 1200px; }
+    @media only screen and (max-width: 68.75em) {
+      #pasos .steps {
+        max-width: 900px; } }
+    @media screen and (max-width: 1300px) {
+      #pasos .steps {
+        max-width: 1000px; } }
     @media only screen and (max-width: 56.25em) {
       #pasos .steps {
         flex-wrap: wrap;
@@ -548,10 +560,11 @@ body {
         #pasos .steps__icon {
           flex: 50%; } }
       #pasos .steps__icon > svg {
-        width: 15rem; }
-        @media only screen and (max-width: 56.25em) {
+        width: 10rem; }
+        @media only screen and (max-width: 68.75em) {
           #pasos .steps__icon > svg {
-            width: 10rem; } }
+            width: 7rem;
+            height: 7rem; } }
       #pasos .steps__icon--down {
         transform: translateY(12rem); }
         @media only screen and (max-width: 56.25em) {

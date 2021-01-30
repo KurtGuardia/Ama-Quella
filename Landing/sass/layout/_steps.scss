@@ -39,6 +39,15 @@
     @include flexCenter();
     justify-content: space-between;
     width: 100%;
+    max-width: 1200px;
+
+    @include respond(tab-land) {
+      max-width: 900px;
+    }
+
+    @media screen and (max-width: 1300px) {
+      max-width: 1000px;
+    }
 
     @include respond(tab-port) {
       flex-wrap: wrap;
@@ -54,10 +63,11 @@
       }
 
       & > svg {
-        width: 15rem;
+        width: 10rem;
 
-        @include respond(tab-port) {
-          width: 10rem;
+        @include respond(tab-land) {
+          width: 7rem;
+          height: 7rem;
         }
       }
 
