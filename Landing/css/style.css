@@ -64,13 +64,13 @@ body {
     body {
       padding: 0; } }
   body::-webkit-scrollbar {
-    width: 1rem; }
+    width: 1.5rem; }
   body::-webkit-scrollbar-track {
     background-color: #222127;
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3); }
   body::-webkit-scrollbar-thumb {
     background-color: rgba(136, 136, 136, 0.5);
-    border-radius: 4px; }
+    border-radius: 6px; }
 
 ::selection {
   background-color: #222127;
@@ -289,6 +289,9 @@ body {
         -moz-perspective: 150rem;
         position: relative;
         transition: all 0.8s ease; }
+        @media only screen and (max-width: 37.5em) {
+          #quienes-somos .about .cards > div {
+            margin: 2rem 0; } }
         #quienes-somos .about .cards > div > * {
           transition: all 0.8s ease;
           position: absolute;
@@ -323,6 +326,9 @@ body {
             color: #fff;
             letter-spacing: 0.5px;
             font-size: 15px; }
+            @media only screen and (max-width: 37.5em) {
+              #quienes-somos .about .cards > div > *:last-child p {
+                font-size: 10px; } }
         #quienes-somos .about .cards > div:hover .cards__left--front {
           transform: rotateY(-180deg); }
         #quienes-somos .about .cards > div:hover .cards__left--back {
@@ -511,10 +517,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #d8890b;
   height: 72rem;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
   #contact .contact-form {
+    background: #d8890b;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -523,6 +530,10 @@ body {
     height: 100%;
     width: 61.8%;
     color: #fff; }
+    @media only screen and (max-width: 37.5em) {
+      #contact .contact-form {
+        width: 100%;
+        background: rgba(216, 137, 11, 0.8); } }
     #contact .contact-form__title {
       font-size: 2rem;
       letter-spacing: 1px;
@@ -574,6 +585,9 @@ body {
             border-bottom: 5px solid #e91717; }
           #contact .contact-form .form__group--input::-webkit-input-placeholder {
             color: #cacaca; }
+            @media only screen and (max-width: 37.5em) {
+              #contact .contact-form .form__group--input::-webkit-input-placeholder {
+                color: #222127; } }
         #contact .contact-form .form__group--label {
           font-size: 1.2rem;
           font-weight: 700;
@@ -584,19 +598,34 @@ body {
           top: 10px;
           left: 0;
           transform: translate(-50%, 50%); }
+          @media only screen and (max-width: 56.25em) {
+            #contact .contact-form .form__group--label {
+              transform: translate(0, -150%); } }
         #contact .contact-form .form__group--input:placeholder-shown + .form__group--label {
           opacity: 0;
           visibility: hidden;
           transform: translate(100%, 50%); }
+          @media only screen and (max-width: 56.25em) {
+            #contact .contact-form .form__group--input:placeholder-shown + .form__group--label {
+              transform: translate(60%, 50%); } }
         #contact .contact-form .form__group--btn button {
           background-color: #222127;
           margin-left: 0; }
           #contact .contact-form .form__group--btn button:hover {
             background-color: #3e365e; }
-  #contact__img {
-    width: 38.2%; }
-    #contact__img img {
-      width: 100%; }
+  #contact .contact__img {
+    width: 38.2%;
+    height: 100%; }
+    @media only screen and (max-width: 37.5em) {
+      #contact .contact__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%; } }
+    #contact .contact__img img {
+      width: 100%;
+      height: 100%; }
 
 .footer {
   display: flex;
@@ -664,9 +693,17 @@ body {
     margin-top: 3rem;
     color: #fff;
     display: flex; }
+    @media only screen and (max-width: 37.5em) {
+      .footer__bottom {
+        flex-wrap: wrap;
+        justify-content: space-evenly; } }
     .footer__bottom p {
       opacity: 0.5;
       margin-right: 1rem; }
+      @media only screen and (max-width: 37.5em) {
+        .footer__bottom p {
+          width: 100vw;
+          text-align: center; } }
     .footer__bottom span {
       opacity: 0.5; }
     .footer__bottom a {
@@ -674,5 +711,5 @@ body {
       text-decoration: none;
       color: #fff;
       opacity: 0.5; }
-    .footer__bottom a:hover {
-      opacity: 1; }
+      .footer__bottom a:hover {
+        opacity: 1; }
