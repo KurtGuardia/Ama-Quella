@@ -91,21 +91,35 @@
     margin-top: 3rem;
     color: #fff;
     display: flex;
+
+    @include respond(phone) {
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+
     p {
       opacity: 0.5;
       margin-right: 1rem;
+
+      @include respond(phone) {
+        width: 100vw;
+        text-align: center;
+      }
     }
+
     span {
       opacity: 0.5;
     }
+
     a {
       font-size: 1.8rem;
       text-decoration: none;
       color: #fff;
       opacity: 0.5;
-    }
-    a:hover {
-      opacity: 1;
+
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 }

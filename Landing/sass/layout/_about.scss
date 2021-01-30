@@ -59,6 +59,10 @@
         position: relative;
         transition: all 0.8s ease;
 
+        @include respond(phone) {
+          margin: 2rem 0;
+        }
+
         //to both sides front and back
         & > * {
           transition: all 0.8s ease;
@@ -74,6 +78,7 @@
           width: 100%;
           border: 1px solid $color-primary;
           border-radius: 15px;
+
           & > * {
             padding: 2rem 0;
             font-size: $large-font-size;
@@ -96,6 +101,10 @@
             color: $color-white;
             letter-spacing: 0.5px;
             font-size: 15px;
+
+            @include respond(phone) {
+              font-size: 10px;
+            }
           }
         }
 
