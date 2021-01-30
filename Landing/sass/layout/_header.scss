@@ -11,11 +11,25 @@
   color: $text-light;
   display: flex;
 
+  @include respond(phone) {
+    flex-direction: column;
+    padding: 3rem;
+    padding-right: 0;
+  }
+
   &__left {
     width: 35%;
     padding: 2rem;
     padding-bottom: 7rem;
     position: relative;
+
+    @include respond(tab-port) {
+      padding-bottom: 5rem;
+    }
+
+    @include respond(phone) {
+      width: 100%;
+    }
 
     img {
       max-width: 12.5rem;
@@ -30,5 +44,14 @@
     width: 65%;
     position: relative;
     padding-bottom: 7rem;
+
+    @include respond(tab-port) {
+      padding-bottom: 5rem;
+    }
+
+    @include respond(phone) {
+      margin-top: 2rem;
+      width: 100%;
+    }
   }
 }

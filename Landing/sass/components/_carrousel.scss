@@ -26,6 +26,10 @@
   height: 52rem;
   overflow: hidden;
 
+  @include respond(tab-port) {
+    height: 35rem;
+  }
+
   &__card {
     position: relative;
     display: inline-block;
@@ -37,9 +41,23 @@
     overflow: hidden;
     transition: transform 0.3s;
 
+    @include respond(tab-port) {
+      min-width: 20rem;
+      min-height: 35rem;
+    }
+
+    @include respond(phone) {
+      margin-right: 2rem;
+    }
+
     img {
       width: 29.2rem;
       height: 52rem;
+
+      @include respond(tab-port) {
+        width: 20rem;
+        height: 35rem;
+      }
     }
 
     &:hover {
@@ -68,6 +86,10 @@
       );
       backdrop-filter: blur(1.5rem);
       transition: opacity 0.4s;
+
+      @include respond(tab-port) {
+        height: 35rem;
+      }
 
       h3 {
         font-size: 2rem;

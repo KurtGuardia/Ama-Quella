@@ -37,6 +37,11 @@
       @include flexCenter();
       justify-content: space-between;
       width: 100%;
+      max-width: 1000px;
+
+      @include respond(big-desktop) {
+        max-width: 1300px;
+      }
 
       @include respond(tab-port) {
         flex-direction: column;
@@ -59,8 +64,13 @@
         position: relative;
         transition: all 0.8s ease;
 
-        @include respond(phone) {
+        @include respond(tab-port) {
           margin: 2rem 0;
+          width: 60rem;
+        }
+
+        @include respond(phone) {
+          width: 40rem;
         }
 
         //to both sides front and back

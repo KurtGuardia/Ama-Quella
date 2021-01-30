@@ -54,7 +54,7 @@
           border-radius: 2px;
           background-color: transparent;
           border: none;
-          border-bottom: 3px solid $color-white;
+          border-bottom: 3px solid rgba($color-white, 0.5);
           display: block;
           width: 90%;
           transition: all 0.3s;

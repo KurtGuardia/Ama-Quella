@@ -65,16 +65,26 @@ body {
       padding: 0; } }
   body::-webkit-scrollbar {
     width: 1.5rem; }
+    @media only screen and (max-width: 37.5em) {
+      body::-webkit-scrollbar {
+        width: 0;
+        display: none; } }
   body::-webkit-scrollbar-track {
     background-color: #222127;
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3); }
+    @media only screen and (max-width: 56.25em) {
+      body::-webkit-scrollbar-track {
+        box-shadow: none; } }
   body::-webkit-scrollbar-thumb {
     background-color: rgba(136, 136, 136, 0.5);
     border-radius: 6px; }
 
 ::selection {
   background-color: #222127;
-  color: #fff; }
+  color: #ffffff; }
+
+.title {
+  opacity: 0.9; }
 
 .heading-primary {
   color: #f9f9f9;
@@ -157,6 +167,9 @@ body {
   width: 100%;
   height: 52rem;
   overflow: hidden; }
+  @media only screen and (max-width: 56.25em) {
+    .carousel {
+      height: 35rem; } }
   .carousel__card {
     position: relative;
     display: inline-block;
@@ -167,9 +180,20 @@ body {
     margin-right: 3rem;
     overflow: hidden;
     transition: transform 0.3s; }
+    @media only screen and (max-width: 56.25em) {
+      .carousel__card {
+        min-width: 20rem;
+        min-height: 35rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .carousel__card {
+        margin-right: 2rem; } }
     .carousel__card img {
       width: 29.2rem;
       height: 52rem; }
+      @media only screen and (max-width: 56.25em) {
+        .carousel__card img {
+          width: 20rem;
+          height: 35rem; } }
     .carousel__card:hover .carousel__card--glass {
       opacity: 1; }
     .carousel__card--glass {
@@ -188,6 +212,9 @@ body {
       background: linear-gradient(to right bottom, rgba(111, 111, 111, 0.7), rgba(111, 111, 111, 0.3));
       backdrop-filter: blur(1.5rem);
       transition: opacity 0.4s; }
+      @media only screen and (max-width: 56.25em) {
+        .carousel__card--glass {
+          height: 35rem; } }
       .carousel__card--glass h3 {
         font-size: 2rem;
         margin-bottom: 1rem; }
@@ -269,7 +296,11 @@ body {
       justify-content: center;
       align-items: center;
       justify-content: space-between;
-      width: 100%; }
+      width: 100%;
+      max-width: 1000px; }
+      @media only screen and (min-width: 112.5em) {
+        #quienes-somos .about .cards {
+          max-width: 1300px; } }
       @media only screen and (max-width: 56.25em) {
         #quienes-somos .about .cards {
           flex-direction: column; }
@@ -289,9 +320,13 @@ body {
         -moz-perspective: 150rem;
         position: relative;
         transition: all 0.8s ease; }
+        @media only screen and (max-width: 56.25em) {
+          #quienes-somos .about .cards > div {
+            margin: 2rem 0;
+            width: 60rem; } }
         @media only screen and (max-width: 37.5em) {
           #quienes-somos .about .cards > div {
-            margin: 2rem 0; } }
+            width: 40rem; } }
         #quienes-somos .about .cards > div > * {
           transition: all 0.8s ease;
           position: absolute;
@@ -323,7 +358,7 @@ body {
           border-radius: 15px;
           transform: rotateY(180deg); }
           #quienes-somos .about .cards > div > *:last-child p {
-            color: #fff;
+            color: #ffffff;
             letter-spacing: 0.5px;
             font-size: 15px; }
             @media only screen and (max-width: 37.5em) {
@@ -346,11 +381,22 @@ body {
   background: radial-gradient(74.41% 147.15% at 74.41% 60.94%, #222127f2 0%, #222127 100%);
   color: #f9f9f9;
   display: flex; }
+  @media only screen and (max-width: 37.5em) {
+    .header {
+      flex-direction: column;
+      padding: 3rem;
+      padding-right: 0; } }
   .header__left {
     width: 35%;
     padding: 2rem;
     padding-bottom: 7rem;
     position: relative; }
+    @media only screen and (max-width: 56.25em) {
+      .header__left {
+        padding-bottom: 5rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .header__left {
+        width: 100%; } }
     .header__left img {
       max-width: 12.5rem; }
     .header__left a {
@@ -359,6 +405,13 @@ body {
     width: 65%;
     position: relative;
     padding-bottom: 7rem; }
+    @media only screen and (max-width: 56.25em) {
+      .header__right {
+        padding-bottom: 5rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .header__right {
+        margin-top: 2rem;
+        width: 100%; } }
 
 .navigation {
   z-index: 10;
@@ -440,7 +493,7 @@ body {
     .navigation__phone li {
       margin-bottom: 1rem; }
     .navigation__phone.open {
-      transform: translateX(0); }
+      transform: translate(7px, 7px); }
 
 #pasos {
   display: flex;
@@ -454,12 +507,12 @@ body {
   padding: 5rem 0;
   font-size: 1.6rem;
   text-align: center;
-  color: #fff; }
+  color: #ffffff; }
   @media only screen and (max-width: 56.25em) {
     #pasos {
       height: auto; } }
   #pasos .title {
-    color: #fff;
+    color: #ffffff;
     font-size: 2rem;
     position: relative;
     margin-bottom: 10rem; }
@@ -473,7 +526,7 @@ body {
       left: 50%;
       width: 32rem;
       height: 0.35rem;
-      background-color: #fff;
+      background-color: #ffffff;
       transform: translateX(-50%); }
   #pasos .steps {
     display: flex;
@@ -529,7 +582,7 @@ body {
     justify-content: space-around;
     height: 100%;
     width: 61.8%;
-    color: #fff; }
+    color: #ffffff; }
     @media only screen and (max-width: 37.5em) {
       #contact .contact-form {
         width: 100%;
@@ -545,7 +598,7 @@ body {
         left: 50%;
         width: 12rem;
         height: 0.35rem;
-        background-color: #fff;
+        background-color: #ffffff;
         transform: translateX(-50%); }
     #contact .contact-form .form {
       display: flex;
@@ -570,7 +623,7 @@ body {
           border-radius: 2px;
           background-color: transparent;
           border: none;
-          border-bottom: 3px solid #fff;
+          border-bottom: 3px solid rgba(255, 255, 255, 0.5);
           display: block;
           width: 90%;
           transition: all 0.3s; }
