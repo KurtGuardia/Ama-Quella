@@ -1,10 +1,10 @@
-.contact {
+#contact {
   @include flexCenter();
   background: $color-secondary;
   height: 72rem;
   overflow: hidden;
 
-  &-form {
+  .contact-form {
     @include flexColumnCenter();
     justify-content: space-around;
     height: 100%;

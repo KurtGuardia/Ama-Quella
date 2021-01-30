@@ -436,7 +436,7 @@ body {
     .navigation__phone.open {
       transform: translateX(0); }
 
-.pasos {
+#pasos {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -450,17 +450,17 @@ body {
   text-align: center;
   color: #fff; }
   @media only screen and (max-width: 56.25em) {
-    .pasos {
+    #pasos {
       height: auto; } }
-  .pasos .title {
+  #pasos .title {
     color: #fff;
     font-size: 2rem;
     position: relative;
     margin-bottom: 10rem; }
     @media only screen and (max-width: 37.5em) {
-      .pasos .title {
+      #pasos .title {
         margin-bottom: 5rem; } }
-    .pasos .title::after {
+    #pasos .title::after {
       position: absolute;
       content: '';
       bottom: -1rem;
@@ -469,52 +469,52 @@ body {
       height: 0.35rem;
       background-color: #fff;
       transform: translateX(-50%); }
-  .pasos .steps {
+  #pasos .steps {
     display: flex;
     justify-content: center;
     align-items: center;
     justify-content: space-between;
     width: 100%; }
     @media only screen and (max-width: 56.25em) {
-      .pasos .steps {
+      #pasos .steps {
         flex-wrap: wrap;
         width: 70%; } }
-    .pasos .steps__icon {
+    #pasos .steps__icon {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       width: 20rem; }
       @media only screen and (max-width: 56.25em) {
-        .pasos .steps__icon {
+        #pasos .steps__icon {
           flex: 50%; } }
-      .pasos .steps__icon > svg {
+      #pasos .steps__icon > svg {
         width: 15rem; }
         @media only screen and (max-width: 56.25em) {
-          .pasos .steps__icon > svg {
+          #pasos .steps__icon > svg {
             width: 10rem; } }
-      .pasos .steps__icon--down {
+      #pasos .steps__icon--down {
         transform: translateY(12rem); }
         @media only screen and (max-width: 56.25em) {
-          .pasos .steps__icon--down {
+          #pasos .steps__icon--down {
             transform: translateY(0); } }
-      .pasos .steps__icon p {
+      #pasos .steps__icon p {
         margin-top: 2rem; }
         @media only screen and (max-width: 56.25em) {
-          .pasos .steps__icon p {
+          #pasos .steps__icon p {
             margin-top: 0;
             margin-bottom: 2rem;
             font-size: 15px;
             letter-spacing: 0.5px; } }
 
-.contact {
+#contact {
   display: flex;
   justify-content: center;
   align-items: center;
   background: #d8890b;
   height: 72rem;
   overflow: hidden; }
-  .contact-form {
+  #contact .contact-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -523,11 +523,11 @@ body {
     height: 100%;
     width: 61.8%;
     color: #fff; }
-    .contact-form__title {
+    #contact .contact-form__title {
       font-size: 2rem;
       letter-spacing: 1px;
       position: relative; }
-      .contact-form__title::after {
+      #contact .contact-form__title::after {
         position: absolute;
         content: '';
         bottom: -0.5rem;
@@ -536,7 +536,7 @@ body {
         height: 0.35rem;
         background-color: #fff;
         transform: translateX(-50%); }
-    .contact-form .form {
+    #contact .contact-form .form {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -544,14 +544,14 @@ body {
       justify-content: space-between;
       height: 50rem;
       width: 80%; }
-      .contact-form .form__group {
+      #contact .contact-form .form__group {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         position: relative;
         width: 100%; }
-        .contact-form .form__group--input {
+        #contact .contact-form .form__group--input {
           font-size: 1.5rem;
           font-family: inherit;
           color: #222127;
@@ -564,17 +564,17 @@ body {
           width: 90%;
           transition: all 0.3s; }
           @media only screen and (max-width: 56.25em) {
-            .contact-form .form__group--input {
+            #contact .contact-form .form__group--input {
               width: 100%; } }
-          .contact-form .form__group--input:focus {
+          #contact .contact-form .form__group--input:focus {
             outline: none;
             box-shadow: 0 1rem 2rem rgba(10, 10, 10, 0.22);
             border-bottom: 5px solid #5fb950; }
-          .contact-form .form__group--input:focus:invalid {
+          #contact .contact-form .form__group--input:focus:invalid {
             border-bottom: 5px solid #e91717; }
-          .contact-form .form__group--input::-webkit-input-placeholder {
+          #contact .contact-form .form__group--input::-webkit-input-placeholder {
             color: #cacaca; }
-        .contact-form .form__group--label {
+        #contact .contact-form .form__group--label {
           font-size: 1.2rem;
           font-weight: 700;
           letter-spacing: 0.5px;
@@ -584,18 +584,18 @@ body {
           top: 10px;
           left: 0;
           transform: translate(-50%, 50%); }
-        .contact-form .form__group--input:placeholder-shown + .form__group--label {
+        #contact .contact-form .form__group--input:placeholder-shown + .form__group--label {
           opacity: 0;
           visibility: hidden;
           transform: translate(100%, 50%); }
-        .contact-form .form__group--btn button {
+        #contact .contact-form .form__group--btn button {
           background-color: #222127;
           margin-left: 0; }
-          .contact-form .form__group--btn button:hover {
+          #contact .contact-form .form__group--btn button:hover {
             background-color: #3e365e; }
-  .contact__img {
+  #contact__img {
     width: 38.2%; }
-    .contact__img img {
+    #contact__img img {
       width: 100%; }
 
 .footer {
