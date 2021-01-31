@@ -40,3 +40,10 @@ nextBtn.addEventListener('click', () => {
   if (counter === 6) counter = 0;
   carouselMotion();
 });
+
+setInterval(() => {
+  counter += 1;
+  carouselMotion();
+  if (counter === 6) counter = 0;
+  carouselMotion();
+}, 4250);
