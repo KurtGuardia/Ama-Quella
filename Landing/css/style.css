@@ -543,9 +543,6 @@ body {
     @media only screen and (max-width: 68.75em) {
       #pasos .steps {
         max-width: 900px; } }
-    @media screen and (max-width: 1300px) {
-      #pasos .steps {
-        max-width: 1000px; } }
     @media only screen and (max-width: 56.25em) {
       #pasos .steps {
         flex-wrap: wrap;
