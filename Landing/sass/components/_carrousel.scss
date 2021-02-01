@@ -143,6 +143,7 @@
     }
 
     button {
+      height: 2rem;
       opacity: 0.7;
       outline: none;
       cursor: pointer;
@@ -155,7 +156,18 @@
       &:hover {
         opacity: 1;
         color: #fff;
+        filter: brightness(2);
       }
+    }
+
+    &--left,
+    &--right {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    &--left {
+      transform: rotate(180deg);
     }
   }
 }

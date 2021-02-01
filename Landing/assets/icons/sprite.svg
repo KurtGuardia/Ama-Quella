@@ -214,4 +214,7 @@
   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 35" id="phone-old">
     <path d="M22.95 33.434l-1.74.96C11.032 39.673-6.618 8.88 3.303 3.062l1.67-.93 5.416 9.432-1.66.921c-3.015 1.816 4.024 14.156 7.114 12.462l1.695-.936 5.412 9.422zM8.646 0l-2.45 1.422 5.417 9.43 2.451-1.422L8.646 0zm12.561 21.87l-2.45 1.422 5.416 9.431 2.452-1.421-5.418-9.431z" fill="#fff" fill-opacity=".5"></path>
   </symbol>
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="arrow">
+    <path d="M5 3l3.057-3L20 12 8.057 24 5 21l9-9-9-9z" fill="#8D8D90"></path>
+  </symbol>
 </svg>
