@@ -21,6 +21,10 @@
       width: 60px;
       height: 60px;
 
+      &.dark {
+        opacity: 0.15;
+      }
+
       &:not(:last-child)::after {
         position: absolute;
         top: 50%;
@@ -52,6 +56,24 @@
   }
 
   &__icons {
+    &--icon {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      & > p {
+        margin-top: 2rem;
+        margin-left: -2rem;
+      }
+
+      &.dark {
+        opacity: 0.15;
+      }
+
+      &.down {
+        transform: translateY(8rem);
+      }
+    }
   }
 
   &__buttons {
