@@ -1,0 +1,54 @@
+.tutorial {
+  height: 100vh;
+  background-color: #222127;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  & > * {
+    display: flex;
+  }
+
+  &__top {
+  }
+
+  &__icons {
+  }
+
+  &__buttons {
+    width: 100%;
+    justify-content: space-between;
+
+    & > div {
+      display: flex;
+      align-items: center;
+      margin: 0 2rem;
+      border: 1px solid #fff;
+      border-radius: 10px;
+      padding: 0.5rem 1rem;
+      transition: all 0.3s;
+
+      &:hover {
+        cursor: pointer;
+        background-color: #313146;
+      }
+
+      svg {
+        width: 25px;
+        height: 25px;
+        margin: 0 1rem;
+
+        &:first-child {
+          transform: rotate(180deg);
+          margin-left: 0;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
