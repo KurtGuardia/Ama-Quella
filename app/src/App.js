@@ -1,9 +1,10 @@
 import './App.scss';
+import Tutorial from './views/tutorial/Tutorial';
 
 function App() {
   return (
-    <div className="App">
-      <h1>App</h1>
+    <div className='App'>
+      <Tutorial />
     </div>
   );
 }
