@@ -1,0 +1,22 @@
+.btn {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: transparent;
+  font-size: 1.7rem;
+  letter-spacing: 1px;
+  padding: 1rem 5rem;
+  color: #f9f9f9;
+  border: 1px solid #f9f9f9;
+  border-radius: 7px;
+  transition: color background-color 0.3s;
+
+  &:hover {
+    color: #222127;
+    background-color: #f9f9f9;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
