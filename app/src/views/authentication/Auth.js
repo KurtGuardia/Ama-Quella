@@ -12,7 +12,9 @@ const Auth = () => {
   return (
     <div className="auth view" style={style}>
       <h1>Auth</h1>
-      <Btn text="Volver" prevIcon={true} position="abs-bottom" />
+      <a href="https://amaquella.netlify.app/">
+        <Btn text="Volver" prevIcon={true} position="abs-bottom" />
+      </a>
     </div>
   );
 };
