@@ -4,10 +4,13 @@ import NavbarLink from './components/NavbarLink';
 import { Link } from 'react-router-dom';
 import { Btn } from '../UI';
 import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { changeIsLogging } from '../../store/actions/authActions';
 
 const Navbar = () => {
+  const isLogging = useSelector((state) => state.auth.isLogging);
+  const dispatch = useDispatch();
   const [isLoggedIn] = useState(false);
-  const [isLoggin, setIsLoggin] = useState(false);
 
   const logout = () => {
     console.log('logout');
@@ -37,8 +40,8 @@ const Navbar = () => {
           <Btn text="Salir" clicked={logout} />
         ) : (
           <Btn
-            text={isLoggin ? 'Login' : 'Registrarse'}
-            clicked={() => setIsLoggin(!isLoggin)}
+            text={isLogging ? 'Registrarse' : 'Login'}
+            clicked={() => dispatch(changeIsLogging())}
           />
         )}
       </div>

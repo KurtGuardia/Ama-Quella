@@ -47,4 +47,16 @@
   &:active {
     transform: scale(0.95);
   }
+
+  &:disabled {
+    cursor: not-allowed;
+    color: #aaa;
+    border: 1px solid #aaa;
+
+    &:hover {
+      color: #aaa;
+      background-color: transparent;
+      border: 1px solid #aaa;
+    }
+  }
 }

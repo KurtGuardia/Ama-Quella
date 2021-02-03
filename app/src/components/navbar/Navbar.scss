@@ -9,6 +9,10 @@
   justify-content: space-between;
   border-bottom: 1px solid #888;
 
+  @media screen and (max-width: 1400px) {
+    height: 10vh;
+  }
+
   &__btns {
     display: flex;
     align-items: center;
