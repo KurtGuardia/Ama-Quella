@@ -265,12 +265,17 @@ body {
   margin-top: 6rem;
   background: radial-gradient(74.41% 147.15% at 74.41% 60.94%, #222127f2 0%, #222127 100%);
   color: #f9f9f9;
-  display: flex; }
+  display: flex;
+  overflow: hidden; }
+  @media only screen and (max-width: 56.25em) {
+    .header {
+      height: 70vh; } }
   @media only screen and (max-width: 37.5em) {
     .header {
       flex-direction: column;
       padding: 3rem;
-      padding-right: 0; } }
+      padding-right: 0;
+      height: 110vh; } }
   .header__left {
     display: flex;
     flex-direction: column;
@@ -286,7 +291,8 @@ body {
         padding-bottom: 5rem; } }
     @media only screen and (max-width: 37.5em) {
       .header__left {
-        width: 100%; } }
+        width: 100%;
+        margin-left: 3rem; } }
     .header__left img {
       max-width: 12.5rem; }
     .header__left a {
@@ -302,12 +308,31 @@ body {
     @media only screen and (max-width: 37.5em) {
       .header__right {
         margin-top: 2rem;
-        width: 100%; } }
+        width: 100%;
+        overflow: unset; } }
     .header__right .aguayo {
       position: relative;
       transform: rotate(-40deg) translate(-15rem, 15rem); }
+      @media only screen and (max-width: 68.75em) {
+        .header__right .aguayo {
+          transform: rotate(-30deg) translate(-6rem, 15rem); } }
+      @media only screen and (max-width: 56.25em) {
+        .header__right .aguayo {
+          transform: rotate(-40deg) translate(-6rem, 15rem); } }
+      @media only screen and (max-width: 37.5em) {
+        .header__right .aguayo {
+          transform: rotate(-25deg) translate(4rem, 0); } }
       .header__right .aguayo__img {
         position: absolute; }
+        @media only screen and (max-width: 68.75em) {
+          .header__right .aguayo__img {
+            width: 700px; } }
+        @media only screen and (max-width: 56.25em) {
+          .header__right .aguayo__img {
+            width: 600px; } }
+        @media only screen and (max-width: 37.5em) {
+          .header__right .aguayo__img {
+            width: 350px; } }
       .header__right .aguayo__overlay {
         position: relative;
         padding: 1.5rem;
@@ -318,6 +343,28 @@ body {
         letter-spacing: 1.5px;
         line-height: 55px;
         background-color: #00000086; }
+        @media screen and (max-width: 1500px) {
+          .header__right .aguayo__overlay {
+            font-size: 25px;
+            line-height: 45px; } }
+        @media only screen and (max-width: 68.75em) {
+          .header__right .aguayo__overlay {
+            font-size: 20px;
+            line-height: 35px;
+            width: 70%;
+            transform: rotate(30deg) translate(25%, 30%); } }
+        @media only screen and (max-width: 56.25em) {
+          .header__right .aguayo__overlay {
+            transform: rotate(40deg) translate(25%, 20%);
+            font-size: 17px;
+            line-height: 25px;
+            width: 65%; } }
+        @media only screen and (max-width: 37.5em) {
+          .header__right .aguayo__overlay {
+            width: 73%;
+            transform: rotate(25deg) translate(15%, 20%);
+            font-size: 15px;
+            line-height: 18px; } }
 
 .navigation {
   z-index: 10;
