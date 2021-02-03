@@ -5,12 +5,12 @@ import { re } from '../../../shared/utility';
 
 const LoginForm = () => {
   const [isFormValid, setIsFormValid] = useState(false);
+  const [isHidePassword, setIsHidePassword] = useState(true);
+  const [errorMsg, setErrorMsg] = useState('');
   const [user, setUser] = useState({
     email: '',
     password: '',
   });
-  const [isHidePassword, setIsHidePassword] = useState(true);
-  const [errorMsg, setErrorMsg] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
