@@ -1,7 +1,6 @@
 .header {
+  height: 100vh;
   width: 100%;
-  padding: 5rem;
-  padding-right: 0;
   margin-top: 6rem;
   background: radial-gradient(
     74.41% 147.15% at 74.41% 60.94%,
@@ -18,8 +17,10 @@
   }
 
   &__left {
-    width: 35%;
-    padding: 2rem;
+    @include flexColumnCenter();
+    align-items: flex-start;
+    margin-left: 10rem;
+    width: 30%;
     padding-bottom: 7rem;
     position: relative;
 
@@ -41,9 +42,10 @@
   }
 
   &__right {
-    width: 65%;
+    width: 70%;
     position: relative;
     padding-bottom: 7rem;
+    overflow: hidden;
 
     @include respond(tab-port) {
       padding-bottom: 5rem;
@@ -52,6 +54,27 @@
     @include respond(phone) {
       margin-top: 2rem;
       width: 100%;
+    }
+
+    .aguayo {
+      position: relative;
+      transform: rotate(-40deg) translate(-15rem, 15rem);
+
+      &__img {
+        position: absolute;
+      }
+
+      &__overlay {
+        position: relative;
+        padding: 1.5rem;
+        border-radius: 15px;
+        transform: rotate(40deg) translate(40%, 5%);
+        width: 60%;
+        font-size: 35px;
+        letter-spacing: 1.5px;
+        line-height: 55px;
+        background-color: #00000086;
+      }
     }
   }
 }

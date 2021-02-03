@@ -145,143 +145,6 @@ body {
     .ingresar.cta:active {
       transform: scale(0.95); }
 
-.selector {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  display: inline-flex;
-  align-items: center; }
-  .selector .square {
-    width: 0.7rem;
-    height: 0.7rem;
-    border-radius: 1px;
-    background-color: #cacaca;
-    margin-right: 1rem; }
-    .selector .square.selected {
-      background-color: #d8890b;
-      width: 1rem;
-      height: 1rem; }
-
-.carousel {
-  display: flex;
-  width: 100%;
-  height: 52rem;
-  overflow: hidden; }
-  @media only screen and (max-width: 56.25em) {
-    .carousel {
-      height: 35rem; } }
-  .carousel__card {
-    position: relative;
-    display: inline-block;
-    min-width: 29.2rem;
-    min-height: 52rem;
-    opacity: 0.9;
-    border-radius: 7px;
-    margin-right: 3rem;
-    overflow: hidden;
-    transition: transform 0.3s; }
-    @media only screen and (max-width: 56.25em) {
-      .carousel__card {
-        min-width: 20rem;
-        min-height: 35rem; } }
-    @media only screen and (max-width: 37.5em) {
-      .carousel__card {
-        margin-right: 2rem; } }
-    .carousel__card img {
-      width: 29.2rem;
-      height: 52rem; }
-      @media only screen and (max-width: 56.25em) {
-        .carousel__card img {
-          width: 20rem;
-          height: 35rem; } }
-    .carousel__card:hover .carousel__card--glass {
-      opacity: 1; }
-    .carousel__card--glass {
-      position: absolute;
-      opacity: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 0 2rem;
-      border-radius: 7px;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 52rem;
-      background: linear-gradient(to right bottom, rgba(111, 111, 111, 0.7), rgba(111, 111, 111, 0.3));
-      backdrop-filter: blur(1.5rem);
-      transition: opacity 0.4s; }
-      @media only screen and (max-width: 68.75em) {
-        .carousel__card--glass {
-          line-height: 1.25; } }
-      @media only screen and (max-width: 56.25em) {
-        .carousel__card--glass {
-          height: 35rem;
-          padding-right: 0; } }
-      .carousel__card--glass h3 {
-        font-size: 2rem;
-        margin-bottom: 1rem; }
-        @media only screen and (max-width: 68.75em) {
-          .carousel__card--glass h3 {
-            margin-bottom: 0.5rem; } }
-      .carousel__card--glass ul {
-        margin-right: 1rem; }
-        .carousel__card--glass ul li {
-          margin: 1rem;
-          font-size: 16px; }
-          @media only screen and (max-width: 68.75em) {
-            .carousel__card--glass ul li {
-              font-size: 1.3rem;
-              margin: 0 0 0.7rem 0.7rem; } }
-    .carousel__card.dots {
-      font-size: 5rem;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center; }
-
-.pagination {
-  display: flex;
-  align-items: center;
-  position: absolute;
-  bottom: 0;
-  right: 5rem; }
-  .pagination span {
-    font-size: 2rem;
-    opacity: 0.5;
-    margin-right: 2rem; }
-  .pagination__btns {
-    display: flex;
-    align-items: center; }
-    .pagination__btns .line {
-      width: 5rem;
-      height: 1px;
-      background-color: #cacaca;
-      opacity: 0.7;
-      margin: 0 0.5rem; }
-    .pagination__btns button {
-      height: 2rem;
-      opacity: 0.7;
-      outline: none;
-      cursor: pointer;
-      background: transparent;
-      border: none;
-      color: #cacaca;
-      font-size: 1.6rem;
-      transition: opacity 0.3s; }
-      .pagination__btns button:hover {
-        opacity: 1;
-        color: #fff;
-        filter: brightness(2); }
-    .pagination__btns--left, .pagination__btns--right {
-      width: 2rem;
-      height: 2rem; }
-    .pagination__btns--left {
-      transform: rotate(180deg); }
-
 #quienes-somos {
   display: flex;
   justify-content: center;
@@ -397,9 +260,8 @@ body {
           transform: rotateY(0deg); }
 
 .header {
+  height: 100vh;
   width: 100%;
-  padding: 5rem;
-  padding-right: 0;
   margin-top: 6rem;
   background: radial-gradient(74.41% 147.15% at 74.41% 60.94%, #222127f2 0%, #222127 100%);
   color: #f9f9f9;
@@ -410,8 +272,13 @@ body {
       padding: 3rem;
       padding-right: 0; } }
   .header__left {
-    width: 35%;
-    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-items: flex-start;
+    margin-left: 10rem;
+    width: 30%;
     padding-bottom: 7rem;
     position: relative; }
     @media only screen and (max-width: 56.25em) {
@@ -425,9 +292,10 @@ body {
     .header__left a {
       display: inline-block; }
   .header__right {
-    width: 65%;
+    width: 70%;
     position: relative;
-    padding-bottom: 7rem; }
+    padding-bottom: 7rem;
+    overflow: hidden; }
     @media only screen and (max-width: 56.25em) {
       .header__right {
         padding-bottom: 5rem; } }
@@ -435,6 +303,21 @@ body {
       .header__right {
         margin-top: 2rem;
         width: 100%; } }
+    .header__right .aguayo {
+      position: relative;
+      transform: rotate(-40deg) translate(-15rem, 15rem); }
+      .header__right .aguayo__img {
+        position: absolute; }
+      .header__right .aguayo__overlay {
+        position: relative;
+        padding: 1.5rem;
+        border-radius: 15px;
+        transform: rotate(40deg) translate(40%, 5%);
+        width: 60%;
+        font-size: 35px;
+        letter-spacing: 1.5px;
+        line-height: 55px;
+        background-color: #00000086; }
 
 .navigation {
   z-index: 10;
