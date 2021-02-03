@@ -1,7 +1,9 @@
+import './Auth.scss';
+
 const Auth = () => {
   return (
     <div className="auth">
-      <h2>Auth</h2>
+      <h1>Auth</h1>
     </div>
   );
 };
