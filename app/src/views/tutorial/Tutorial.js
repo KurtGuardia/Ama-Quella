@@ -75,30 +75,30 @@ const Tutorial = () => {
   }, [counter]);
 
   return (
-    <div className='tutorial'>
-      <div className='tutorial__top'>
-        <div className='tutorial__top--number'>
-          <div className='square'></div>
-          <div className='numb'>1</div>
+    <div className="tutorial view">
+      <div className="tutorial__top">
+        <div className="tutorial__top--number">
+          <div className="square"></div>
+          <div className="numb">1</div>
         </div>
-        <div className='tutorial__top--number dark' ref={twoTop}>
-          <div className='square'></div>
-          <div className='numb'>2</div>
+        <div className="tutorial__top--number dark" ref={twoTop}>
+          <div className="square"></div>
+          <div className="numb">2</div>
         </div>
-        <div className='tutorial__top--number dark' ref={threeTop}>
-          <div className='square'></div>
-          <div className='numb'>3</div>
+        <div className="tutorial__top--number dark" ref={threeTop}>
+          <div className="square"></div>
+          <div className="numb">3</div>
         </div>
-        <div className='tutorial__top--number dark' ref={fourTop}>
-          <div className='square'></div>
-          <div className='numb'>4</div>
+        <div className="tutorial__top--number dark" ref={fourTop}>
+          <div className="square"></div>
+          <div className="numb">4</div>
         </div>
-        <div className='tutorial__top--number dark' ref={fiveTop}>
-          <div className='square'></div>
-          <div className='numb'>5 </div>
+        <div className="tutorial__top--number dark" ref={fiveTop}>
+          <div className="square"></div>
+          <div className="numb">5 </div>
         </div>
       </div>
-      <div className='tutorial__icons'>
+      <div className="tutorial__icons">
         <div className={`tutorial__icons--icon down`}>
           <svg>
             <use href={sprite + '#user-icon'} />
@@ -130,9 +130,9 @@ const Tutorial = () => {
           <p>Pulsa Guardar y continúa con otra factura</p>
         </div>
       </div>
-      <div className='tutorial__buttons'>
+      <div className="tutorial__buttons">
         <button
-          className='tutorial__buttons--button'
+          className="tutorial__buttons--button"
           onClick={prev}
           ref={prevBtn}
         >
@@ -142,7 +142,7 @@ const Tutorial = () => {
           <p>Anterior</p>
         </button>
         <button
-          className='tutorial__buttons--button'
+          className="tutorial__buttons--button"
           onClick={next}
           ref={nextBtn}
         >

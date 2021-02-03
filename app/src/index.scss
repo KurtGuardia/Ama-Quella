@@ -2,6 +2,7 @@
 
 html {
   box-sizing: border-box;
+  font-size: 62.5%;
 
   @media screen and (max-width: 1024px) {
     font-size: 15px;
@@ -23,12 +24,12 @@ html {
 body {
   height: 100vh;
   width: 100vw;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 body > div {
   width: 100%;
-  height: 100%;
+  height: 93vh;
 }
 
 .loading-container {
@@ -43,6 +44,6 @@ body > div {
 }
 
 ::selection {
-  background-color: #10735fc7;
+  background-color: #222127d5;
   color: #fff;
 }
