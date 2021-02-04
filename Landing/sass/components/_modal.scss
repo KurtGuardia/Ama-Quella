@@ -28,6 +28,14 @@
     transition: all 0.3s;
     transform: translateY(-100vw);
 
+    @include respond(tab-port) {
+      width: 55rem;
+    }
+
+    @include respond(phone) {
+      width: 37rem;
+    }
+
     &.active {
       transform: translateY(0);
     }
@@ -36,11 +44,24 @@
       font-size: $large-font-size;
       text-decoration: underline;
       margin-bottom: 2rem;
+
+      @include respond(tab-port) {
+        font-size: 25px;
+      }
     }
 
     &--list {
       font-size: $default-font-size;
       line-height: 40px;
+
+      @include respond(tab-port) {
+        font-size: 20px;
+        line-height: 30px;
+      }
+
+      @include respond(phone) {
+        line-height: 25px;
+      }
     }
 
     &--close {
