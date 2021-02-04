@@ -5,6 +5,18 @@
   padding: 5rem 0;
   height: 100vh;
 
+  @include respond(tab-land) {
+    height: 85vh;
+  }
+
+  @include respond(tab-port) {
+    height: 60vh;
+  }
+
+  @include respond(phone) {
+    height: 70vh;
+  }
+
   & .about {
     width: 70%;
     @include flexColumnCenter();
@@ -40,8 +52,8 @@
     }
 
     & .card {
-      width: 500px;
-      height: 600px;
+      width: 400px;
+      height: 500px;
       position: relative;
 
       &:hover .card__front {
@@ -53,17 +65,18 @@
       }
 
       @include respond(tab-land) {
-        width: 450px;
-        height: 550px;
+        width: 350px;
+        height: 450px;
       }
 
       @include respond(tab-port) {
-        flex-direction: column;
+        width: 300px;
+        height: 400px;
       }
 
       @include respond(phone) {
-        width: 300px;
-        height: 400px;
+        width: 250px;
+        height: 350px;
       }
 
       // for both cards front and back
@@ -97,14 +110,18 @@
         & p {
           color: $color-white;
           letter-spacing: 0.5px;
-          font-size: 20px;
+          font-size: 16px;
 
           @include respond(tab-land) {
-            font-size: 17px;
+            font-size: 14px;
+          }
+
+          @include respond(tab-port) {
+            font-size: 12px;
           }
 
           @include respond(phone) {
-            font-size: 12px;
+            font-size: 10px;
           }
         }
       }
