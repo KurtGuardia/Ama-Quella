@@ -421,7 +421,7 @@ body {
     .navigation__phone.open {
       transform: translate(7px, 7px); }
 
-#pasos {
+#services {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -429,23 +429,23 @@ body {
   justify-content: flex-start;
   background-color: #222127;
   width: 100%;
-  height: 60rem;
+  height: 66rem;
   padding: 5rem 0;
   font-size: 1.6em;
   text-align: center;
   color: #ffffff; }
   @media only screen and (max-width: 56.25em) {
-    #pasos {
+    #services {
       height: auto; } }
-  #pasos .title {
+  #services .services__title {
     color: #ffffff;
     font-size: 2rem;
     position: relative;
     margin-bottom: 10rem; }
     @media only screen and (max-width: 37.5em) {
-      #pasos .title {
+      #services .services__title {
         margin-bottom: 5rem; } }
-    #pasos .title::after {
+    #services .services__title::after {
       position: absolute;
       content: '';
       bottom: -1rem;
@@ -454,44 +454,56 @@ body {
       height: 0.35rem;
       background-color: #ffffff;
       transform: translateX(-50%); }
-  #pasos .steps {
+  #services .services__container {
     display: flex;
     justify-content: center;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     max-width: 1200px; }
+    @media only screen and (min-width: 112.5em) {
+      #services .services__container {
+        max-width: 1500px; } }
     @media only screen and (max-width: 68.75em) {
-      #pasos .steps {
+      #services .services__container {
         max-width: 900px; } }
     @media only screen and (max-width: 56.25em) {
-      #pasos .steps {
+      #services .services__container {
         flex-wrap: wrap;
         width: 70%; } }
-    #pasos .steps__icon {
+    #services .services__container--icon {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width: 20rem; }
+      cursor: pointer;
+      width: 20rem;
+      opacity: 0.5;
+      transition: all 0.3s; }
+      #services .services__container--icon:hover {
+        opacity: 1;
+        transform: scale(1.1); }
       @media only screen and (max-width: 56.25em) {
-        #pasos .steps__icon {
+        #services .services__container--icon {
           flex: 50%; } }
-      #pasos .steps__icon > svg {
+      #services .services__container--icon > img {
         width: 10rem; }
         @media only screen and (max-width: 68.75em) {
-          #pasos .steps__icon > svg {
+          #services .services__container--icon > img {
             width: 7rem;
             height: 7rem; } }
-      #pasos .steps__icon--down {
-        transform: translateY(12rem); }
+      #services .services__container--icon.down {
+        transform: translateY(18rem); }
+        #services .services__container--icon.down:hover {
+          opacity: 1;
+          transform: translateY(18rem) scale(1.1); }
         @media only screen and (max-width: 56.25em) {
-          #pasos .steps__icon--down {
+          #services .services__container--icon.down {
             transform: translateY(0); } }
-      #pasos .steps__icon p {
+      #services .services__container--icon p {
         margin-top: 2rem; }
         @media only screen and (max-width: 56.25em) {
-          #pasos .steps__icon p {
+          #services .services__container--icon p {
             margin-top: 0;
             margin-bottom: 2rem;
             font-size: 15px;
