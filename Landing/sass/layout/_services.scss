@@ -19,6 +19,7 @@
       font-size: $large-font-size;
       position: relative;
       margin-bottom: 10rem;
+      opacity: 0.7;
 
       @include respond(phone) {
         margin-bottom: 5rem;
@@ -29,10 +30,14 @@
         content: '';
         bottom: -1rem;
         left: 50%;
-        width: 32rem;
+        width: 28rem;
         height: 0.35rem;
         background-color: $color-white;
         transform: translateX(-50%);
+
+        @include respond(phone) {
+          width: 22rem;
+        }
       }
     }
 
@@ -91,6 +96,11 @@
 
           @include respond(tab-port) {
             transform: translateY(0);
+
+            &:hover {
+              opacity: 1;
+              transform: scale(1.1);
+            }
           }
         }
 
