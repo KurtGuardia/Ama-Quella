@@ -200,7 +200,8 @@ body {
           line-height: 30px; } }
       @media only screen and (max-width: 37.5em) {
         .modal__card--list {
-          line-height: 25px; } }
+          line-height: 25px;
+          font-size: 15px; } }
     .modal__card--close {
       cursor: pointer;
       color: #ffffff;
@@ -517,6 +518,9 @@ body {
   font-size: 1.6em;
   text-align: center;
   color: #ffffff; }
+  @media only screen and (max-width: 68.75em) {
+    #services {
+      height: 58rem; } }
   @media only screen and (max-width: 56.25em) {
     #services {
       height: auto; } }
@@ -526,6 +530,9 @@ body {
     position: relative;
     margin-bottom: 10rem;
     opacity: 0.7; }
+    @media only screen and (max-width: 68.75em) {
+      #services .services__title {
+        margin-bottom: 5rem; } }
     @media only screen and (max-width: 37.5em) {
       #services .services__title {
         margin-bottom: 5rem; } }
@@ -546,8 +553,7 @@ body {
     justify-content: center;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-    max-width: 1200px; }
+    width: 80%; }
     @media only screen and (min-width: 112.5em) {
       #services .services__container {
         max-width: 1500px; } }
@@ -564,21 +570,25 @@ body {
       justify-content: center;
       align-items: center;
       cursor: pointer;
-      width: 20rem;
+      width: 12rem;
       opacity: 0.5;
       transition: all 0.3s; }
       #services .services__container--icon:hover {
         opacity: 1;
         transform: scale(1.1); }
+      @media only screen and (max-width: 68.75em) {
+        #services .services__container--icon {
+          width: 10rem; } }
       @media only screen and (max-width: 56.25em) {
         #services .services__container--icon {
-          flex: 50%; } }
-      #services .services__container--icon > img {
-        width: 10rem; }
+          flex: 50%;
+          height: 15rem;
+          margin-top: 2rem; } }
+      #services .services__container--icon > svg {
+        width: 100%; }
         @media only screen and (max-width: 68.75em) {
-          #services .services__container--icon > img {
-            width: 7rem;
-            height: 7rem; } }
+          #services .services__container--icon > svg {
+            height: 70px; } }
       #services .services__container--icon.down {
         transform: translateY(18rem); }
         #services .services__container--icon.down:hover {
@@ -592,12 +602,18 @@ body {
               transform: scale(1.1); } }
       #services .services__container--icon p {
         margin-top: 2rem; }
+        @media only screen and (max-width: 68.75em) {
+          #services .services__container--icon p {
+            margin-top: 0; } }
         @media only screen and (max-width: 56.25em) {
           #services .services__container--icon p {
-            margin-top: 0;
+            margin-top: 1.5rem;
             margin-bottom: 2rem;
             font-size: 15px;
             letter-spacing: 0.5px; } }
+      @media only screen and (max-width: 37.5em) {
+        #services .services__container--icon.familia {
+          padding: 0.5rem; } }
 
 #contact {
   display: flex;
