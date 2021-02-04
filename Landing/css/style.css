@@ -145,6 +145,51 @@ body {
     .ingresar.cta:active {
       transform: scale(0.95); }
 
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s; }
+  .modal.active {
+    visibility: visible;
+    opacity: 1; }
+  .modal__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    border-radius: 8px;
+    background-color: #222127;
+    color: #ffffff;
+    padding: 5rem; }
+    .modal__card--title {
+      font-size: 2rem;
+      text-decoration: underline;
+      margin-bottom: 2rem; }
+    .modal__card--list {
+      font-size: 1.6em;
+      line-height: 40px; }
+    .modal__card--close {
+      cursor: pointer;
+      color: #ffffff;
+      position: absolute;
+      font-size: xx-large;
+      top: 0;
+      right: 0;
+      padding: 2rem; }
+
 #quienes-somos {
   display: flex;
   justify-content: center;
