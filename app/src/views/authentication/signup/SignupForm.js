@@ -34,6 +34,8 @@ const SignupForm = () => {
       epigrafe: '',
       activity: '',
     });
+
+    setStep(1);
   };
 
   const handleChange = (e) => {
@@ -318,7 +320,26 @@ const SignupForm = () => {
             clicked={() => setStep(step - 1)}
             text="Anterior"
           />
-          <Btn clicked={() => setStep(step + 1)} text="Siguiente" />
+          {step === 1 && (
+            <Btn
+              disabled={
+                user.firstName.length < 3 ||
+                user.lastName.length < 3 ||
+                !re.test(user.email)
+              }
+              clicked={() => setStep(step + 1)}
+              text="Siguiente"
+            />
+          )}
+          {step === 2 && (
+            <Btn
+              disabled={
+                user.password.length < 6 || user.password !== user.password2
+              }
+              clicked={() => setStep(step + 1)}
+              text="Siguiente"
+            />
+          )}
         </div>
       )}
 
