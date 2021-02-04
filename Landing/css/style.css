@@ -155,7 +155,7 @@ body {
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.7);
-  z-index: 2;
+  z-index: 11;
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s, opacity 0.3s; }
@@ -173,7 +173,11 @@ body {
     border-radius: 8px;
     background-color: #222127;
     color: #ffffff;
-    padding: 5rem; }
+    padding: 5rem;
+    transition: all 0.3s;
+    transform: translateY(-100vw); }
+    .modal__card.active {
+      transform: translateY(0); }
     .modal__card--title {
       font-size: 2rem;
       text-decoration: underline;
