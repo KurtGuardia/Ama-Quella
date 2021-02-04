@@ -105,7 +105,7 @@ const LoginForm = () => {
       </div>
 
       <div className="input-field btn-container">
-        <Btn disabled={!isFormValid} text="Iniciar Sesión" />
+        <Btn disabled={!isFormValid} text="Iniciar Sesión" btnType="submit" />
       </div>
 
       {errorMsg && <p className="error-msg">{errorMsg}</p>}
