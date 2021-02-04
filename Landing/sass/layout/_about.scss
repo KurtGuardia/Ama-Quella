@@ -1,13 +1,10 @@
 #quienes-somos {
   @include flexCenter();
+  background-color: $color-primary;
   align-items: flex-start;
   width: 100%;
   padding: 5rem 0;
-  height: 100vh;
-
-  @include respond(tab-land) {
-    height: 85vh;
-  }
+  height: 85vh;
 
   @include respond(tab-port) {
     height: 60vh;
@@ -30,6 +27,8 @@
       font-size: $large-font-size;
       position: relative;
       margin-bottom: 10rem;
+      color: $color-white;
+      opacity: 0.7;
 
       @include respond(tab-land) {
         margin-bottom: 5rem;
@@ -46,7 +45,7 @@
         left: 50%;
         width: 12rem;
         height: 0.35rem;
-        background-color: $color-primary;
+        background-color: $color-white;
         transform: translateX(-50%);
       }
     }
@@ -62,6 +61,11 @@
 
       &:hover .card__back {
         transform: rotateY(0deg);
+      }
+
+      @include respond(big-desktop) {
+        width: 400px;
+        height: 530px;
       }
 
       @include respond(tab-land) {
@@ -100,15 +104,15 @@
       }
 
       &__back {
-        background-color: $color-primary;
+        background-color: $color-grey;
         height: 100%;
         padding: 3rem;
         transform: rotateY(180deg);
         letter-spacing: 1px;
-        border: 1px solid $color-primary;
+        border: 1px solid $color-white;
 
         & p {
-          color: $color-white;
+          color: $color-primary;
           letter-spacing: 0.5px;
           font-size: 16px;
 

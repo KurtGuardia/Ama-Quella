@@ -149,13 +149,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #222127;
   align-items: flex-start;
   width: 100%;
   padding: 5rem 0;
-  height: 100vh; }
-  @media only screen and (max-width: 68.75em) {
-    #quienes-somos {
-      height: 85vh; } }
+  height: 85vh; }
   @media only screen and (max-width: 56.25em) {
     #quienes-somos {
       height: 60vh; } }
@@ -175,7 +173,9 @@ body {
     #quienes-somos .about .title {
       font-size: 2rem;
       position: relative;
-      margin-bottom: 10rem; }
+      margin-bottom: 10rem;
+      color: #ffffff;
+      opacity: 0.7; }
       @media only screen and (max-width: 68.75em) {
         #quienes-somos .about .title {
           margin-bottom: 5rem; } }
@@ -189,7 +189,7 @@ body {
         left: 50%;
         width: 12rem;
         height: 0.35rem;
-        background-color: #222127;
+        background-color: #ffffff;
         transform: translateX(-50%); }
     #quienes-somos .about .card {
       width: 400px;
@@ -199,6 +199,10 @@ body {
         transform: rotateY(-180deg); }
       #quienes-somos .about .card:hover .card__back {
         transform: rotateY(0deg); }
+      @media only screen and (min-width: 112.5em) {
+        #quienes-somos .about .card {
+          width: 400px;
+          height: 530px; } }
       @media only screen and (max-width: 68.75em) {
         #quienes-somos .about .card {
           width: 350px;
@@ -225,14 +229,14 @@ body {
         #quienes-somos .about .card__front > img {
           width: 100%; }
       #quienes-somos .about .card__back {
-        background-color: #222127;
+        background-color: #cacaca;
         height: 100%;
         padding: 3rem;
         transform: rotateY(180deg);
         letter-spacing: 1px;
-        border: 1px solid #222127; }
+        border: 1px solid #ffffff; }
         #quienes-somos .about .card__back p {
-          color: #ffffff;
+          color: #222127;
           letter-spacing: 0.5px;
           font-size: 16px; }
           @media only screen and (max-width: 68.75em) {
@@ -440,7 +444,7 @@ body {
   justify-content: center;
   align-items: center;
   justify-content: flex-start;
-  background-color: #222127;
+  background-color: #290300;
   width: 100%;
   height: 66rem;
   padding: 5rem 0;
