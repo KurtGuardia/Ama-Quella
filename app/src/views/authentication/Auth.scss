@@ -1,0 +1,127 @@
+.auth {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .form {
+    min-width: 45rem;
+    max-width: 60rem;
+    width: 50%;
+    padding: 2rem;
+    background: linear-gradient(
+      to right bottom,
+      rgba(224, 224, 224, 0.4),
+      rgba(224, 224, 224, 0.3)
+    );
+    backdrop-filter: blur(1rem);
+    border-radius: 1.5rem;
+
+    h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+      color: #fff;
+      margin-bottom: 2rem;
+      position: relative;
+      margin-bottom: 5rem;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -0.5rem;
+        left: 50%;
+        width: 10rem;
+        height: 0.2rem;
+        background-color: #fff;
+        border-radius: 1px;
+        transform: translateX(-50%);
+      }
+    }
+
+    .input-field {
+      width: 100%;
+      margin-bottom: 1.25rem;
+      position: relative;
+
+      &.btn-container {
+        margin-top: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      &__svg {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: 0.5rem;
+
+        path {
+          fill: #ccc;
+        }
+      }
+    }
+
+    input {
+      width: 100%;
+      font-family: inherit;
+      font-size: 1.6rem;
+      padding: 0.2rem 0.5rem;
+      border: 0;
+      border-bottom: 2px solid #ccc;
+      display: block;
+      background-color: transparent;
+      color: inherit;
+
+      &:focus {
+        outline: none;
+        border-bottom: 2px solid #28b062;
+
+        &:invalid {
+          border-bottom: 2px solid #d62c1a;
+        }
+
+        &.error {
+          border-bottom: 2px solid #d62c1a;
+        }
+      }
+
+      &::-webkit-input-placeholder {
+        color: #f9f9f9;
+      }
+    }
+
+    label {
+      color: #f9f9f9;
+      font-size: 1.6rem;
+      margin-left: 0.5rem;
+      display: block;
+      transform: translateY(-250%);
+      transition: all 0.2s;
+    }
+
+    input:placeholder-shown + label {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-100%);
+    }
+
+    .error-msg {
+      position: absolute;
+      bottom: 3px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #ccc;
+      padding: 0.5rem;
+      text-align: center;
+
+      &.second {
+        bottom: 25px;
+      }
+    }
+  }
+}

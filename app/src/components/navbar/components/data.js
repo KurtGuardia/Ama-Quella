@@ -1,4 +1,4 @@
-export const SignedInLinks = [
+export const signedInLinks = [
   {
     id: 1,
     text: 'tutorial',
@@ -16,15 +16,10 @@ export const SignedInLinks = [
   },
 ];
 
-export const SignedOutLinks = [
+export const signedOutLinks = [
   {
     id: 1,
     text: 'tutorial',
     url: '/tutorial',
-  },
-  {
-    id: 2,
-    text: 'registrarse',
-    url: '/registrarse',
   },
 ];
