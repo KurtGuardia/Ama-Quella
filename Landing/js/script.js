@@ -12,7 +12,14 @@ const nextBtn = document.getElementById('nextBtn');
 const carouselContainer = document.querySelector('.testimony__carousel');
 const carouselCards = document.querySelectorAll('.testimony__carousel--client');
 
+// Responsive
+
+var tabLand = window.matchMedia('(max-width: 1100px)');
+var tabPort = window.matchMedia('(max-width: 900px)');
+var phone = window.matchMedia('(max-width: 600px)');
+
 // Phone Navigation sidebar
+
 menu.addEventListener('click', () => {
   menu.classList.toggle('open');
   phoneNav.classList.toggle('open');
@@ -65,12 +72,21 @@ modal.addEventListener('click', () => {
   }
 });
 
-// Testomony carrousel
+//________________________ Testimony carrousel
 let counter = 0;
+let translateX = 108;
+let counterLength = carouselCards.length - 1;
+
+if (tabLand.matches) translateX = 110;
+if (tabPort.matches) translateX = 112.5;
+if (phone.matches) {
+  translateX = 102.3333333;
+  counterLength = carouselCards.length;
+}
 
 const carouselMotion = () => {
   [...carouselCards].forEach((card) => {
-    card.style.transform = `translateX(-${counter * 108}%)`;
+    card.style.transform = `translateX(-${counter * translateX}%)`;
   });
 };
 
@@ -85,9 +101,8 @@ nextBtn.addEventListener('click', () => {
   counter += 1;
   carouselMotion();
 
-  if (counter === carouselCards.length - 1) counter = 0;
+  if (counter === counterLength) counter = 0;
   carouselMotion();
-  console.log(counter);
 });
 
 setInterval(() => {
