@@ -1,7 +1,18 @@
 #quienes-somos {
   @include flexCenter();
+  background-color: $color-primary;
+  align-items: flex-start;
   width: 100%;
   padding: 5rem 0;
+  height: 90vh;
+
+  @include respond(tab-port) {
+    height: 60vh;
+  }
+
+  @include respond(phone) {
+    height: 80vh;
+  }
 
   & .about {
     width: 70%;
@@ -16,6 +27,12 @@
       font-size: $large-font-size;
       position: relative;
       margin-bottom: 10rem;
+      color: $color-white;
+      opacity: 0.7;
+
+      @include respond(tab-land) {
+        margin-bottom: 5rem;
+      }
 
       @include respond(phone) {
         margin-bottom: 5rem;
@@ -28,110 +45,89 @@
         left: 50%;
         width: 12rem;
         height: 0.35rem;
-        background-color: $color-primary;
+        background-color: $color-white;
         transform: translateX(-50%);
       }
     }
 
-    & .cards {
-      @include flexCenter();
-      justify-content: space-between;
-      width: 100%;
-      max-width: 1000px;
+    & .card {
+      width: 400px;
+      height: 500px;
+      position: relative;
+
+      &:hover .card__front {
+        transform: rotateY(-180deg);
+      }
+
+      &:hover .card__back {
+        transform: rotateY(0deg);
+      }
 
       @include respond(big-desktop) {
-        max-width: 1300px;
+        width: 400px;
+        height: 530px;
+      }
+
+      @include respond(tab-land) {
+        width: 350px;
+        height: 450px;
       }
 
       @include respond(tab-port) {
-        flex-direction: column;
+        width: 300px;
+        height: 400px;
+      }
 
-        &--left {
-          margin-bottom: 10rem;
-          @include respond(phone) {
-            margin-bottom: 5rem;
-          }
+      @include respond(phone) {
+        width: 250px;
+        height: 350px;
+      }
+
+      // for both cards front and back
+      & > div {
+        perspective: 150rem;
+        -moz-perspective: 150rem;
+        position: absolute;
+        backface-visibility: hidden;
+        overflow: hidden;
+        transition: all 0.8s ease;
+        border-radius: 15px;
+      }
+
+      &__front {
+        width: 100%;
+        height: 100%;
+        opacity: 0.7;
+
+        & > img {
+          width: 100%;
         }
       }
 
-      // for both cards left and right
-      & > div {
-        @include flexColumnCenter();
-        width: 40rem;
-        height: 45rem;
-        perspective: 150rem;
-        -moz-perspective: 150rem;
-        position: relative;
-        transition: all 0.8s ease;
+      &__back {
+        background-color: $color-grey;
+        height: 100%;
+        padding: 3rem;
+        transform: rotateY(180deg);
+        letter-spacing: 1px;
+        border: 1px solid $color-white;
 
-        @include respond(tab-port) {
-          margin: 2rem 0;
-          width: 60rem;
-        }
+        & p {
+          color: $color-primary;
+          letter-spacing: 0.5px;
+          font-size: 16px;
 
-        @include respond(phone) {
-          width: 40rem;
-        }
-
-        //to both sides front and back
-        & > * {
-          transition: all 0.8s ease;
-          position: absolute;
-          backface-visibility: hidden;
-          overflow: hidden;
-        }
-
-        // only to card front
-        & > *:first-child {
-          @include flexColumnCenter();
-          height: 100%;
-          width: 100%;
-          border: 1px solid $color-primary;
-          border-radius: 15px;
-
-          & > * {
-            padding: 2rem 0;
-            font-size: $large-font-size;
-            letter-spacing: 1px;
-            font-weight: bold;
+          @include respond(tab-land) {
+            font-size: 14px;
           }
-        }
 
-        // only to card back
-        & > *:last-child {
-          @include flexColumnCenter();
-          line-height: 2.5rem;
-          background-color: $color-primary;
-          height: 100%;
-          padding: 3rem;
-          border-radius: 15px;
-          transform: rotateY(180deg);
-
-          & p {
-            color: $color-white;
-            letter-spacing: 0.5px;
-            font-size: 15px;
-
-            @include respond(phone) {
-              font-size: 10px;
-            }
+          @include respond(tab-port) {
+            font-size: 12px;
           }
-        }
 
-        &:hover .cards__left--front {
-          transform: rotateY(-180deg);
-        }
-
-        &:hover .cards__left--back {
-          transform: rotateY(0deg);
-        }
-
-        &:hover .cards__right--front {
-          transform: rotateY(-180deg);
-        }
-
-        &:hover .cards__right--back {
-          transform: rotateY(0deg);
+          @include respond(phone) {
+            font-size: 10px;
+          }
         }
       }
     }

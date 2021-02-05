@@ -1,0 +1,150 @@
+#services {
+  @include flexColumnCenter();
+  justify-content: flex-start;
+  background-color: #290300;
+  width: 100%;
+  height: 66rem;
+  padding: 5rem 0;
+  font-size: $default-font-size;
+  text-align: center;
+  color: $color-white;
+
+  @include respond(tab-land) {
+    height: 58rem;
+  }
+
+  @include respond(tab-port) {
+    height: auto;
+  }
+
+  .services {
+    &__title {
+      color: $color-white;
+      font-size: $large-font-size;
+      position: relative;
+      margin-bottom: 10rem;
+      opacity: 0.7;
+
+      @include respond(tab-land) {
+        margin-bottom: 5rem;
+      }
+
+      @include respond(phone) {
+        margin-bottom: 5rem;
+      }
+
+      &::after {
+        position: absolute;
+        content: '';
+        bottom: -1rem;
+        left: 50%;
+        width: 28rem;
+        height: 0.35rem;
+        background-color: $color-white;
+        transform: translateX(-50%);
+
+        @include respond(phone) {
+          width: 22rem;
+        }
+      }
+    }
+
+    &__container {
+      @include flexCenter();
+      justify-content: space-between;
+      width: 80%;
+
+      @include respond(big-desktop) {
+        max-width: 1500px;
+      }
+
+      @include respond(tab-land) {
+        max-width: 900px;
+      }
+
+      @include respond(tab-port) {
+        flex-wrap: wrap;
+        width: 70%;
+      }
+
+      @include respond(phone) {
+        width: 90%;
+      }
+
+      &--icon {
+        @include flexColumnCenter();
+        cursor: pointer;
+        width: 12rem;
+        opacity: 0.5;
+        transition: all 0.3s;
+
+        &:hover {
+          opacity: 1;
+          transform: scale(1.1);
+        }
+
+        @include respond(tab-land) {
+          width: 10rem;
+        }
+
+        @include respond(tab-port) {
+          flex: 50%;
+          height: 15rem;
+          margin-top: 3rem;
+        }
+
+        & > svg {
+          width: 100%;
+
+          @include respond(tab-land) {
+            height: 70px;
+          }
+        }
+
+        &.down {
+          transform: translateY(18rem);
+
+          &:hover {
+            opacity: 1;
+            transform: translateY(18rem) scale(1.1);
+          }
+
+          @include respond(tab-port) {
+            transform: translateY(0);
+
+            &:hover {
+              opacity: 1;
+              transform: scale(1.1);
+            }
+          }
+        }
+
+        & p {
+          margin-top: 2rem;
+          font-size: 22px;
+
+          @include respond(tab-land) {
+            margin-top: 1rem;
+            font-size: 18px;
+          }
+
+          @include respond(tab-port) {
+            margin-top: 1.5rem;
+            margin-bottom: 2rem;
+            letter-spacing: 0.5px;
+          }
+
+          @include respond(phone) {
+            font-size: 15px;
+          }
+        }
+
+        &.familia {
+          @include respond(phone) {
+            padding: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}

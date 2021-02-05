@@ -1,7 +1,6 @@
 .header {
+  height: 100vh;
   width: 100%;
-  padding: 5rem;
-  padding-right: 0;
   margin-top: 6rem;
   background: radial-gradient(
     74.41% 147.15% at 74.41% 60.94%,
@@ -10,16 +9,24 @@
   );
   color: $text-light;
   display: flex;
+  overflow: hidden;
+
+  @include respond(tab-port) {
+    height: 70vh;
+  }
 
   @include respond(phone) {
     flex-direction: column;
     padding: 3rem;
     padding-right: 0;
+    height: 110vh;
   }
 
   &__left {
-    width: 35%;
-    padding: 2rem;
+    @include flexColumnCenter();
+    align-items: flex-start;
+    margin-left: 10rem;
+    width: 30%;
     padding-bottom: 7rem;
     position: relative;
 
@@ -29,6 +36,7 @@
 
     @include respond(phone) {
       width: 100%;
+      margin-left: 3rem;
     }
 
     img {
@@ -41,9 +49,10 @@
   }
 
   &__right {
-    width: 65%;
+    width: 70%;
     position: relative;
     padding-bottom: 7rem;
+    overflow: hidden;
 
     @include respond(tab-port) {
       padding-bottom: 5rem;
@@ -52,6 +61,78 @@
     @include respond(phone) {
       margin-top: 2rem;
       width: 100%;
+      overflow: unset;
+    }
+
+    .aguayo {
+      position: relative;
+      transform: rotate(-40deg) translate(-15rem, 15rem);
+
+      @include respond(tab-land) {
+        transform: rotate(-30deg) translate(-6rem, 15rem);
+      }
+
+      @include respond(tab-port) {
+        transform: rotate(-40deg) translate(-6rem, 15rem);
+      }
+
+      @include respond(phone) {
+        transform: rotate(-25deg) translate(4rem, 0);
+      }
+
+      &__img {
+        position: absolute;
+
+        @include respond(tab-land) {
+          width: 700px;
+        }
+
+        @include respond(tab-port) {
+          width: 600px;
+        }
+
+        @include respond(phone) {
+          width: 350px;
+        }
+      }
+
+      &__overlay {
+        position: relative;
+        padding: 1.5rem;
+        border-radius: 15px;
+        transform: rotate(40deg) translate(40%, 5%);
+        width: 60%;
+        font-size: 35px;
+        letter-spacing: 1.5px;
+        line-height: 55px;
+        background-color: #00000086;
+
+        @media screen and (max-width: 1500px) {
+          font-size: 25px;
+          line-height: 45px;
+        }
+
+        @include respond(tab-land) {
+          font-size: 20px;
+          line-height: 35px;
+          width: 70%;
+          transform: rotate(30deg) translate(25%, 30%);
+        }
+
+        @include respond(tab-port) {
+          transform: rotate(40deg) translate(25%, 20%);
+          font-size: 17px;
+          line-height: 25px;
+          width: 65%;
+        }
+
+        @include respond(phone) {
+          width: 73%;
+          transform: rotate(25deg) translate(15%, 20%);
+          font-size: 15px;
+          line-height: 18px;
+        }
+      }
     }
   }
 }
