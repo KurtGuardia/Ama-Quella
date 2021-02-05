@@ -192,7 +192,7 @@ body {
         .modal__card--title {
           font-size: 25px; } }
     .modal__card--list {
-      font-size: 1.6em;
+      font-size: 20px;
       line-height: 40px; }
       @media only screen and (max-width: 56.25em) {
         .modal__card--list {
@@ -225,7 +225,7 @@ body {
       height: 60vh; } }
   @media only screen and (max-width: 37.5em) {
     #quienes-somos {
-      height: 70vh; } }
+      height: 80vh; } }
   #quienes-somos .about {
     width: 70%;
     display: flex;
@@ -564,6 +564,9 @@ body {
       #services .services__container {
         flex-wrap: wrap;
         width: 70%; } }
+    @media only screen and (max-width: 37.5em) {
+      #services .services__container {
+        width: 90%; } }
     #services .services__container--icon {
       display: flex;
       flex-direction: column;
@@ -583,7 +586,7 @@ body {
         #services .services__container--icon {
           flex: 50%;
           height: 15rem;
-          margin-top: 2rem; } }
+          margin-top: 3rem; } }
       #services .services__container--icon > svg {
         width: 100%; }
         @media only screen and (max-width: 68.75em) {
@@ -601,16 +604,20 @@ body {
               opacity: 1;
               transform: scale(1.1); } }
       #services .services__container--icon p {
-        margin-top: 2rem; }
+        margin-top: 2rem;
+        font-size: 22px; }
         @media only screen and (max-width: 68.75em) {
           #services .services__container--icon p {
-            margin-top: 0; } }
+            margin-top: 1rem;
+            font-size: 18px; } }
         @media only screen and (max-width: 56.25em) {
           #services .services__container--icon p {
             margin-top: 1.5rem;
             margin-bottom: 2rem;
-            font-size: 15px;
             letter-spacing: 0.5px; } }
+        @media only screen and (max-width: 37.5em) {
+          #services .services__container--icon p {
+            font-size: 15px; } }
       @media only screen and (max-width: 37.5em) {
         #services .services__container--icon.familia {
           padding: 0.5rem; } }

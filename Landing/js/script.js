@@ -63,22 +63,22 @@ modal.addEventListener('click', () => {
 
 //Services list
 const fiscal =
-  '<li><b>Precios adaptados a gestiones y responsabilidad</b></li> <li>Asesoría Autónomos</li> <li>Nuevas PYMEs</li> <li>Ayudas y Subvenciones</li> <li>Gestión impuestos trimestrales y anuales</li> <li>Llevanza de libros contables</li>';
+  '<b>--> Precios adaptados a gestiones y responsabilidad</b> <li>Asesoría Autónomos</li> <li>Nuevas PYMEs</li> <li>Ayudas y Subvenciones</li> <li>Gestión impuestos trimestrales y anuales</li> <li>Llevanza de libros contables</li>';
 
 const laboral =
-  '<li><b>Presupuesto según tu caso particular</b></li> <li>Despidos improcedentes</li><li>Contratación de trabajadores</li> <li>Altas, bajas y modificaciones </li> <li>Nominas y seguros sociales </li> <li> Partes de accidente y bajas laborales</li>';
+  '<b>--> Presupuesto según tu caso particular</b> <li>Despidos improcedentes</li><li>Contratación de trabajadores</li> <li>Altas, bajas y modificaciones </li> <li>Nominas y seguros sociales </li> <li> Partes de accidente y bajas laborales</li>';
 
 const extranjeria =
-  '<li><b>Primera consulta gratis</b></li> <li>Permisos de residencia y trabajo</li> Reagrupación familiar <li>Nacionalidad</li> <li>Expedientes de expulsión y sanciones</li> ';
+  '<b>--> Primera consulta gratis</b> <li>Permisos de residencia y trabajo</li> <li>Reagrupación familiar</li> <li>Nacionalidad</li> <li>Expedientes de expulsión y sanciones</li> ';
 
 const familia =
-  '<li><b>Presupuesto según tu caso particular</b></li> <li>Matrimonios </li> <li>Capitulaciones matrimoniales</li> <li>Pareja de hecho</li> <li>Filiación y reconocimiento </li> <li>Separación y divorcio</li> <li>Nulidad</li> <li>Pensiones compensatorias y alimenticias</li> <li>Pensiones> </li> <li>Herencias</li> <li>Adopciones</li> <li>Familia Internacional(Matrimonios mixtos, etc)</li>';
+  '<b>--> Presupuesto según tu caso particular</b> <li>Matrimonios </li> <li>Capitulaciones matrimoniales</li> <li>Pareja de hecho</li> <li>Filiación y reconocimiento </li> <li>Separación y divorcio</li> <li>Nulidad</li> <li>Pensiones compensatorias y alimenticias</li> <li>Pensiones> </li> <li>Herencias</li> <li>Adopciones</li> <li>Familia Internacional(Matrimonios mixtos, etc)</li>';
 
 const inmobiliario =
-  '<li><b>Primera consulta gratis</b></li> <li>Asesoría en operaciones inmobiliarias</li> <li>Compra-venta y arrendamiento de inmuebles</li> <li>Revisión situación jurídica del inmueble</li> <li>Negociación y redacción de contratos</li> <li>Asesoría Deshaucios</li> <li> Asesoría y planificación financiera</li>';
+  '<b>--> Primera consulta gratis</b> <li>Asesoría en operaciones inmobiliarias</li> <li>Compra-venta y arrendamiento de inmuebles</li> <li>Revisión situación jurídica del inmueble</li> <li>Negociación y redacción de contratos</li> <li>Asesoría Deshaucios</li> <li> Asesoría y planificación financiera</li>';
 
 const data =
-  '<li><b>Presupuesto según tus necesidades</b></li> <li>Asesoría a Autónomos, Sociedades y Asociaciones</li> <li>Adaptación LOPD/RGPD</li> <li>Redacción Documentos de Seguridad</li> <li>Cláusulas informativas</li> <li>Contratos de acceso a datos y confidencialidad</li> <li>Información y protocolo para el ejercicio de los derechos de interesados</li> <li>Cumplimiento de obligaciones para videovigilancia</li>';
+  '<b>--> Presupuesto según tus necesidades</b> <li>Asesoría a Autónomos, Sociedades y Asociaciones</li> <li>Adaptación LOPD/RGPD</li> <li>Redacción Documentos de Seguridad</li> <li>Cláusulas informativas</li> <li>Contratos de acceso a datos y confidencialidad</li> <li>Información y protocolo para el ejercicio de los derechos de interesados</li> <li>Cumplimiento de obligaciones para videovigilancia</li>';
 
 const otros =
-  '<li>Trámites con Administraciones</li>  <li>Ayuntamientos</li> <li>ASNEF y RAI</li> <li>CONSULTA TU CASO</li>';
+  '<li>Trámites con Administraciones</li>  <li>Ayuntamientos</li> <li>ASNEF y RAI</li> --> CONSULTA TU CASO';
