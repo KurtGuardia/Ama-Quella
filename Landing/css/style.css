@@ -624,11 +624,16 @@ body {
 
 .testimony {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 70vh;
+  height: 75vh;
   width: 100%; }
+  @media only screen and (max-width: 37.5em) {
+    .testimony {
+      justify-content: flex-start;
+      padding: 5rem 0; } }
   .testimony::before {
     content: '';
     position: absolute;
@@ -640,6 +645,21 @@ body {
     background-position: 100% 100%;
     background-size: cover;
     filter: sepia(30%) blur(10px); }
+  .testimony .title {
+    font-size: 2rem;
+    position: relative;
+    margin-bottom: 10rem;
+    color: #ffffff;
+    opacity: 0.8; }
+    .testimony .title h2::after {
+      position: absolute;
+      content: '';
+      bottom: -0.5rem;
+      left: 50%;
+      width: 15rem;
+      height: 0.35rem;
+      background-color: #ffffff;
+      transform: translateX(-50%); }
   .testimony__carousel {
     display: flex;
     width: 85%;
@@ -718,7 +738,7 @@ body {
     justify-content: center;
     align-items: center;
     position: absolute;
-    bottom: 4rem;
+    bottom: 3rem;
     right: 5rem; }
     .testimony .pagination__btns {
       display: flex;

@@ -1,8 +1,13 @@
 .testimony {
-  @include flexCenter();
+  @include flexColumnCenter();
   position: relative;
-  height: 70vh;
+  height: 75vh;
   width: 100%;
+
+  @include respond(phone) {
+    justify-content: flex-start;
+    padding: 5rem 0;
+  }
 
   &::before {
     content: '';
@@ -15,6 +20,27 @@
     background-position: 100% 100%;
     background-size: cover;
     filter: sepia(30%) blur(10px);
+  }
+
+  & .title {
+    font-size: 2rem;
+    position: relative;
+    margin-bottom: 10rem;
+    color: #ffffff;
+    opacity: 0.8;
+
+    & h2 {
+      &::after {
+        position: absolute;
+        content: '';
+        bottom: -0.5rem;
+        left: 50%;
+        width: 15rem;
+        height: 0.35rem;
+        background-color: #ffffff;
+        transform: translateX(-50%);
+      }
+    }
   }
 
   &__carousel {
@@ -113,7 +139,7 @@
   & .pagination {
     @include flexCenter();
     position: absolute;
-    bottom: 4rem;
+    bottom: 3rem;
     right: 5rem;
 
     &__btns {

@@ -1,5 +1,6 @@
 // DOM elements
 const menu = document.getElementById('menu');
+const navLi = document.querySelectorAll('.navigation__item');
 const phoneNav = document.getElementById('phone-nav');
 const modal = document.querySelector('.modal');
 const modalCard = document.querySelector('.modal__card');
@@ -17,6 +18,20 @@ const carouselCards = document.querySelectorAll('.testimony__carousel--client');
 var tabLand = window.matchMedia('(max-width: 1100px)');
 var tabPort = window.matchMedia('(max-width: 900px)');
 var phone = window.matchMedia('(max-width: 600px)');
+
+// Navigation active <li>
+
+const clearNavActive = () => {
+  navLi.forEach((e) => {
+    e.classList.remove('active');
+  });
+};
+navLi.forEach((e) => {
+  e.addEventListener('click', () => {
+    clearNavActive();
+    e.classList.add('active');
+  });
+});
 
 // Phone Navigation sidebar
 
