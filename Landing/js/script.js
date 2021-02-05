@@ -7,6 +7,10 @@ const modalTitle = document.querySelector('.modal__card--title');
 const modalList = document.querySelector('.modal__card--list');
 const modalClose = document.querySelector('.modal__card--close');
 const services = document.querySelectorAll('.services__container--icon');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const carouselContainer = document.querySelector('.testimony__carousel');
+const carouselCards = document.querySelectorAll('.testimony__carousel--client');
 
 // Phone Navigation sidebar
 menu.addEventListener('click', () => {
@@ -60,6 +64,38 @@ modal.addEventListener('click', () => {
     modalList.removeChild(modalList.firstChild);
   }
 });
+
+// Testomony carrousel
+let counter = 0;
+
+const carouselMotion = () => {
+  [...carouselCards].forEach((card) => {
+    card.style.transform = `translateX(-${counter * 108}%)`;
+  });
+};
+
+prevBtn.addEventListener('click', () => {
+  if (counter < 1) counter = 1;
+  counter -= 1;
+
+  carouselMotion();
+});
+
+nextBtn.addEventListener('click', () => {
+  counter += 1;
+  carouselMotion();
+
+  if (counter === carouselCards.length - 1) counter = 0;
+  carouselMotion();
+  console.log(counter);
+});
+
+setInterval(() => {
+  counter += 1;
+  carouselMotion();
+  if (counter === carouselCards.length - 1) counter = 0;
+  carouselMotion();
+}, 5000);
 
 //Services list
 const fiscal =

@@ -642,16 +642,19 @@ body {
     filter: sepia(30%) blur(10px); }
   .testimony__carousel {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-around;
-    position: relative; }
+    width: 85%;
+    position: relative;
+    overflow: hidden; }
     .testimony__carousel--client {
-      width: 35%;
+      min-width: 48%;
       border-radius: 10px;
+      margin-right: 5rem;
       padding: 2rem;
       color: #222127;
-      background-color: rgba(255, 255, 255, 0.7); }
+      background-color: rgba(255, 255, 255, 0.7);
+      transition: all 0.5s;
+      display: inline-block;
+      overflow: hidden; }
       @media only screen and (max-width: 68.75em) {
         .testimony__carousel--client {
           width: 40%; } }
@@ -709,7 +712,7 @@ body {
         .testimony .pagination__btns button:hover {
           opacity: 1;
           background: rgba(0, 0, 0, 0.4);
-          filter: brightness(2); }
+          filter: brightness(1.5); }
       .testimony .pagination__btns--left, .testimony .pagination__btns--right {
         width: 2rem;
         height: 2rem;
