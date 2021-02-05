@@ -1,9 +1,12 @@
 import { useCallback, useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { HideIcon, LookIcon } from '../../../assets/icons';
 import { Btn } from '../../../components/UI';
 import { re } from '../../../shared/utility';
+import { login } from '../../../store/actions/authActions';
 
 const LoginForm = () => {
+  const dispatch = useDispatch();
   const [isFormValid, setIsFormValid] = useState(false);
   const [isHidePassword, setIsHidePassword] = useState(true);
   const [errorMsg, setErrorMsg] = useState('');
@@ -15,6 +18,7 @@ const LoginForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(user);
+    dispatch(login(user));
 
     setUser({
       email: '',
