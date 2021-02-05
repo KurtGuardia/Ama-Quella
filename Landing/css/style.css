@@ -652,8 +652,14 @@ body {
       padding: 2rem;
       color: #222127;
       background-color: rgba(255, 255, 255, 0.7); }
+      @media only screen and (max-width: 68.75em) {
+        .testimony__carousel--client {
+          width: 40%; } }
       .testimony__carousel--client p {
         font-size: 25px; }
+        @media only screen and (max-width: 68.75em) {
+          .testimony__carousel--client p {
+            font-size: 20px; } }
       .testimony__carousel--client .name {
         display: flex;
         justify-content: center;
@@ -661,11 +667,55 @@ body {
         justify-content: space-between;
         margin-top: 1rem; }
         .testimony__carousel--client .name h2 {
-          font-size: 30px; }
+          font-size: 30px;
+          margin-right: 1rem; }
+          @media only screen and (max-width: 68.75em) {
+            .testimony__carousel--client .name h2 {
+              font-size: 22px; } }
         .testimony__carousel--client .name img {
           align-self: flex-end;
           width: 13rem;
           border-radius: 10px; }
+          @media only screen and (max-width: 68.75em) {
+            .testimony__carousel--client .name img {
+              width: 10rem; } }
+  .testimony .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 4rem;
+    right: 5rem; }
+    .testimony .pagination__btns {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .testimony .pagination__btns .line {
+        width: 4rem;
+        height: 3px;
+        background-color: #ffffff;
+        opacity: 0.7;
+        margin: 0 0.5rem; }
+      .testimony .pagination__btns button {
+        height: 3rem;
+        opacity: 0.7;
+        outline: none;
+        cursor: pointer;
+        background: rgba(255, 255, 255, 0.7);
+        border: none;
+        border-radius: 50%;
+        font-size: 1.6rem;
+        transition: all 0.3s; }
+        .testimony .pagination__btns button:hover {
+          opacity: 1;
+          background: rgba(0, 0, 0, 0.4);
+          filter: brightness(2); }
+      .testimony .pagination__btns--left, .testimony .pagination__btns--right {
+        width: 2rem;
+        height: 2rem;
+        margin: 0.5rem; }
+      .testimony .pagination__btns--left {
+        transform: rotate(180deg); }
 
 #contact {
   display: flex;

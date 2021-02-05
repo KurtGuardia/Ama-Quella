@@ -24,14 +24,21 @@
 
     &--client {
       width: 35%;
-
       border-radius: 10px;
       padding: 2rem;
       color: $color-primary;
       background-color: rgba($color: #fff, $alpha: 0.7);
 
+      @include respond(tab-land) {
+        width: 40%;
+      }
+
       & p {
         font-size: 25px;
+
+        @include respond(tab-land) {
+          font-size: 20px;
+        }
       }
 
       & .name {
@@ -41,13 +48,71 @@
 
         & h2 {
           font-size: 30px;
+          margin-right: 1rem;
+
+          @include respond(tab-land) {
+            font-size: 22px;
+          }
         }
 
         & img {
           align-self: flex-end;
           width: 13rem;
           border-radius: 10px;
+
+          @include respond(tab-land) {
+            width: 10rem;
+          }
         }
+      }
+    }
+  }
+
+  & .pagination {
+    @include flexCenter();
+    position: absolute;
+    bottom: 4rem;
+    right: 5rem;
+
+    &__btns {
+      @include flexCenter();
+
+      .line {
+        width: 4rem;
+        height: 3px;
+        background-color: $color-white;
+        opacity: 0.7;
+        margin: 0 0.5rem;
+      }
+
+      button {
+        height: 3rem;
+        opacity: 0.7;
+        // padding: 0.5rem;
+        outline: none;
+        cursor: pointer;
+        background: rgba($color: #fff, $alpha: 0.7);
+        border: none;
+        border-radius: 50%;
+        font-size: 1.6rem;
+        transition: all 0.3s;
+
+        &:hover {
+          opacity: 1;
+          background: rgba($color: #000, $alpha: 0.4);
+          filter: brightness(2);
+        }
+      }
+
+      &--left,
+      &--right {
+        width: 2rem;
+        height: 2rem;
+        margin: 0.5rem;
+      }
+
+      &--left {
+        transform: rotate(180deg);
       }
     }
   }
