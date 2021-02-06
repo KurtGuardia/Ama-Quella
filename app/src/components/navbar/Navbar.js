@@ -1,7 +1,7 @@
 import './Navbar.scss';
 import { signedInLinks, signedOutLinks } from './components/data';
 import NavbarLink from './components/NavbarLink';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { Btn } from '../UI';
 import { useDispatch, useSelector } from 'react-redux';
 import { changeIsLogging, logout } from '../../store/actions/authActions';
@@ -10,16 +10,22 @@ const Navbar = () => {
   const isLogging = useSelector((state) => state.auth.isLogging);
   const uid = useSelector((state) => state.firebase.auth.uid);
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const handleLogout = () => {
     dispatch(logout());
+  };
+
+  const loginClicked = () => {
+    if (history.location.pathname !== '/auth') history.push('/auth');
+    dispatch(changeIsLogging());
   };
 
   return (
     <nav className="navbar">
       <div className="navbar__title">
         <Link to="/">
-          <h1>Ama Quella Abogados</h1>
+          <h1>Ama Quella</h1>
         </Link>
       </div>
 
@@ -41,7 +47,7 @@ const Navbar = () => {
         ) : (
           <Btn
             text={isLogging ? 'Registrarse' : 'Login'}
-            clicked={() => dispatch(changeIsLogging())}
+            clicked={loginClicked}
           />
         )}
       </div>

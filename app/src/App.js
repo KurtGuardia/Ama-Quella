@@ -1,9 +1,19 @@
 import './App.scss';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, useHistory } from 'react-router-dom';
 import { Navbar } from './components';
 import { Auth, Home, Tutorial } from './views';
+import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
 
 function App() {
+  const uid = useSelector((state) => state.firebase.auth.uid);
+  const history = useHistory();
+
+  useEffect(() => {
+    if (!uid) history?.push('/auth');
+    // eslint-disable-next-line
+  }, [uid]);
+
   return (
     <BrowserRouter>
       <div className="app">

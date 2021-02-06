@@ -69,9 +69,9 @@ const Tutorial = () => {
   ];
 
   return (
-    <div className='tutorial view'>
+    <div className="tutorial view">
       <Steps howMany={5} darkProp={dark} counter={counter} />
-      <div className='tutorial__icons'>
+      <div className="tutorial__icons">
         {icons.map((icon, index) => (
           <Icon
             key={index}
@@ -84,19 +84,19 @@ const Tutorial = () => {
           />
         ))}
       </div>
-      <div className='tutorial__buttons'>
+      <div className="tutorial__buttons">
         <Btn
-          text='Anterior'
+          text="Anterior"
           clicked={prev}
           prevIcon={true}
-          position='abs-bottom-left'
+          position="abs-bottom-left"
           disabled={counter === 1 ? true : false}
         />
         <Btn
-          text='Siguiente'
+          text="Siguiente"
           clicked={next}
           nextIcon={true}
-          position='abs-bottom-right'
+          position="abs-bottom-right"
           disabled={counter === 5 ? true : false}
         />
       </div>
