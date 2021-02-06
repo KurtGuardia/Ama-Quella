@@ -58,28 +58,5 @@
   }
 
   &__icons {
-    &--icon {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      transition: all 0.3s;
-
-      & > p {
-        margin-top: 2rem;
-        margin-left: -2rem;
-      }
-
-      &.dark {
-        opacity: 0.15;
-        transform: scale(0.92);
-      }
-
-      &.down {
-        transform: translateY(8rem);
-        &.dark {
-          transform: translateY(8rem) scale(0.92);
-        }
-      }
-    }
   }
 }

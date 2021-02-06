@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import sprite from '../../../assets/icons/sprite.svg';
+import './Icon.scss';
 
 const Icon = ({ index, icon, counter, darkProp }) => {
   const [dark, setDark] = useState(true);
-  console.log(dark);
 
   useEffect(() => {
     if (index === darkProp) setDark(!dark);
@@ -15,9 +15,7 @@ const Icon = ({ index, icon, counter, darkProp }) => {
 
   return (
     <div
-      className={`tutorial__icons--icon ${!(index % 2 === 0) ? 'down' : ''} ${
-        dark && 'dark'
-      }`}
+      className={`icon ${!(index % 2 === 0) ? 'down' : ''} ${dark && 'dark'}`}
     >
       <svg>
         <use href={sprite + icon} />
