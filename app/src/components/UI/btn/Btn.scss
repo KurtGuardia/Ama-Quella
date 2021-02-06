@@ -4,7 +4,6 @@
   align-items: center;
   justify-content: space-evenly;
   outline: none;
-  border: none;
   background: transparent;
   font-size: 1.7rem;
   letter-spacing: 1px;
@@ -12,26 +11,34 @@
   color: #f9f9f9;
   border: 1px solid #f9f9f9;
   border-radius: 7px;
-  transition: color background-color 0.3s;
+  transition: color, background-color 0.3s;
 
   span {
     svg {
       opacity: 0.7;
+
       &.rotate {
         margin-left: -1rem;
         margin-right: 1rem;
         transform: rotate(180deg) translateY(-1px);
       }
+
       path {
         fill: #f9f9f9;
       }
     }
   }
 
-  &.abs-bottom {
+  &.abs-bottom-left {
     position: absolute;
     bottom: 4rem;
     left: 4rem;
+  }
+
+  &.abs-bottom-right {
+    position: absolute;
+    bottom: 4rem;
+    right: 4rem;
   }
 
   &:hover {
@@ -50,13 +57,13 @@
 
   &:disabled {
     cursor: not-allowed;
+    border: 1px solid transparent;
+    background-color: #555;
     color: #aaa;
-    border: 1px solid #aaa;
-
     &:hover {
-      color: #aaa;
-      background-color: transparent;
-      border: 1px solid #aaa;
+      svg path {
+        fill: #f9f9f9;
+      }
     }
   }
 }

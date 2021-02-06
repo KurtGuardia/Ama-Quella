@@ -15,10 +15,10 @@ const Auth = () => {
   const isLogging = useSelector((state) => state.auth.isLogging);
 
   return (
-    <div className="auth view" style={style}>
+    <div className='auth view' style={style}>
       {isLogging ? <LoginForm /> : <SignupForm />}
-      <a href="https://amaquella.netlify.app/">
-        <Btn text="Volver" prevIcon={true} position="abs-bottom" />
+      <a href='https://amaquella.netlify.app/'>
+        <Btn text='Volver' prevIcon={true} position='abs-bottom-left' />
       </a>
     </div>
   );

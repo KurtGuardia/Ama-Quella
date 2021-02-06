@@ -17,7 +17,7 @@ const Btn = ({
       onClick={clicked}
       type={btnType}
     >
-      <span>{prevIcon && <ArrowIcon className="rotate" />}</span>
+      <span>{prevIcon && <ArrowIcon className='rotate' />}</span>
       {text} <span>{nextIcon && <ArrowIcon />}</span>
     </button>
   );

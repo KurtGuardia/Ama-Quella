@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './_Tutorial.scss';
 import sprite from '../../assets/icons/sprite.svg';
+import Btn from '../../components/UI/btn/Btn';
 
 const Tutorial = () => {
   let [counter, setCounter] = useState(1);
@@ -12,8 +13,6 @@ const Tutorial = () => {
   const threeTop = useRef(null);
   const fourTop = useRef(null);
   const fiveTop = useRef(null);
-  const nextBtn = useRef(null);
-  const prevBtn = useRef(null);
 
   useEffect(() => {
     console.log('contador: ' + counter);
@@ -61,44 +60,31 @@ const Tutorial = () => {
     }
   };
 
-  useEffect(() => {
-    if (counter === 1) {
-      prevBtn.current.setAttribute('disabled', true);
-    } else if (counter >= 2) {
-      prevBtn.current.removeAttribute('disabled');
-    }
-    if (counter === 5) {
-      nextBtn.current.setAttribute('disabled', true);
-    } else if (counter <= 4) {
-      nextBtn.current.removeAttribute('disabled');
-    }
-  }, [counter]);
-
   return (
-    <div className="tutorial view">
-      <div className="tutorial__top">
-        <div className="tutorial__top--number">
-          <div className="square"></div>
-          <div className="numb">1</div>
+    <div className='tutorial view'>
+      <div className='tutorial__top'>
+        <div className='tutorial__top--number'>
+          <div className='square'></div>
+          <div className='numb'>1</div>
         </div>
-        <div className="tutorial__top--number dark" ref={twoTop}>
-          <div className="square"></div>
-          <div className="numb">2</div>
+        <div className='tutorial__top--number dark' ref={twoTop}>
+          <div className='square'></div>
+          <div className='numb'>2</div>
         </div>
-        <div className="tutorial__top--number dark" ref={threeTop}>
-          <div className="square"></div>
-          <div className="numb">3</div>
+        <div className='tutorial__top--number dark' ref={threeTop}>
+          <div className='square'></div>
+          <div className='numb'>3</div>
         </div>
-        <div className="tutorial__top--number dark" ref={fourTop}>
-          <div className="square"></div>
-          <div className="numb">4</div>
+        <div className='tutorial__top--number dark' ref={fourTop}>
+          <div className='square'></div>
+          <div className='numb'>4</div>
         </div>
-        <div className="tutorial__top--number dark" ref={fiveTop}>
-          <div className="square"></div>
-          <div className="numb">5 </div>
+        <div className='tutorial__top--number dark' ref={fiveTop}>
+          <div className='square'></div>
+          <div className='numb'>5 </div>
         </div>
       </div>
-      <div className="tutorial__icons">
+      <div className='tutorial__icons'>
         <div className={`tutorial__icons--icon down`}>
           <svg>
             <use href={sprite + '#user-icon'} />
@@ -130,27 +116,21 @@ const Tutorial = () => {
           <p>Pulsa Guardar y continúa con otra factura</p>
         </div>
       </div>
-      <div className="tutorial__buttons">
-        <button
-          className="tutorial__buttons--button"
-          onClick={prev}
-          ref={prevBtn}
-        >
-          <svg>
-            <use href={sprite + '#arrow'} />
-          </svg>
-          <p>Anterior</p>
-        </button>
-        <button
-          className="tutorial__buttons--button"
-          onClick={next}
-          ref={nextBtn}
-        >
-          <p>Siguiente</p>
-          <svg>
-            <use href={sprite + '#arrow'} />
-          </svg>
-        </button>
+      <div className='tutorial__buttons'>
+        <Btn
+          text='Anterior'
+          clicked={prev}
+          prevIcon={true}
+          position='abs-bottom-left'
+          disabled={counter === 1 ? true : false}
+        />
+        <Btn
+          text='Siguiente'
+          clicked={next}
+          nextIcon={true}
+          position='abs-bottom-right'
+          disabled={counter === 5 ? true : false}
+        />
       </div>
     </div>
   );
