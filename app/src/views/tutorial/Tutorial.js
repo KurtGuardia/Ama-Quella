@@ -1,18 +1,17 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './_Tutorial.scss';
-import sprite from '../../assets/icons/sprite.svg';
 import Btn from '../../components/UI/btn/Btn';
+import Icon from '../../components/UI/icons/Icon';
 
 const Tutorial = () => {
   let [counter, setCounter] = useState(1);
-  const two = useRef(null);
-  const three = useRef(null);
-  const four = useRef(null);
-  const five = useRef(null);
+  const [dark, setDark] = useState(0);
   const twoTop = useRef(null);
   const threeTop = useRef(null);
   const fourTop = useRef(null);
   const fiveTop = useRef(null);
+
+  const icons = ['#user-icon', '#declare', '#coins', '#fill', '#done'];
 
   useEffect(() => {
     console.log('contador: ' + counter);
@@ -24,19 +23,30 @@ const Tutorial = () => {
     } else {
       setCounter(counter - 1);
     }
-    if (counter === 2) {
-      two.current.classList.add('dark');
-      twoTop.current.classList.add('dark');
+    if (counter === 1) {
+      setDark(1);
+    } else if (counter === 2) {
+      setDark(1);
     } else if (counter === 3) {
-      three.current.classList.add('dark');
-      threeTop.current.classList.add('dark');
+      setDark(2);
     } else if (counter === 4) {
-      four.current.classList.add('dark');
-      fourTop.current.classList.add('dark');
+      setDark(3);
     } else if (counter === 5) {
-      five.current.classList.add('dark');
-      fiveTop.current.classList.add('dark');
+      setDark(4);
     }
+    // if (counter === 2) {
+    //   two.current.classList.add('dark');
+    //   twoTop.current.classList.add('dark');
+    // } else if (counter === 3) {
+    //   three.current.classList.add('dark');
+    //   threeTop.current.classList.add('dark');
+    // } else if (counter === 4) {
+    //   four.current.classList.add('dark');
+    //   fourTop.current.classList.add('dark');
+    // } else if (counter === 5) {
+    //   five.current.classList.add('dark');
+    //   fiveTop.current.classList.add('dark');
+    // }
   };
 
   const next = () => {
@@ -46,17 +56,15 @@ const Tutorial = () => {
       setCounter(counter + 1);
     }
     if (counter === 1) {
-      two.current.classList.remove('dark');
-      twoTop.current.classList.remove('dark');
+      setDark(1);
     } else if (counter === 2) {
-      three.current.classList.remove('dark');
-      threeTop.current.classList.remove('dark');
+      setDark(2);
     } else if (counter === 3) {
-      four.current.classList.remove('dark');
-      fourTop.current.classList.remove('dark');
+      setDark(3);
     } else if (counter === 4) {
-      five.current.classList.remove('dark');
-      fiveTop.current.classList.remove('dark');
+      setDark(4);
+    } else if (counter === 5) {
+      setDark(5);
     }
   };
 
@@ -85,36 +93,15 @@ const Tutorial = () => {
         </div>
       </div>
       <div className='tutorial__icons'>
-        <div className={`tutorial__icons--icon down`}>
-          <svg>
-            <use href={sprite + '#user-icon'} />
-          </svg>
-          <p>Inicia sesión</p>
-        </div>
-        <div className={`tutorial__icons--icon dark`} ref={two}>
-          <svg>
-            <use href={sprite + '#declare'} />
-          </svg>
-          <p>Ingresa a Declarar</p>
-        </div>
-        <div className={`tutorial__icons--icon down dark`} ref={three}>
-          <svg>
-            <use href={sprite + '#coins'} />
-          </svg>
-          <p>Selecciona Ingreso o Gasto</p>
-        </div>
-        <div className={`tutorial__icons--icon dark`} ref={four}>
-          <svg>
-            <use href={sprite + '#fill'} />
-          </svg>
-          <p>Rellena el formulario</p>
-        </div>
-        <div className={`tutorial__icons--icon down dark`} ref={five}>
-          <svg>
-            <use href={sprite + '#done'} />
-          </svg>
-          <p>Pulsa Guardar y continúa con otra factura</p>
-        </div>
+        {icons.map((icon, index) => (
+          <Icon
+            key={index}
+            index={index}
+            icon={icon}
+            counter={counter}
+            darkProp={dark}
+          />
+        ))}
       </div>
       <div className='tutorial__buttons'>
         <Btn
