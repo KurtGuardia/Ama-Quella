@@ -125,7 +125,11 @@ const LoginForm = () => {
         <Btn disabled={!isFormValid} text="Iniciar Sesión" btnType="submit" />
       </div>
 
-      {isLoading && <Spinner />}
+      {isLoading && (
+        <div className="loading-container">
+          <Spinner />
+        </div>
+      )}
 
       {errorMsg && <p className="error-msg">{errorMsg}</p>}
     </form>
