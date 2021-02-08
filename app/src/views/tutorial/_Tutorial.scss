@@ -1,5 +1,4 @@
 .tutorial {
-  //height: 100vh;
   background-color: #222127;
   color: #fff;
   display: flex;
@@ -7,8 +6,24 @@
   justify-content: space-around;
   align-items: center;
 
+  @media screen and (max-width: 1024px) {
+    justify-content: space-evenly;
+  }
+
   & > * {
     display: flex;
     width: 90%;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 600px) {
+      height: 80vh;
+      width: 100%;
+    }
+  }
+
+  .tutorial__buttons {
+    @media screen and (max-width: 600px) {
+      height: 0;
+    }
   }
 }

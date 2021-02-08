@@ -13,14 +13,34 @@
   border-radius: 7px;
   transition: color, background-color 0.3s;
 
+  @media screen and (max-width: 1024px) {
+    font-size: 18px;
+    padding: 0.2rem 1rem;
+  }
+
+  @media screen and (max-width: 600px) {
+    font-size: 12px;
+    padding: 0.2rem 0.5rem;
+  }
+
   span {
     svg {
       opacity: 0.7;
+
+      @media screen and (max-width: 600px) {
+        height: 15px;
+        width: auto;
+      }
 
       &.rotate {
         margin-left: -1rem;
         margin-right: 1rem;
         transform: rotate(180deg) translateY(-1px);
+
+        @media screen and (max-width: 1024px) {
+          margin-left: 0%;
+          margin-right: 0.25rem;
+        }
       }
 
       path {
@@ -33,12 +53,22 @@
     position: absolute;
     bottom: 4rem;
     left: 4rem;
+
+    @media screen and (max-width: 600px) {
+      bottom: 2rem;
+      left: 2rem;
+    }
   }
 
   &.abs-bottom-right {
     position: absolute;
     bottom: 4rem;
     right: 4rem;
+
+    @media screen and (max-width: 600px) {
+      bottom: 2rem;
+      right: 2rem;
+    }
   }
 
   &:hover {

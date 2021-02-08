@@ -4,10 +4,26 @@
   justify-content: space-between;
   align-items: center;
 
+  @media screen and (max-width: 1024px) {
+    padding: 0 8rem;
+  }
+
+  @media screen and (max-width: 900px) {
+    padding: 0 5rem;
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 0 2rem;
+  }
+
   & .line {
-    width: 100px;
+    width: 10%;
     border-top: 1px solid #fff;
     opacity: 0.65;
+
+    @media screen and (max-width: 1400px) {
+      width: 7%;
+    }
   }
 
   & .line.dark {

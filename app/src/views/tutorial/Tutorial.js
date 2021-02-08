@@ -80,6 +80,7 @@ const Tutorial = () => {
             counter={counter}
             darkProp={dark}
             text={text}
+            totalIcons={icons.length}
           />
         ))}
       </div>
