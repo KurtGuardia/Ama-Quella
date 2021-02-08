@@ -6,13 +6,13 @@ const Step = ({ step, darkProp, counter }) => {
 
   useEffect(() => {
     if (step === darkProp) {
-      setDark(!dark);
+      setDark((dark) => !dark);
     }
 
     if (step === 0) {
       setDark(false);
     }
-  }, [counter]);
+  }, [counter, step, darkProp]);
 
   return (
     <div className={`step ${dark && 'dark'}`}>

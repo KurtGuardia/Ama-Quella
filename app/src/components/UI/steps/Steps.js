@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Step from './step/Step';
 import './Steps.scss';
 
 const Steps = ({ howMany, darkProp, counter }) => {
-  const [dark, setDark] = useState(true);
-
   let getSteps = () => {
     let steps = [];
     for (let i = 0; i < howMany; i++) {
