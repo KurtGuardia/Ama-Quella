@@ -1,17 +1,21 @@
 import { useCallback, useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { signup } from '../../../store/actions/authActions';
 import { HideIcon, LookIcon } from '../../../assets/icons';
-import { Btn } from '../../../components/UI';
+import { Btn, Spinner } from '../../../components/UI';
 import { re } from '../../../shared/utility';
+import { useHistory } from 'react-router-dom';
 
 const SignupForm = () => {
   const dispatch = useDispatch();
+  const uid = useSelector((state) => state.firebase.auth.uid);
   const [step, setStep] = useState(1);
   const [isFormValid, setIsFormValid] = useState(false);
   const [isHidePassword, setIsHidePassword] = useState(true);
   const [showCode, setShowCode] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const history = useHistory();
   const [user, setUser] = useState({
     firstName: '',
     lastName: '',
@@ -23,10 +27,19 @@ const SignupForm = () => {
     activity: '',
   });
 
+  useEffect(() => {
+    if (uid) {
+      setIsLoading(false);
+      history.push('/');
+    }
+    // eslint-disable-next-line
+  }, [uid]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(user);
     dispatch(signup(user));
+    setIsLoading(true);
 
     setUser({
       firstName: '',
@@ -80,6 +93,8 @@ const SignupForm = () => {
   useEffect(() => {
     checkValidation();
   }, [checkValidation]);
+
+  if (uid) history.push('/');
 
   return (
     <form className="form" onSubmit={handleSubmit}>
@@ -360,6 +375,8 @@ const SignupForm = () => {
           <Btn disabled={!isFormValid} text="Resgistrarme" btnType="submit" />
         </div>
       )}
+
+      {isLoading && <Spinner />}
 
       {errorMsg && <p className="error-msg">{errorMsg}</p>}
     </form>

@@ -1,24 +1,37 @@
 import { useCallback, useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import { HideIcon, LookIcon } from '../../../assets/icons';
-import { Btn } from '../../../components/UI';
+import { Btn, Spinner } from '../../../components/UI';
 import { re } from '../../../shared/utility';
 import { login } from '../../../store/actions/authActions';
 
 const LoginForm = () => {
   const dispatch = useDispatch();
+  const uid = useSelector((state) => state.firebase.auth.uid);
   const [isFormValid, setIsFormValid] = useState(false);
   const [isHidePassword, setIsHidePassword] = useState(true);
   const [errorMsg, setErrorMsg] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const history = useHistory();
   const [user, setUser] = useState({
     email: '',
     password: '',
   });
 
+  useEffect(() => {
+    if (uid) {
+      setIsLoading(false);
+      history.push('/');
+    }
+    // eslint-disable-next-line
+  }, [uid]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(user);
     dispatch(login(user));
+    setIsLoading(true);
 
     setUser({
       email: '',
@@ -111,6 +124,12 @@ const LoginForm = () => {
       <div className="input-field btn-container">
         <Btn disabled={!isFormValid} text="Iniciar Sesión" btnType="submit" />
       </div>
+
+      {isLoading && (
+        <div className="loading-container">
+          <Spinner />
+        </div>
+      )}
 
       {errorMsg && <p className="error-msg">{errorMsg}</p>}
     </form>
