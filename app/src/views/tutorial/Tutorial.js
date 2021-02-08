@@ -2,20 +2,12 @@ import React, { useEffect, useRef, useState } from 'react';
 import './_Tutorial.scss';
 import Btn from '../../components/UI/btn/Btn';
 import Icon from '../../components/UI/icons/Icon';
+import Steps from '../../components/UI/steps/Steps';
 
 const Tutorial = () => {
   let [counter, setCounter] = useState(1);
   const [dark, setDark] = useState(0);
-  const twoTop = useRef(null);
-  const threeTop = useRef(null);
-  const fourTop = useRef(null);
-  const fiveTop = useRef(null);
-
   const icons = ['#user-icon', '#declare', '#coins', '#fill', '#done'];
-
-  useEffect(() => {
-    console.log('contador: ' + counter);
-  }, [counter]);
 
   const prev = () => {
     if (counter === 1) {
@@ -68,30 +60,17 @@ const Tutorial = () => {
     }
   };
 
+  const text = [
+    'Iniciar sesión',
+    'Ingresar a Declarar',
+    'Selecciona Ingreso o Gasto',
+    'Rellena el formulario',
+    'Pulsa guardar y continúa...',
+  ];
+
   return (
     <div className='tutorial view'>
-      <div className='tutorial__top'>
-        <div className='tutorial__top--number'>
-          <div className='square'></div>
-          <div className='numb'>1</div>
-        </div>
-        <div className='tutorial__top--number dark' ref={twoTop}>
-          <div className='square'></div>
-          <div className='numb'>2</div>
-        </div>
-        <div className='tutorial__top--number dark' ref={threeTop}>
-          <div className='square'></div>
-          <div className='numb'>3</div>
-        </div>
-        <div className='tutorial__top--number dark' ref={fourTop}>
-          <div className='square'></div>
-          <div className='numb'>4</div>
-        </div>
-        <div className='tutorial__top--number dark' ref={fiveTop}>
-          <div className='square'></div>
-          <div className='numb'>5 </div>
-        </div>
-      </div>
+      <Steps howMany={5} darkProp={dark} counter={counter} />
       <div className='tutorial__icons'>
         {icons.map((icon, index) => (
           <Icon
@@ -100,6 +79,7 @@ const Tutorial = () => {
             icon={icon}
             counter={counter}
             darkProp={dark}
+            text={text}
           />
         ))}
       </div>

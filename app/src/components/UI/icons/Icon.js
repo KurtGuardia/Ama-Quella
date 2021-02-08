@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import sprite from '../../../assets/icons/sprite.svg';
 import './Icon.scss';
 
-const Icon = ({ index, icon, counter, darkProp }) => {
+const Icon = ({ index, icon, counter, darkProp, text }) => {
   const [dark, setDark] = useState(true);
+  // console.log('On icon ' + index + ' darkProp: ' + darkProp);
 
   useEffect(() => {
     if (index === darkProp) setDark(!dark);
@@ -20,7 +21,7 @@ const Icon = ({ index, icon, counter, darkProp }) => {
       <svg>
         <use href={sprite + icon} />
       </svg>
-      <p>Inicia sesión</p>
+      <p>{text[index]}</p>
     </div>
   );
 };

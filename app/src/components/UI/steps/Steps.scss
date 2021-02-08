@@ -1,0 +1,20 @@
+.steps {
+  padding: 0 20rem;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+
+  & .line {
+    width: 100px;
+    border-top: 1px solid #fff;
+    opacity: 0.65;
+  }
+
+  & .line.dark {
+    opacity: 0.15;
+  }
+
+  & .line:last-child {
+    display: none;
+  }
+}
