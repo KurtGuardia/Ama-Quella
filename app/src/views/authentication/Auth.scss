@@ -50,6 +50,17 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        & button:disabled {
+          border: 1px solid #aaa;
+          background-color: transparent;
+
+          &:hover {
+            color: #aaa;
+            background-color: transparent;
+            border: 1px solid #aaa;
+          }
+        }
       }
 
       &__svg {

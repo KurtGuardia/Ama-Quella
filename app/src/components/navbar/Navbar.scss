@@ -13,6 +13,10 @@
     height: 10vh;
   }
 
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
+
   &__btns {
     display: flex;
     align-items: center;
