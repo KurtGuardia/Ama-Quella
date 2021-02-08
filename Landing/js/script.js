@@ -10,8 +10,6 @@ const modalClose = document.querySelector('.modal__card--close');
 const services = document.querySelectorAll('.services__container--icon');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
-const carouselContainer = document.querySelector('.testimony__carousel');
-const carouselCards = document.querySelectorAll('.testimony__carousel--client');
 
 // Responsive
 
@@ -87,64 +85,24 @@ modal.addEventListener('click', () => {
   }
 });
 
-//________________________ Testimony carrousel
-let counter = 0;
-let translateX = 108;
-let counterLength = carouselCards.length - 1;
-
-if (tabLand.matches) translateX = 110;
-if (tabPort.matches) translateX = 112.5;
-if (phone.matches) {
-  translateX = 102.3333333;
-  counterLength = carouselCards.length;
-}
-
-const carouselMotion = () => {
-  [...carouselCards].forEach((card) => {
-    card.style.transform = `translateX(-${counter * translateX}%)`;
-  });
-};
-
-prevBtn.addEventListener('click', () => {
-  if (counter < 1) counter = 1;
-  counter -= 1;
-
-  carouselMotion();
-});
-
-nextBtn.addEventListener('click', () => {
-  counter += 1;
-  carouselMotion();
-
-  if (counter === counterLength) counter = 0;
-  carouselMotion();
-});
-
-setInterval(() => {
-  counter += 1;
-  carouselMotion();
-  if (counter === carouselCards.length - 1) counter = 0;
-  carouselMotion();
-}, 5000);
-
 //Services list
 const fiscal =
-  '<b>--> Precios adaptados a gestiones y responsabilidad</b> <li>Asesoría Autónomos</li> <li>Nuevas PYMEs</li> <li>Ayudas y Subvenciones</li> <li>Gestión impuestos trimestrales y anuales</li> <li>Llevanza de libros contables</li>';
+  '<li>Asesoría Autónomos</li> <li>Nuevas PYMEs</li> <li>Ayudas y Subvenciones</li> <li>Gestión impuestos trimestrales y anuales</li> <li>Llevanza de libros contables</li><b>--> Precios adaptados a gestiones y responsabilidad</b> ';
 
 const laboral =
-  '<b>--> Presupuesto según tu caso particular</b> <li>Despidos improcedentes</li><li>Contratación de trabajadores</li> <li>Altas, bajas y modificaciones </li> <li>Nominas y seguros sociales </li> <li> Partes de accidente y bajas laborales</li>';
+  '<li>Asesoría al trabajador y finiquitos</li><li>Contratación de trabajadores</li> <li>Altas, bajas y modificaciones </li> <li>Nominas y seguros sociales </li> <li> Partes de accidente y bajas laborales</li><b>--> Presupuesto según tu caso particular</b> ';
 
 const extranjeria =
-  '<b>--> Primera consulta gratis</b> <li>Permisos de residencia y trabajo</li> <li>Reagrupación familiar</li> <li>Nacionalidad</li> <li>Expedientes de expulsión y sanciones</li> ';
+  ' <li>Permisos de residencia y trabajo</li> <li>Reagrupación familiar</li> <li>Nacionalidad</li> <li>Expedientes de expulsión y sanciones</li> <b>--> Primera consulta gratis</b>';
 
 const familia =
-  '<b>--> Presupuesto según tu caso particular</b> <li>Matrimonios </li> <li>Capitulaciones matrimoniales</li> <li>Pareja de hecho</li> <li>Filiación y reconocimiento </li> <li>Separación y divorcio</li> <li>Nulidad</li> <li>Pensiones compensatorias y alimenticias</li> <li>Pensiones> </li> <li>Herencias</li> <li>Adopciones</li> <li>Familia Internacional(Matrimonios mixtos, etc)</li>';
+  ' <li>Matrimonios </li> <li>Capitulaciones matrimoniales</li> <li>Pareja de hecho</li> <li>Filiación y reconocimiento </li> <li>Separación y divorcio</li> <li>Nulidad</li> <li>Pensiones compensatorias y alimenticias</li> <li>Pensiones> </li> <li>Herencias</li> <li>Adopciones</li> <li>Familia Internacional(Matrimonios mixtos, etc)</li><b>--> Presupuesto según tu caso particular</b>';
 
 const inmobiliario =
-  '<b>--> Primera consulta gratis</b> <li>Asesoría en operaciones inmobiliarias</li> <li>Compra-venta y arrendamiento de inmuebles</li> <li>Revisión situación jurídica del inmueble</li> <li>Negociación y redacción de contratos</li> <li>Asesoría Deshaucios</li> <li> Asesoría y planificación financiera</li>';
+  ' <li>Asesoría en operaciones inmobiliarias</li> <li>Compra-venta y arrendamiento de inmuebles</li> <li>Revisión situación jurídica del inmueble</li> <li>Negociación y redacción de contratos</li> <li>Asesoría Deshaucios</li> <li> Asesoría y planificación financiera</li><b>--> Primera consulta gratis</b>';
 
 const data =
-  '<b>--> Presupuesto según tus necesidades</b> <li>Asesoría a Autónomos, Sociedades y Asociaciones</li> <li>Adaptación LOPD/RGPD</li> <li>Redacción Documentos de Seguridad</li> <li>Cláusulas informativas</li> <li>Contratos de acceso a datos y confidencialidad</li> <li>Información y protocolo para el ejercicio de los derechos de interesados</li> <li>Cumplimiento de obligaciones para videovigilancia</li>';
+  ' <li>Asesoría a Autónomos, Sociedades y Asociaciones</li> <li>Adaptación LOPD/RGPD</li> <li>Redacción Documentos de Seguridad</li> <li>Cláusulas informativas</li> <li>Contratos de acceso a datos y confidencialidad</li> <li>Información y protocolo para el ejercicio de los derechos de interesados</li> <li>Cumplimiento de obligaciones para videovigilancia</li><b>--> Presupuesto según tus necesidades</b>';
 
 const otros =
   '<li>Trámites con Administraciones</li>  <li>Ayuntamientos</li> <li>ASNEF y RAI</li> --> CONSULTA TU CASO';
