@@ -7,12 +7,12 @@ const Icon = ({ index, icon, counter, darkProp, text, totalIcons }) => {
   const iconWidth = 100 / totalIcons + '%';
 
   useEffect(() => {
-    if (index === darkProp) setDark(!dark);
+    if (index === darkProp) setDark((dark) => !dark);
 
     if (index === 0) {
       setDark(false);
     }
-  }, [counter]);
+  }, [counter, index, darkProp]);
 
   return (
     <div

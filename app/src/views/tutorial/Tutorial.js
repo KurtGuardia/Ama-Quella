@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import './_Tutorial.scss';
 import Btn from '../../components/UI/btn/Btn';
 import Icon from '../../components/UI/icons/Icon';
