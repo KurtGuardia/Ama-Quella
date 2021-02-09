@@ -234,8 +234,23 @@
             ></textarea>
           </div>
 
+          <div class="form__group">
+            <input
+              type="checkbox"
+              id="privacy"
+              value="privacy"
+              class="form__group--input checkbox"
+              onchange="document.getElementById('send').disabled = !this.checked;"
+            />
+            <span class="checkmark"></span>
+            <label for="privacy" class="form__group--label forCheckbox"
+              >He leído y acepto los
+              <span id="terms">terminos y condiciones</span>
+            </label>
+          </div>
+
           <div class="form__group--btn">
-            <button class="ingresar cta">Enviar</button>
+            <button class="ingresar cta" id="send" disabled>Enviar</button>
           </div>
         </form>
       </div>
@@ -316,7 +331,7 @@
     <div class="modal">
       <div class="modal__card">
         <h3 class="modal__card--title">Fiscal</h3>
-        <ul class="modal__card--list active"></ul>
+        <ul class="modal__card--list"></ul>
         <span class="modal__card--close">X</span>
       </div>
     </div>

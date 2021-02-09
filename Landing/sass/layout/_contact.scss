@@ -1,9 +1,12 @@
 #contact {
   @include flexCenter();
-
   height: 72rem;
   overflow: hidden;
   position: relative;
+
+  @include respond(tab-port) {
+    height: 90rem;
+  }
 
   .contact-form {
     background: $color-secondary;
@@ -38,8 +41,12 @@
     & .form {
       @include flexColumnCenter();
       justify-content: space-between;
-      height: 50rem;
+      height: 55rem;
       width: 80%;
+
+      @include respond(tab-port) {
+        height: 70rem;
+      }
 
       &__group {
         @include flexColumnCenter();
@@ -80,6 +87,76 @@
               color: $color-primary;
             }
           }
+
+          &.checkbox {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+
+            &:hover ~ .checkmark {
+              background-color: $color-secondary-dark;
+            }
+
+            &:checked ~ .checkmark {
+              background-color: $color-primary;
+            }
+
+            &:checked ~ .checkmark::after {
+              display: block;
+            }
+          }
+        }
+
+        & .checkmark {
+          cursor: pointer;
+          position: absolute;
+          top: -3px;
+          left: 40px;
+          height: 25px;
+          width: 25px;
+          background-color: #eee;
+          border-radius: 3px;
+          transition: all 0.3s;
+
+          @include respond(tab-land) {
+            left: 27px;
+          }
+
+          @include respond(tab-port) {
+            left: 22px;
+          }
+
+          @include respond(phone) {
+            height: 20px;
+            width: 20px;
+            top: 0;
+          }
+
+          &:hover {
+            background-color: $color-secondary-dark;
+          }
+
+          &::after {
+            content: '';
+            position: absolute;
+            display: none;
+            left: 10px;
+            top: 5px;
+            width: 7px;
+            height: 13px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+
+            @include respond(phone) {
+              left: 6px;
+              top: 3px;
+            }
+          }
         }
 
         &--label {
@@ -95,6 +172,30 @@
 
           @include respond(tab-port) {
             transform: translate(0, -150%);
+          }
+
+          &.forCheckbox {
+            cursor: pointer;
+            transform: translate(0);
+            top: 50%;
+            left: 3rem;
+            padding-left: 4rem;
+            font-size: 15px;
+            font-weight: normal;
+
+            @include respond(tab-port) {
+              top: 0;
+              font-size: 12px;
+            }
+
+            & #terms {
+              border-bottom: 1px dotted rgba($color-white, 1);
+              transition: all 0.3s;
+
+              &:hover {
+                color: $color-primary;
+              }
+            }
           }
         }
 
@@ -112,6 +213,24 @@
           & button {
             background-color: $color-primary;
             margin-left: 0;
+            position: relative;
+
+            &:disabled {
+              cursor: not-allowed;
+              background-color: $color-grey;
+
+              &:hover {
+                background-color: $color-grey;
+                &::after {
+                  background-color: rgba($color-white, 0.3);
+                  position: absolute;
+                  content: 'Acepta los terminos y condiciones';
+                  width: max-content;
+                  bottom: -3rem;
+                  left: -75%;
+                }
+              }
+            }
 
             &:hover {
               background-color: $color-primary-light;
