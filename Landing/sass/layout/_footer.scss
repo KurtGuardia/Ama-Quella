@@ -9,7 +9,7 @@
   font-size: 1.8rem;
 
   &__top {
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -20,7 +20,6 @@
     }
 
     & > * {
-      width: 33.33%;
       text-align: center;
 
       @include respond(tab-port) {
@@ -31,6 +30,12 @@
   }
 
   &__nav {
+    width: 40%;
+
+    @include respond(tab-port) {
+      width: fit-content;
+    }
+
     &-list {
       list-style: none;
       display: flex;
@@ -38,11 +43,15 @@
       justify-content: space-between;
     }
 
-    &-item a {
-      text-decoration: none;
-      color: #fff;
-      opacity: 0.5;
-      transition: all 0.3s;
+    &-item {
+      margin: 0 0.5rem;
+
+      & a {
+        text-decoration: none;
+        color: #fff;
+        opacity: 0.5;
+        transition: all 0.3s;
+      }
     }
 
     &-item a:hover {
@@ -53,23 +62,32 @@
   &__logo img {
     opacity: 0.5;
     transition: all 0.3s;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 
-  &__logo img:hover {
-    opacity: 1;
-  }
+  &__link {
+    width: 40%;
+    padding-left: 4%;
 
-  &__link-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 2rem;
-    text-decoration: none;
+    @include respond(tab-port) {
+      width: fit-content;
+    }
 
-    p {
+    &-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2rem;
       text-decoration: none;
-      color: #fff;
-      opacity: 0.5;
-      transition: all 0.2s;
+
+      p {
+        text-decoration: none;
+        color: #fff;
+        opacity: 0.5;
+        transition: all 0.2s;
+      }
     }
   }
 

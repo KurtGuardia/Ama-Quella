@@ -746,7 +746,7 @@ body {
   padding: 6rem 0;
   font-size: 1.8rem; }
   .footer__top {
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -755,39 +755,51 @@ body {
       .footer__top {
         flex-direction: column; } }
     .footer__top > * {
-      width: 33.33%;
       text-align: center; }
       @media only screen and (max-width: 56.25em) {
         .footer__top > * {
           width: 90%;
           margin: 1.5rem auto; } }
-  .footer__nav-list {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; }
-  .footer__nav-item a {
-    text-decoration: none;
-    color: #fff;
-    opacity: 0.5;
-    transition: all 0.3s; }
-  .footer__nav-item a:hover {
-    opacity: 1; }
+  .footer__nav {
+    width: 40%; }
+    @media only screen and (max-width: 56.25em) {
+      .footer__nav {
+        width: fit-content; } }
+    .footer__nav-list {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+    .footer__nav-item {
+      margin: 0 0.5rem; }
+      .footer__nav-item a {
+        text-decoration: none;
+        color: #fff;
+        opacity: 0.5;
+        transition: all 0.3s; }
+    .footer__nav-item a:hover {
+      opacity: 1; }
   .footer__logo img {
     opacity: 0.5;
     transition: all 0.3s; }
-  .footer__logo img:hover {
-    opacity: 1; }
-  .footer__link-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 2rem;
-    text-decoration: none; }
-    .footer__link-item p {
-      text-decoration: none;
-      color: #fff;
-      opacity: 0.5;
-      transition: all 0.2s; }
+    .footer__logo img:hover {
+      opacity: 1; }
+  .footer__link {
+    width: 40%;
+    padding-left: 4%; }
+    @media only screen and (max-width: 56.25em) {
+      .footer__link {
+        width: fit-content; } }
+    .footer__link-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2rem;
+      text-decoration: none; }
+      .footer__link-item p {
+        text-decoration: none;
+        color: #fff;
+        opacity: 0.5;
+        transition: all 0.2s; }
   .footer__link-item:hover p,
   .footer__link-item:hover .footer__link-icon {
     opacity: 1; }

@@ -10,21 +10,15 @@
     <link
       rel="shortcut icon"
       type="image/svg"
-      href="./assets/icons/sprite.svg#ama-quella-logo.svg"
+      href="./assets/images/ama-quella-logo.svg"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <link
-      rel="shortcut icon"
-      type="image/png"
-      href="./assets/icons/ama-quella-logo.svg"
-    />
-
-    <title>Ama Quella Abogad@s</title>
+    <title>Ama Quella</title>
   </head>
   <body>
     <!-- _______________________________ Navigation _______________________________ -->
     <nav class="navigation">
-      <h1>Ama Quella <small>Abogados</small></h1>
+      <h1>Ama Quella</h1>
 
       <ul class="navigation__list">
         <li class="navigation__item">
@@ -32,9 +26,6 @@
         </li>
         <li class="navigation__item">
           <a href="#quienes-somos">Nosotros</a>
-        </li>
-        <li class="navigation__item">
-          <a href="#testimony">Testimonios</a>
         </li>
         <li class="navigation__item">
           <a href="#contact">Contacto</a>
@@ -60,9 +51,6 @@
         </li>
         <li class="navigation__item active">
           <a href="#quienes-somos">Nosotros</a>
-        </li>
-        <li class="navigation__item">
-          <a href="#testimony">Testimonios</a>
         </li>
         <li class="navigation__item">
           <a href="#contact">Contacto</a>
@@ -109,7 +97,6 @@
     </header>
 
     <!-- _______________________________ Services _______________________________ -->
-
     <section id="services">
       <div class="services__title">
         <h2>Conoce nuestros servicios:</h2>
@@ -121,11 +108,23 @@
           </svg>
           <p>Fiscal</p>
         </div>
-        <div class="services__container--icon down laboral">
+        <div class="services__container--icon down extranjeria">
+          <svg>
+            <use xlink:href="assets/icons/sprite.svg#foraign"></use>
+          </svg>
+          <p>Extranjería</p>
+        </div>
+        <div class="services__container--icon laboral">
           <svg>
             <use xlink:href="assets/icons/sprite.svg#tools"></use>
           </svg>
           <p>Laboral</p>
+        </div>
+        <div class="services__container--icon down familia">
+          <svg>
+            <use xlink:href="assets/icons/sprite.svg#family"></use>
+          </svg>
+          <p>Familia</p>
         </div>
         <div class="services__container--icon inmobiliario">
           <svg>
@@ -138,18 +137,6 @@
             <use xlink:href="assets/icons/sprite.svg#data"></use>
           </svg>
           <p>Proteccion de datos</p>
-        </div>
-        <div class="services__container--icon extranjeria">
-          <svg>
-            <use xlink:href="assets/icons/sprite.svg#foraign"></use>
-          </svg>
-          <p>Extranjería</p>
-        </div>
-        <div class="services__container--icon down familia">
-          <svg>
-            <use xlink:href="assets/icons/sprite.svg#family"></use>
-          </svg>
-          <p>Familia</p>
         </div>
         <div class="services__container--icon otros">
           <svg>
@@ -195,7 +182,6 @@
     </section>
 
     <!-- _______________________________ Contact Form _______________________________ -->
-
     <section id="contact">
       <div class="contact-form">
         <div class="contact-form__title title">
@@ -263,12 +249,16 @@
       <div class="footer__top">
         <div class="footer__nav">
           <ul class="footer__nav-list">
-            <li class="footer__nav-item"><a href="#">Inicio</a></li>
+            <li class="footer__nav-item">
+              <a href="#services">Servicios</a>
+            </li>
             <li class="footer__nav-item">
               <a href="#quienes-somos">Nosotros</a>
             </li>
-            <li class="footer__nav-item"><a href="#pasos">Pasos</a></li>
             <li class="footer__nav-item"><a href="#contact">Contacto</a></li>
+            <li class="footer__nav-item">
+              <a href="./pages/legal.html">Aviso Legal</a>
+            </li>
           </ul>
         </div>
         <div class="footer__logo">
