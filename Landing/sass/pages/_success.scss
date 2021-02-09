@@ -1,0 +1,86 @@
+.success {
+  @include flexCenter();
+  height: 100vh;
+  color: $color-white;
+
+  @include respond(tab-port) {
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+  }
+
+  .success__left {
+    width: 360px;
+    padding: 5rem;
+
+    @include respond(phone) {
+      width: 250px;
+    }
+
+    & img {
+      width: 100%;
+    }
+  }
+
+  &__right {
+    width: 30vw;
+
+    @include respond(tab-land) {
+      width: 40vw;
+    }
+
+    @include respond(tab-port) {
+      width: 50vw;
+    }
+
+    @include respond(phone) {
+      width: 80vw;
+    }
+
+    & h2 {
+      margin-bottom: 2rem;
+      font-size: xx-large;
+
+      @include respond(phone) {
+        font-size: 18px;
+      }
+    }
+
+    & p {
+      font-size: large;
+
+      @include respond(phone) {
+        font-size: 12px;
+      }
+    }
+
+    & a {
+      @include flexCenter();
+      justify-content: flex-start;
+      text-decoration: none;
+      color: $color-white;
+      width: fit-content;
+
+      & svg {
+        margin-right: 2rem;
+        width: 2.5rem;
+        height: 55px;
+
+        @include respond(phone) {
+          height: 40px;
+        }
+      }
+
+      & p {
+        border-bottom: 1px solid $color-white;
+      }
+
+      &.ingresar {
+        margin-top: 2rem;
+
+        & p {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}
