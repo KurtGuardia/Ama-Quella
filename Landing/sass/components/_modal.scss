@@ -40,19 +40,67 @@
       transform: translateY(0);
     }
 
+    &.terms {
+      width: 60%;
+      height: 70%;
+
+      @include respond(tab-land) {
+        width: 75%;
+      }
+
+      @include respond(phone) {
+        width: 85%;
+
+        & .modal__card--list {
+          line-height: 18px;
+        }
+      }
+    }
+
     &--title {
       font-size: $large-font-size;
       text-decoration: underline;
       margin-bottom: 2rem;
 
-      @include respond(tab-port) {
+      @include respond(tab-land) {
         font-size: 25px;
+      }
+
+      @include respond(phone) {
+        font-size: 18px;
       }
     }
 
     &--list {
       font-size: 20px;
       line-height: 40px;
+      overflow-y: scroll;
+
+      &::-webkit-scrollbar {
+        width: 1.5rem;
+
+        @include respond(phone) {
+          width: 0.5rem;
+        }
+      }
+
+      &::-webkit-scrollbar-track {
+        background-color: $color-primary;
+        box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+
+        @include respond(tab-port) {
+          box-shadow: none;
+        }
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: rgba($color: #888, $alpha: 0.5);
+        border-radius: 6px;
+      }
+
+      @include respond(tab-land) {
+        line-height: 35px;
+      }
 
       @include respond(tab-port) {
         font-size: 20px;
@@ -62,6 +110,16 @@
       @include respond(phone) {
         line-height: 25px;
         font-size: 15px;
+      }
+    }
+
+    & p,
+    h4 {
+      font-size: 16px;
+
+      @include respond(phone) {
+        margin-right: 0.5rem;
+        font-size: 12px;
       }
     }
 

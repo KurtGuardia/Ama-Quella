@@ -10,7 +10,7 @@
     <link
       rel="shortcut icon"
       type="image/svg"
-      href="./assets/icons/sprite.svg#ama-quella-logo.svg"
+      href="./assets/images/ama-quella-logo.svg"
     />
     <link rel="stylesheet" href="css/style.css" />
     <title>Ama Quella</title>
@@ -234,8 +234,23 @@
             ></textarea>
           </div>
 
+          <div class="form__group">
+            <input
+              type="checkbox"
+              id="privacy"
+              value="privacy"
+              class="form__group--input checkbox"
+              onchange="document.getElementById('send').disabled = !this.checked;"
+            />
+            <span class="checkmark"></span>
+            <label for="privacy" class="form__group--label forCheckbox"
+              >He leído y acepto los
+              <span id="terms">terminos y condiciones</span>
+            </label>
+          </div>
+
           <div class="form__group--btn">
-            <button class="ingresar cta">Enviar</button>
+            <button class="ingresar cta" id="send" disabled>Enviar</button>
           </div>
         </form>
       </div>
@@ -249,15 +264,14 @@
       <div class="footer__top">
         <div class="footer__nav">
           <ul class="footer__nav-list">
-            <li class="navigation__item"><a href="#">Inicio</a></li>
-            <li class="navigation__item">
+            <li class="footer__nav-item">
               <a href="#services">Servicios</a>
             </li>
-            <li class="navigation__item">
+            <li class="footer__nav-item">
               <a href="#quienes-somos">Nosotros</a>
             </li>
-            <li class="navigation__item"><a href="#contact">Contacto</a></li>
-            <li class="navigation__item">
+            <li class="footer__nav-item"><a href="#contact">Contacto</a></li>
+            <li class="footer__nav-item">
               <a href="./pages/legal.html">Aviso Legal</a>
             </li>
           </ul>
@@ -286,7 +300,7 @@
             <p>923 995 136</p>
           </a>
           <a
-            href="mailto:amaquellaabogados@gmail.com"
+            href="mailto:amaquella.asesoria@gmail.com"
             target="_blank"
             rel="noreferrer"
             class="footer__link-item"
@@ -294,7 +308,7 @@
             <svg class="footer__link-icon">
               <use xlink:href="assets/icons/sprite.svg#mail"></use>
             </svg>
-            <p>amaquellaabogados@gmail.com</p>
+            <p>amaquella.asesoria@gmail.com</p>
           </a>
         </div>
       </div>
@@ -316,8 +330,8 @@
     <!-- _______________________________ Modal _______________________________ -->
     <div class="modal">
       <div class="modal__card">
-        <h3 class="modal__card--title">Fiscal</h3>
-        <ul class="modal__card--list active"></ul>
+        <h3 class="modal__card--title"></h3>
+        <ul class="modal__card--list"></ul>
         <span class="modal__card--close">X</span>
       </div>
     </div>

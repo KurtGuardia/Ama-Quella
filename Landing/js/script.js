@@ -10,6 +10,7 @@ const modalClose = document.querySelector('.modal__card--close');
 const services = document.querySelectorAll('.services__container--icon');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
+const termsBtn = document.getElementById('terms');
 
 // Responsive
 
@@ -70,22 +71,36 @@ services.forEach((e) => {
   });
 });
 
+// Terms modal
+
+termsBtn.addEventListener('click', () => {
+  modalTitle.innerHTML = 'TRATAMIENTO DE DATOS PERSONALES';
+  modalList.insertAdjacentHTML('afterbegin', terms);
+  modal.classList.add('active');
+  modalCard.classList.add('active');
+  modalCard.classList.add('terms');
+});
+
+//Modal close
+
 modalClose.addEventListener('click', () => {
   modal.classList.remove('active');
   modalCard.classList.remove('active');
+  modalCard.classList.remove('terms');
   while (modalList.hasChildNodes()) {
     modalList.removeChild(modalList.firstChild);
   }
 });
-modal.addEventListener('click', () => {
-  modalCard.classList.remove('active');
-  modal.classList.remove('active');
-  while (modalList.hasChildNodes()) {
-    modalList.removeChild(modalList.firstChild);
-  }
-});
+// modal.removeEventListener('click', () => {
+//   modalCard.classList.remove('active');
+//   modal.classList.remove('active');
+//   while (modalList.hasChildNodes()) {
+//     modalList.removeChild(modalList.firstChild);
+//   }
+// });   NOT WORKING FOR SOME REASON UNKWOWN
 
 //Services list
+
 const fiscal =
   '<li>Asesoría Autónomos</li> <li>Nuevas PYMEs</li> <li>Ayudas y Subvenciones</li> <li>Gestión impuestos trimestrales y anuales</li> <li>Llevanza de libros contables</li><b>--> Precios adaptados a gestiones y responsabilidad</b> ';
 
@@ -106,3 +121,8 @@ const data =
 
 const otros =
   '<li>Trámites con Administraciones</li>  <li>Ayuntamientos</li> <li>ASNEF y RAI</li> --> CONSULTA TU CASO';
+
+// Terms - text for Modal
+
+const terms =
+  '<h4> Clausula informativa:</h4><br><p>Datos del responsable del tratamiento: <br>Identidad: Ama Quella - NIF: X8398057K  <br>Dirección postal: Calle Bolívar 37. 1c<br>Teléfono: 617729711 - Correo electrónico: amaquella.asesoria@gmail.com<br><br>“En Ama Quella tratamos la información que nos facilita con el fin de prestarles el servicio solicitado y realizar su facturación. Los datos proporcionados se conservarán mientras se mantenga la relación comercial o durante el tiempo necesario para cumplir con las obligaciones legales y atender las posibles responsabilidades que pudieran derivar del cumplimiento de la finalidad para la que los datos fueron recabados. Los datos no se cederán a terceros salvo en los casos en que exista una obligación legal. Usted tiene derecho a obtener información sobre si en Ama Quella estamos tratando sus datos personales, por lo que puede ejercer sus derechos de acceso, rectificación, supresión y portabilidad de datos y oposición y limitación a su tratamiento ante Ama Quella, Calle Bolívar 37. 1c o en la dirección de correo electrónico amaquella.asesoria@gmail.com, adjuntando copia de su DNI o documento equivalente.  Asimismo, y especialmente si considera que no ha obtenido satisfacción plena en el ejercicio de sus derechos, podrá presentar una reclamación ante la autoridad nacional de control dirigiéndose a estos efectos a la Agencia Española de Protección de Datos, C/ Jorge Juan, 6 – 28001 Madrid.</p>';

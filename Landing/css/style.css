@@ -184,16 +184,48 @@ body {
         width: 37rem; } }
     .modal__card.active {
       transform: translateY(0); }
+    .modal__card.terms {
+      width: 60%;
+      height: 70%; }
+      @media only screen and (max-width: 68.75em) {
+        .modal__card.terms {
+          width: 75%; } }
+      @media only screen and (max-width: 37.5em) {
+        .modal__card.terms {
+          width: 85%; }
+          .modal__card.terms .modal__card--list {
+            line-height: 18px; } }
     .modal__card--title {
       font-size: 2rem;
       text-decoration: underline;
       margin-bottom: 2rem; }
-      @media only screen and (max-width: 56.25em) {
+      @media only screen and (max-width: 68.75em) {
         .modal__card--title {
           font-size: 25px; } }
+      @media only screen and (max-width: 37.5em) {
+        .modal__card--title {
+          font-size: 18px; } }
     .modal__card--list {
       font-size: 20px;
-      line-height: 40px; }
+      line-height: 40px;
+      overflow-y: scroll; }
+      .modal__card--list::-webkit-scrollbar {
+        width: 1.5rem; }
+        @media only screen and (max-width: 37.5em) {
+          .modal__card--list::-webkit-scrollbar {
+            width: 0.5rem; } }
+      .modal__card--list::-webkit-scrollbar-track {
+        background-color: #222127;
+        box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3); }
+        @media only screen and (max-width: 56.25em) {
+          .modal__card--list::-webkit-scrollbar-track {
+            box-shadow: none; } }
+      .modal__card--list::-webkit-scrollbar-thumb {
+        background-color: rgba(136, 136, 136, 0.5);
+        border-radius: 6px; }
+      @media only screen and (max-width: 68.75em) {
+        .modal__card--list {
+          line-height: 35px; } }
       @media only screen and (max-width: 56.25em) {
         .modal__card--list {
           font-size: 20px;
@@ -202,6 +234,14 @@ body {
         .modal__card--list {
           line-height: 25px;
           font-size: 15px; } }
+    .modal__card p,
+    .modal__card h4 {
+      font-size: 16px; }
+      @media only screen and (max-width: 37.5em) {
+        .modal__card p,
+        .modal__card h4 {
+          margin-right: 0.5rem;
+          font-size: 12px; } }
     .modal__card--close {
       cursor: pointer;
       color: #ffffff;
@@ -629,6 +669,9 @@ body {
   height: 72rem;
   overflow: hidden;
   position: relative; }
+  @media only screen and (max-width: 56.25em) {
+    #contact {
+      height: 90rem; } }
   #contact .contact-form {
     background: #d8890b;
     display: flex;
@@ -662,8 +705,11 @@ body {
       justify-content: center;
       align-items: center;
       justify-content: space-between;
-      height: 50rem;
+      height: 55rem;
       width: 80%; }
+      @media only screen and (max-width: 56.25em) {
+        #contact .contact-form .form {
+          height: 70rem; } }
       #contact .contact-form .form__group {
         display: flex;
         flex-direction: column;
@@ -697,6 +743,58 @@ body {
             @media only screen and (max-width: 37.5em) {
               #contact .contact-form .form__group--input::-webkit-input-placeholder {
                 color: #222127; } }
+          #contact .contact-form .form__group--input.checkbox {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0; }
+            #contact .contact-form .form__group--input.checkbox:hover ~ .checkmark {
+              background-color: #af700a; }
+            #contact .contact-form .form__group--input.checkbox:checked ~ .checkmark {
+              background-color: #222127; }
+            #contact .contact-form .form__group--input.checkbox:checked ~ .checkmark::after {
+              display: block; }
+        #contact .contact-form .form__group .checkmark {
+          cursor: pointer;
+          position: absolute;
+          top: -3px;
+          left: 40px;
+          height: 25px;
+          width: 25px;
+          background-color: #eee;
+          border-radius: 3px;
+          transition: all 0.3s; }
+          @media only screen and (max-width: 68.75em) {
+            #contact .contact-form .form__group .checkmark {
+              left: 27px; } }
+          @media only screen and (max-width: 56.25em) {
+            #contact .contact-form .form__group .checkmark {
+              left: 22px; } }
+          @media only screen and (max-width: 37.5em) {
+            #contact .contact-form .form__group .checkmark {
+              height: 20px;
+              width: 20px;
+              top: 0; } }
+          #contact .contact-form .form__group .checkmark:hover {
+            background-color: #af700a; }
+          #contact .contact-form .form__group .checkmark::after {
+            content: '';
+            position: absolute;
+            display: none;
+            left: 10px;
+            top: 5px;
+            width: 7px;
+            height: 13px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg); }
+            @media only screen and (max-width: 37.5em) {
+              #contact .contact-form .form__group .checkmark::after {
+                left: 6px;
+                top: 3px; } }
         #contact .contact-form .form__group--label {
           font-size: 1.2rem;
           font-weight: 700;
@@ -710,6 +808,23 @@ body {
           @media only screen and (max-width: 56.25em) {
             #contact .contact-form .form__group--label {
               transform: translate(0, -150%); } }
+          #contact .contact-form .form__group--label.forCheckbox {
+            cursor: pointer;
+            transform: translate(0);
+            top: 50%;
+            left: 3rem;
+            padding-left: 4rem;
+            font-size: 15px;
+            font-weight: normal; }
+            @media only screen and (max-width: 56.25em) {
+              #contact .contact-form .form__group--label.forCheckbox {
+                top: 0;
+                font-size: 12px; } }
+            #contact .contact-form .form__group--label.forCheckbox #terms {
+              border-bottom: 1px dotted white;
+              transition: all 0.3s; }
+              #contact .contact-form .form__group--label.forCheckbox #terms:hover {
+                color: #222127; }
         #contact .contact-form .form__group--input:placeholder-shown + .form__group--label {
           opacity: 0;
           visibility: hidden;
@@ -719,7 +834,20 @@ body {
               transform: translate(60%, 50%); } }
         #contact .contact-form .form__group--btn button {
           background-color: #222127;
-          margin-left: 0; }
+          margin-left: 0;
+          position: relative; }
+          #contact .contact-form .form__group--btn button:disabled {
+            cursor: not-allowed;
+            background-color: #cacaca; }
+            #contact .contact-form .form__group--btn button:disabled:hover {
+              background-color: #cacaca; }
+              #contact .contact-form .form__group--btn button:disabled:hover::after {
+                background-color: rgba(255, 255, 255, 0.3);
+                position: absolute;
+                content: 'Acepta los terminos y condiciones';
+                width: max-content;
+                bottom: -3rem;
+                left: -75%; }
           #contact .contact-form .form__group--btn button:hover {
             background-color: #3e365e; }
   #contact .contact__img {
@@ -746,7 +874,7 @@ body {
   padding: 6rem 0;
   font-size: 1.8rem; }
   .footer__top {
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -755,39 +883,51 @@ body {
       .footer__top {
         flex-direction: column; } }
     .footer__top > * {
-      width: 33.33%;
       text-align: center; }
       @media only screen and (max-width: 56.25em) {
         .footer__top > * {
           width: 90%;
           margin: 1.5rem auto; } }
-  .footer__nav-list {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; }
-  .footer__nav-item a {
-    text-decoration: none;
-    color: #fff;
-    opacity: 0.5;
-    transition: all 0.3s; }
-  .footer__nav-item a:hover {
-    opacity: 1; }
+  .footer__nav {
+    width: 40%; }
+    @media only screen and (max-width: 56.25em) {
+      .footer__nav {
+        width: fit-content; } }
+    .footer__nav-list {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+    .footer__nav-item {
+      margin: 0 0.5rem; }
+      .footer__nav-item a {
+        text-decoration: none;
+        color: #fff;
+        opacity: 0.5;
+        transition: all 0.3s; }
+    .footer__nav-item a:hover {
+      opacity: 1; }
   .footer__logo img {
     opacity: 0.5;
     transition: all 0.3s; }
-  .footer__logo img:hover {
-    opacity: 1; }
-  .footer__link-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 2rem;
-    text-decoration: none; }
-    .footer__link-item p {
-      text-decoration: none;
-      color: #fff;
-      opacity: 0.5;
-      transition: all 0.2s; }
+    .footer__logo img:hover {
+      opacity: 1; }
+  .footer__link {
+    width: 40%;
+    padding-left: 4%; }
+    @media only screen and (max-width: 56.25em) {
+      .footer__link {
+        width: fit-content; } }
+    .footer__link-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2rem;
+      text-decoration: none; }
+      .footer__link-item p {
+        text-decoration: none;
+        color: #fff;
+        opacity: 0.5;
+        transition: all 0.2s; }
   .footer__link-item:hover p,
   .footer__link-item:hover .footer__link-icon {
     opacity: 1; }
