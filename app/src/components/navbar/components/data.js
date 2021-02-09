@@ -18,8 +18,21 @@ export const signedInLinks = [
 
 export const signedOutLinks = [
   {
-    id: 1,
+    id: 4,
     text: 'tutorial',
     url: '/tutorial',
+  },
+];
+
+export const adminLinks = [
+  {
+    id: 5,
+    text: 'clientes',
+    url: '/clients',
+  },
+  {
+    id: 6,
+    text: 'admin',
+    url: '/admin',
   },
 ];

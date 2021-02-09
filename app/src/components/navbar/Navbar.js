@@ -1,5 +1,5 @@
 import './Navbar.scss';
-import { signedInLinks, signedOutLinks } from './components/data';
+import { signedInLinks, signedOutLinks, adminLinks } from './components/data';
 import NavbarLink from './components/NavbarLink';
 import { Link, useHistory } from 'react-router-dom';
 import { Btn } from '../UI';
@@ -8,6 +8,7 @@ import { changeIsLogging, logout } from '../../store/actions/authActions';
 
 const Navbar = () => {
   const isLogging = useSelector((state) => state.auth.isLogging);
+  const isAdmin = useSelector((state) => state.firebase.profile.isAdmin);
   const uid = useSelector((state) => state.firebase.auth.uid);
   const dispatch = useDispatch();
   const history = useHistory();
@@ -31,7 +32,13 @@ const Navbar = () => {
 
       <div className="navbar__btns">
         <ul className="navbar__links">
+          {isAdmin &&
+            adminLinks.map((linkInfo) => (
+              <NavbarLink key={linkInfo.id} {...linkInfo} />
+            ))}
+
           {uid &&
+            !isAdmin &&
             signedInLinks.map((linkInfo) => (
               <NavbarLink key={linkInfo.id} {...linkInfo} />
             ))}
