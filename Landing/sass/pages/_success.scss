@@ -71,11 +71,15 @@
       }
 
       & p {
-        border-bottom: 1px dotted $color-white;
+        border-bottom: 1px solid $color-white;
       }
 
       &.ingresar {
         margin-top: 2rem;
+
+        & p {
+          border-bottom: none;
+        }
       }
     }
   }

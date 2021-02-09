@@ -879,6 +879,23 @@ body {
           .success__right a svg {
             height: 40px; } }
       .success__right a p {
-        border-bottom: 1px dotted #ffffff; }
+        border-bottom: 1px solid #ffffff; }
       .success__right a.ingresar {
         margin-top: 2rem; }
+        .success__right a.ingresar p {
+          border-bottom: none; }
+
+.legal {
+  margin-top: 5rem;
+  width: 50%;
+  color: #ffffff; }
+  @media only screen and (max-width: 93.75em) {
+    .legal {
+      width: 70%; } }
+  @media only screen and (max-width: 37.5em) {
+    .legal {
+      width: 80%; } }
+  .legal p {
+    font-size: 14px; }
+  .legal h3 {
+    font-size: 16px; }
