@@ -5,6 +5,7 @@ import { Link, useHistory } from 'react-router-dom';
 import { Btn } from '../UI';
 import { useDispatch, useSelector } from 'react-redux';
 import { changeIsLogging, logout } from '../../store/actions/authActions';
+import { AQ_Logo } from '../../assets/icons';
 
 const Navbar = () => {
   const isLogging = useSelector((state) => state.auth.isLogging);
@@ -26,6 +27,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar__title">
         <Link to="/">
+          <AQ_Logo className="navbar__title--logo" />
           <h1>Ama Quella</h1>
         </Link>
       </div>

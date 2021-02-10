@@ -6,8 +6,8 @@ export const signedInLinks = [
   },
   {
     id: 2,
-    text: 'declarar',
-    url: '/declarar',
+    text: 'facturas',
+    url: '/facturas',
   },
   {
     id: 3,
