@@ -41,11 +41,12 @@ const Home = () => {
           aplicación
         </li>
         <li>
-          <strong>Declarar:</strong>
+          <strong>Facturas:</strong> Rellena el formulario para registrar tus
+          facturas
         </li>
         <li>
-          <strong>Usuario:</strong> Guia simple del funcionamiento de la
-          aplicación
+          <strong>Usuario:</strong> Revisa antiguas facturas y tu información de
+          usuario
         </li>
       </ul>
       <FormImg className="form-img" />
