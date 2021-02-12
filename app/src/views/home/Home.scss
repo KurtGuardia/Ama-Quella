@@ -1,0 +1,46 @@
+.home {
+  padding: 5rem;
+
+  &__title {
+    font-size: 4rem;
+    font-weight: 100;
+    letter-spacing: 3px;
+    margin-bottom: 2rem;
+  }
+
+  &__desc {
+    width: 70%;
+    max-width: 1000px;
+    font-size: 1.6rem;
+    color: #ccc;
+    line-height: 1.5;
+    letter-spacing: 1px;
+
+    a {
+      color: #d8890b;
+      transition: color 0.2s;
+
+      &:hover {
+        color: #ff9d00;
+      }
+    }
+  }
+
+  &__list {
+    margin: 2rem 0;
+    padding-left: 2rem;
+    font-size: 1.5rem;
+
+    li {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .form-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 350px;
+    height: auto;
+  }
+}
