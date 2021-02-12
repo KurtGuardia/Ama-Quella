@@ -4,7 +4,7 @@ import { UserIcon } from '../../assets/images';
 import Folder from './folder/Folder';
 
 const User = () => {
-  const folderName = ['1T 2021', '2T 2021']; //This Will Come From FireBase
+  const folderName = ['1T 2021', '2T 2021', '3T 2021', '4T 2021']; //This Will Come From FireBase
 
   return (
     <div className='user view'>
@@ -33,6 +33,8 @@ const User = () => {
         <div className='user__bottom--folders'>
           <Folder title={folderName[0]} />
           <Folder title={folderName[1]} />
+          <Folder title={folderName[2]} />
+          <Folder title={folderName[3]} />
         </div>
       </div>
     </div>
