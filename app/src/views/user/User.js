@@ -1,8 +1,11 @@
 import React from 'react';
 import './User.scss';
 import { UserIcon } from '../../assets/images';
+import Folder from './folder/Folder';
 
 const User = () => {
+  const folderName = ['1T 2021', '2T 2021']; //This Will Come From FireBase
+
   return (
     <div className='user view'>
       <div className='user__data'>
@@ -20,12 +23,16 @@ const User = () => {
           <UserIcon />
         </div>
       </div>
-      <div className='user__folders'>
-        <div className='user__folders--input'>
+      <div className='user__bottom'>
+        <div className='user__bottom--input'>
           <label>Año:</label>
           <select>
             <option>2021</option>
           </select>
+        </div>
+        <div className='user__bottom--folders'>
+          <Folder title={folderName[0]} />
+          <Folder title={folderName[1]} />
         </div>
       </div>
     </div>
