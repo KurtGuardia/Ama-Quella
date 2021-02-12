@@ -1,5 +1,43 @@
 .user {
   &__data {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     height: 40vh;
+    padding: 0 10rem;
+
+    &--text {
+      h2 {
+        width: fit-content;
+        font-size: xx-large;
+        border-bottom: 1px dotted #fff;
+        margin-bottom: 2rem;
+      }
+
+      ul {
+        font-size: x-large;
+        line-height: 45px;
+        list-style: none;
+
+        li {
+          position: relative;
+          letter-spacing: 2px;
+          &::before {
+            content: '◉';
+            max-width: 25px;
+            color: #d8890b;
+            padding-right: 1rem;
+          }
+        }
+      }
+    }
+
+    &--icon {
+      width: 350px;
+
+      svg {
+        width: 100%;
+      }
+    }
   }
 }

@@ -13,14 +13,21 @@ const User = () => {
             <li>Razón Social: Phi - Desarrollo</li>
             <li>Epígrafe: 666.6</li>
             <li>Atividad: Ser cool</li>
-            <li>email: kurtguardia@gmail.com</li>
+            <li>Email: kurtguardia@gmail.com</li>
           </ul>
         </div>
         <div className='user__data--icon'>
           <UserIcon />
         </div>
       </div>
-      <div className='user__folders'></div>
+      <div className='user__folders'>
+        <div className='user__folders--input'>
+          <label>Año:</label>
+          <select>
+            <option>2021</option>
+          </select>
+        </div>
+      </div>
     </div>
   );
 };
