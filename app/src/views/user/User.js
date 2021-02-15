@@ -25,9 +25,21 @@ const User = () => {
       </div>
       <div className='user__bottom'>
         <div className='user__bottom--input'>
-          <label>Año:</label>
-          <select>
+          <label htmlFor='year'>Año:</label>
+          <select name='year' id='year'>
             <option>2021</option>
+            <option>2022</option>
+            <option>2023</option>
+            <option>2024</option>
+            <option>2025</option>
+            <option>2026</option>
+            <option>2027</option>
+            <option>2028</option>
+            <option>2029</option>
+            <option>2030</option>
+            <option>2031</option>
+            <option>2032</option>
+            <option>2033</option>
           </select>
         </div>
         <div className='user__bottom--folders'>

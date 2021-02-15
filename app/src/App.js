@@ -1,7 +1,7 @@
 import './App.scss';
 import { BrowserRouter, Switch, Route, useHistory } from 'react-router-dom';
 import { Navbar } from './components';
-import { Auth, Home, Tutorial, User } from './views';
+import { Auth, Home, Tutorial, User, Bill } from './views';
 import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
 
@@ -23,6 +23,7 @@ function App() {
           <Route path='/auth' component={Auth} />
           <Route path='/tutorial' component={Tutorial} />
           <Route path='/usuario' component={User} />
+          <Route path='/facturas' component={Bill} />
           {/* <Route component={NotFound} /> */}
         </Switch>
       </div>
