@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Btn from '../../components/UI/btn/Btn';
 import './Bill.scss';
 
 const Bill = () => {
+  const [billType, setBillType] = useState('income');
+
   const dummyFn = () => {
     console.log();
   };
@@ -13,12 +15,24 @@ const Bill = () => {
         <label htmlFor='type'>
           <h2>Tipo:</h2>
         </label>
-        <select name='type' id='type' onChange={dummyFn}>
-          <option className='expense'>Gasto</option>
-          <option className='income'>Ingreso</option>
+        <select
+          name='type'
+          id='type'
+          onChange={(e) => setBillType(e.target.value)}
+        >
+          <option value='income' className='income'>
+            Ingreso
+          </option>
+          <option value='expense' className='expense'>
+            Gasto
+          </option>
         </select>
       </div>
-      <form className='bill__form expense hidden'>
+      <form
+        className={`bill__form expense ${
+          billType === 'expense' ? '' : 'hidden'
+        }`}
+      >
         <div className='row'>
           <label>Fecha:</label>
           <input
@@ -91,7 +105,11 @@ const Bill = () => {
           <Btn type={'submit'} text={'Guardar'} />
         </div>
       </form>
-      <form className='bill__form income'>
+      <form
+        className={`bill__form income ${
+          billType === 'income' ? '' : 'hidden'
+        } `}
+      >
         <div className='row'>
           <label>Fecha:</label>
           <input
