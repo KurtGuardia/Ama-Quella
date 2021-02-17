@@ -26,19 +26,6 @@ const Tutorial = () => {
     } else if (counter === 5) {
       setDark(4);
     }
-    // if (counter === 2) {
-    //   two.current.classList.add('dark');
-    //   twoTop.current.classList.add('dark');
-    // } else if (counter === 3) {
-    //   three.current.classList.add('dark');
-    //   threeTop.current.classList.add('dark');
-    // } else if (counter === 4) {
-    //   four.current.classList.add('dark');
-    //   fourTop.current.classList.add('dark');
-    // } else if (counter === 5) {
-    //   five.current.classList.add('dark');
-    //   fiveTop.current.classList.add('dark');
-    // }
   };
 
   const next = () => {
@@ -69,9 +56,9 @@ const Tutorial = () => {
   ];
 
   return (
-    <div className="tutorial view">
+    <div className='tutorial view'>
       <Steps howMany={5} darkProp={dark} counter={counter} />
-      <div className="tutorial__icons">
+      <div className='tutorial__icons'>
         {icons.map((icon, index) => (
           <Icon
             key={index}
@@ -84,19 +71,19 @@ const Tutorial = () => {
           />
         ))}
       </div>
-      <div className="tutorial__buttons">
+      <div className='tutorial__buttons'>
         <Btn
-          text="Anterior"
+          text='Anterior'
           clicked={prev}
           prevIcon={true}
-          position="abs-bottom-left"
+          position='abs-bottom-left'
           disabled={counter === 1 ? true : false}
         />
         <Btn
-          text="Siguiente"
+          text='Siguiente'
           clicked={next}
           nextIcon={true}
-          position="abs-bottom-right"
+          position='abs-bottom-right'
           disabled={counter === 5 ? true : false}
         />
       </div>

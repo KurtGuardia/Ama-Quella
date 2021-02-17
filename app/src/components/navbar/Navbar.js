@@ -5,7 +5,7 @@ import { Link, useHistory } from 'react-router-dom';
 import { Btn } from '../UI';
 import { useDispatch, useSelector } from 'react-redux';
 import { changeIsLogging, logout } from '../../store/actions/authActions';
-import { AQ_Logo } from '../../assets/icons';
+import { AqLogo } from '../../assets/icons';
 
 const Navbar = () => {
   const isLogging = useSelector((state) => state.auth.isLogging);
@@ -24,16 +24,16 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar">
-      <div className="navbar__title">
-        <Link to="/">
-          <AQ_Logo className="navbar__title--logo" />
+    <nav className='navbar'>
+      <div className='navbar__title'>
+        <Link to='/'>
+          <AqLogo className='navbar__title--logo' />
           <h1>Ama Quella</h1>
         </Link>
       </div>
 
-      <div className="navbar__btns">
-        <ul className="navbar__links">
+      <div className='navbar__btns'>
+        <ul className='navbar__links'>
           {isAdmin &&
             adminLinks.map((linkInfo) => (
               <NavbarLink key={linkInfo.id} {...linkInfo} />
@@ -52,7 +52,7 @@ const Navbar = () => {
         </ul>
 
         {uid ? (
-          <Btn text="Salir" clicked={handleLogout} />
+          <Btn text='Salir' clicked={handleLogout} />
         ) : (
           <Btn
             text={isLogging ? 'Registrarse' : 'Login'}
