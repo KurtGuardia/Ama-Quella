@@ -45,16 +45,28 @@ export const signup = (newUser) => {
       .auth()
       .createUserWithEmailAndPassword(newUser.email, newUser.password)
       .then((resp) => {
-        return firestore.collection('users').doc(resp.user.uid).set({
-          firstName: newUser.firstName,
-          lastName: newUser.lastName,
-          email: newUser.email,
-          password: newUser.password,
-          code: newUser.code,
-          epigrafe: newUser.epigrafe,
-          activity: newUser.activity,
-          isAdmin: false,
-        });
+        return firestore
+          .collection('users')
+          .doc(resp.user.uid)
+          .set({
+            firstName: newUser.firstName,
+            lastName: newUser.lastName,
+            email: newUser.email,
+            password: newUser.password,
+            code: newUser.code,
+            epigrafe: newUser.epigrafe,
+            activity: newUser.activity,
+            isAdmin: false,
+            bills: {
+              inc: [],
+              exp: [],
+            },
+            years: {
+              year_2021: {
+                Trimesters: [],
+              },
+            },
+          });
       })
       .then(() => {
         dispatch({ type: 'SIGNUP_SUCCESS' });
